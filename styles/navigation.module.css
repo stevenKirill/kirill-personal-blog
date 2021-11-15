@@ -1,5 +1,5 @@
 .navigation {
-    border: 1px solid orange;
+    display: flex;
 }
 .nav_list {
     display: grid;
@@ -8,7 +8,6 @@
 .nav_item {
     list-style-type: none;
     text-align: center;
-    /* margin-left: 4px; */
     cursor: pointer;
     min-width: 80px;
 }
@@ -17,5 +16,4 @@
 }
 .nav_item a:hover {
     color: var(--red);
-    text-decoration: underline;
 }

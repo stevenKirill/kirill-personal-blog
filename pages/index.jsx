@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
-export default function Home({ posts }) {
+export default function Home() {
+  // TODO продумать как будет выглядеть главная страница
   return (
     <div>
       <Head>

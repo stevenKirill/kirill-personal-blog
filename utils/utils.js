@@ -1,31 +1,31 @@
 import { CATEGORIES } from "../consts/consts"
 
-export const getCategoryColor = (category) => {
+export const getCategoryColor = category => {
     switch(category) {
         case CATEGORIES.PROGRAMMING:
             return {
                 text: 'Программирование',
-                color: ''
+                color: 'goldenCategory'
             }
         case CATEGORIES.PSYCHOLOGY:
             return {
                 text: 'Психология',
-                color: '',
+                color: 'lightGreenCategory',
             }
         case CATEGORIES.SPORT:
             return {
                 text: 'Спорт',
-                color: ''
+                color: 'lightBlueCategory'
             }
         case CATEGORIES.FOOD:
             return {
                 text: 'Еда',
-                color: ''
+                color: 'orangeCategory'
             }
         default: 
         return {
             text: 'Общая',
-            color: ''
+            color: 'goldenCategory'
         }
     }
 }

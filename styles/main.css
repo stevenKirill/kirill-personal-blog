@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Crimson Text', serif;
 }
 
 :root {
@@ -11,8 +12,28 @@
     --dark-white: #DFD8CA;
     --light-white: #FBF3E4;
     --green: #105652;
+    --orange: #F58840;
+    --light-green: #9AE66E;
+    --purple: #753188;
+    --golden: #FFCE45;
+    --light-blue: #94B3FD;
 }
 
+.orangeCategory {
+    background-color: var(--orange);
+}
+.lightGreenCategory {
+    background-color: var(--light-green);
+}
+.lightBlueCategory {
+    background-color: var(--light-blue);
+}
+.purpleCategory {
+    background-color: var(--purple);
+}
+.goldenCategory {
+    background-color: var(--golden);
+}
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -25,11 +46,6 @@ p {
 a {
     text-decoration: none;
     color: rgb(41, 33, 33);
-}
-  
-img {
-    width: 100%;
-    border-radius: 10px;
 }
   
 header {
