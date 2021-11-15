@@ -1,0 +1,7 @@
+export const CATEGORIES = {
+    PROGRAMMING: 'PROGRAMMING',
+    SPORT: 'SPORT',
+    PSYCHOLOGY: 'PSYCHOLOGY',
+    FOOD: 'FOOD',
+    LIFE: 'LIFE',
+};

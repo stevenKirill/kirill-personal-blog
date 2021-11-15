@@ -1,0 +1,21 @@
+.navigation {
+    border: 1px solid orange;
+}
+.nav_list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.nav_item {
+    list-style-type: none;
+    text-align: center;
+    /* margin-left: 4px; */
+    cursor: pointer;
+    min-width: 80px;
+}
+.nav_item a {
+    transition: color ease 0.4s;
+}
+.nav_item a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}

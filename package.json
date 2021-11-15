@@ -2,12 +2,14 @@
   "name": "practise-next",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.3",
     "next": "12.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
