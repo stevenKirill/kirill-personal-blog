@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Pagination = () => {
+const Footer = () => {
     return (
         <div>
-            Pagination component
+            Footer component
         </div>
     )
 };
+
+export default Footer

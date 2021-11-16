@@ -5,13 +5,13 @@ import Head from 'next/head';
 import { Post } from '../../components/Post/Post';
 import styles from '../../styles/post.module.css';
 
-// TODO написать мета теги для каждой html страницы
 const Blog = ({ posts }) => {
     return (
         <>
         <Head>
-            <title>Статьи Кирилла Павловского</title>
-            <meta></meta>
+          <title>Статьи Кирилла Павловского</title>
+          <meta name="keywords" content="блог,Кирилл,Павловский,программирование,психология,спорт,питание"/>
+          <meta name="description" content="блог о программировании,психологии,спорте и других интересных темах."/>
         </Head>
         <div className={styles.posts}>
             {posts.map((post) => {

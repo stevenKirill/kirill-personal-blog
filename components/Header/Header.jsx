@@ -5,7 +5,7 @@ import styles from '../../styles/header.module.css';
 
 export const Header = () => {
     return (
-        <header>
+        <header className={styles.wrapper}>
             <div className={styles.header}>
                 <Link href="/">
                     <a className={styles.header_link}>

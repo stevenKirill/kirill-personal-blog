@@ -10,16 +10,17 @@ const PostPage = ({
     slug,
     content,
   }) => {
-    console.log(slug,'=> slug')
     return (
         <>
           <Link href='/blog'>
-            <a className={styles.post_back}>Назад</a>
+            <a className={styles.post_back}>
+            <button class={styles.back_button} role="button">Назад</button>
+            </a>
           </Link>
           <div className={styles.card}>
             <h1 className={styles.post_title}>{title}</h1>
             <div className={styles.post_date}>Опубликовано: {date}</div>
-            <div className={styles.post_image}>
+            <div className={styles.post_image_big}>
               <img src={cover_image} alt={styles.post_title}/>
             </div>
             <div className={styles.post_body}>

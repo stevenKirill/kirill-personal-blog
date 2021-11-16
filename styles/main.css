@@ -54,6 +54,10 @@ header {
     padding: 5px;
     margin-bottom: 30px;
 }
+
+ul {
+    margin-left: 10px;
+}
   
 header a {
     color: var(--green);
@@ -88,28 +92,7 @@ header a {
 }
   
 .btn-back {
-background: #f4f4f4;
-color: #000;
-margin-bottom: 20px;
-}
-  
-.post-body ul,
-ol {
-font-size: 110%;
-line-height: 2.3;
-font-weight: bold;
-margin: 10px 0;
-}
-  
-.post-body pre {
-background: #f4f4f4;
-padding: 20px;
-margin: 20px 0;
-line-height: 2.3;
-}
-  
-@media (max-width: 500px) {
-.posts {
-    grid-template-columns: 1fr;
-}
+    background: #f4f4f4;
+    color: #000;
+    margin-bottom: 20px;
 }

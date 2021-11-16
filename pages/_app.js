@@ -1,6 +1,8 @@
 import '../styles/main.css';
 import { Header } from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
+/** Общая обертка над всеми страницами. */
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -8,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <main className="container">
         <Component {...pageProps} />
       </main>
+      <Footer/>
     </div>
   )
 }

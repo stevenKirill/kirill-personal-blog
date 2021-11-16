@@ -6,7 +6,8 @@ export default function Home() {
     <div>
       <Head>
         <title>Главная</title>
-        <meta></meta>
+        <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
+        <meta name="description" content=""/>
       </Head>
       <div>
         Главная страница сайта

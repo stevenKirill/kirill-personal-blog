@@ -2,9 +2,16 @@ import Head from 'next/head';
 
 const Other = () => {
     return (
-        <div>
-            Другое
-        </div>
+        <>
+            <Head>
+                <title>Другое</title>
+                <meta name="keywords" content=""/>
+                <meta name="description" content=""/>
+            </Head>
+            <div>
+                Другое
+            </div>
+        </>
     )
 };
 
