@@ -5,11 +5,11 @@ const Contacts = () => {
         <>
             <Head>
                 <title>Контакты Кирилла Павловского</title>
-                <meta name="keywords" content=""/>
+                <meta name="keywords" content="контакты,павловский,кирилл"/>
                 <meta name="description" content=""/>
             </Head>
             <div>
-                Контакты
+                Страница Контакты
             </div>
         </>
     )

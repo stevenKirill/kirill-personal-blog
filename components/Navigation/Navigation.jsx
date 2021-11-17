@@ -8,22 +8,22 @@ const Navigation = () => {
             <ul className={classes.nav_list}>
                 <li className={classes.nav_item}>
                     <Link href="/">
-                        <a>Главная</a>
+                        <a>главная</a>
                     </Link>
                 </li>
                 <li className={classes.nav_item}>
                     <Link href="/blog">
-                        <a>Блог</a>
+                        <a>почитать</a>
+                    </Link>
+                </li>
+                <li className={classes.nav_item}>
+                    <Link href="/watch">
+                        <a>посмотреть</a>
                     </Link>
                 </li>
                 <li className={classes.nav_item}>
                     <Link href="/contacts">
-                        <a>Контакты</a>
-                    </Link>
-                </li>
-                <li className={classes.nav_item}>
-                    <Link href="/other">
-                        <a>Другое</a>
+                        <a>эбаут</a>
                     </Link>
                 </li>
             </ul>

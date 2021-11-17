@@ -1,9 +1,19 @@
 import React from 'react';
+import classes from '../../styles/footer.module.css';
+import { FaGithub, FaTelegram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div>
-            Footer component
+        <div className={classes.wrapper}>
+            <div className={classes.name}>kirill pavlovskii</div>
+            <div className={classes.icons}>
+                <a href="/">
+                    <FaTelegram color="white" size="30" className={classes.icon}/>
+                </a>
+                <a href="/">
+                    <FaGithub color="white" size="30" className={classes.icon}/>
+                </a>
+            </div>
         </div>
     )
 };

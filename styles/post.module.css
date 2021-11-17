@@ -5,6 +5,13 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.container {
+  max-width: 768px;
+  margin: auto;
+  margin-top: 10px;
+  overflow: auto;
+  padding: 0 10px;
+}
   
 .card-page {
   padding: 15px 30px;
@@ -14,6 +21,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  max-width: 768px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 10px;
 }
 
 .post_title {
@@ -95,12 +106,11 @@
 .back_button {
   align-items: center;
   appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, var(--dark-white) 0, var(--green) 100%);
+  background-color: var(--black);
   border: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--light-white);
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
@@ -112,27 +122,4 @@
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.back_button:focus {
-  box-shadow: var(--green) 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, var(--light-white) 0 -3px 0 inset;
-}
-
-.back_button:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, var(--green) 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.back_button:active {
-  box-shadow: var(--green) 0 3px 7px inset;
-  transform: translateY(2px);
 }

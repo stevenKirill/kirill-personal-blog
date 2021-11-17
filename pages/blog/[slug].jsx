@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import {marked} from 'marked';
+import { marked } from 'marked';
 import styles from '../../styles/post.module.css';
 import Link from 'next/link';
 
@@ -11,7 +11,7 @@ const PostPage = ({
     content,
   }) => {
     return (
-        <>
+        <div className={styles.container}>
           <Link href='/blog'>
             <a className={styles.post_back}>
             <button class={styles.back_button} role="button">Назад</button>
@@ -20,6 +20,7 @@ const PostPage = ({
           <div className={styles.card}>
             <h1 className={styles.post_title}>{title}</h1>
             <div className={styles.post_date}>Опубликовано: {date}</div>
+            <div className={styles.post_category}>{category}</div>
             <div className={styles.post_image_big}>
               <img src={cover_image} alt={styles.post_title}/>
             </div>
@@ -27,7 +28,7 @@ const PostPage = ({
               <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             </div>
           </div>
-        </>
+        </div>
       )
 };
 

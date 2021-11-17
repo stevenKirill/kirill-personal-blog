@@ -1,9 +1,7 @@
-.navigation {
-    display: flex;
-}
 .nav_list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 6.66%;
 }
 .nav_item {
     list-style-type: none;
