@@ -19,6 +19,10 @@
     --golden: #dbb54b;
     --light-blue: #7f93c2;
     --black: #323846;
+    --mobile-width: 576px;
+    --tablet-width: 768px;
+    --desktop-width: 992px;
+    --desktop-large-width: 1200px;
 }
 
 body {

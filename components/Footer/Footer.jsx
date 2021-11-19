@@ -5,7 +5,7 @@ import { FaGithub, FaTelegram } from 'react-icons/fa';
 const Footer = () => {
     return (
         <div className={classes.wrapper}>
-            <div className={classes.name}>kirill pavlovskii</div>
+            <div className={classes.name}>© kirill pavlovskii</div>
             <div className={classes.icons}>
                 <a href="/">
                     <FaTelegram color="white" size="30" className={classes.icon}/>

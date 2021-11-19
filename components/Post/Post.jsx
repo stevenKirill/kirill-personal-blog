@@ -5,7 +5,7 @@ import { getCategoryColor } from '../../utils/utils';
 import { FaReadme } from 'react-icons/fa';
 
 export const Post = ({ post }) => {
-    const { frontmatter: { title, category, cover_image, date }, slug } = post
+    const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post
     const { text, color } = getCategoryColor(category);
     return (
         <div className={styles.card}>
@@ -15,6 +15,7 @@ export const Post = ({ post }) => {
                 <img src={cover_image} alt={title}/>
             </div>
             <div className={styles.post_date}>{date}</div>
+            <div className={styles.post_excerpt}>{excerpt}...</div>
             <Link href={`/blog/${slug}`}>
                 <a className={styles.post_read_more}>
                     <FaReadme size="1.2rem"/>
