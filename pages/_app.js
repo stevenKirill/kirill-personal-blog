@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 /** Общая обертка над всеми страницами. */
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="main_container">
       <Header/>
       <Component {...pageProps} />
       <Footer/>

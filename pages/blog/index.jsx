@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 import Head from 'next/head';
+import matter from 'gray-matter';
 import { Post } from '../../components/Post/Post';
-import { Pagination } from '../../components/Pagination/Pagination';
 import styles from '../../styles/post.module.css';
+import { Pagination } from '../../components/Pagination/Pagination';
 
 const Blog = ({ posts }) => {
   const [allPosts,setAllPosts] = useState(posts);
+
   useEffect(() => {
     console.log('effetс')
-  }, [])
+  }, []);
+
     return (
         <>
           <Head>
