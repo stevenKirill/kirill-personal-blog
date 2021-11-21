@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../../styles/post.module.css';
-import { getCategoryColor } from '../../utils/utils';
 import { FaReadme } from 'react-icons/fa';
+import { getCategoryColor } from '../../utils/utils';
 
 export const Post = ({ post }) => {
     const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post

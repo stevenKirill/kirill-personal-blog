@@ -10,6 +10,7 @@ const PostPage = ({
     slug,
     content,
   }) => {
+    console.log(slug,'=> slug')
     return (
         <div className={styles.container}>
           <Link href='/blog'>
@@ -39,7 +40,6 @@ export const getStaticPaths = async () => {
       slug: fileName.replace('.md', ''),
     },
   }));
-  console.log(paths,'=> пути сечас')
   return {
     paths,
     fallback: false,
