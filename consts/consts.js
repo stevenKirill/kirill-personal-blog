@@ -5,3 +5,5 @@ export const CATEGORIES = {
     FOOD: 'FOOD',
     LIFE: 'LIFE',
 };
+
+export const POSTS_PER_PAGE = 3;
