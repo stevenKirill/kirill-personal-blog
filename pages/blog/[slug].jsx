@@ -10,7 +10,6 @@ const PostPage = ({
     slug,
     content,
   }) => {
-    console.log(slug,'=> slug')
     return (
         <div className={styles.container}>
           <Link href='/blog'>

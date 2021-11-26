@@ -1,8 +1,8 @@
-import React from 'react';
 import classes from '../../styles/footer.module.css';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 
 const Footer = () => {
+    // TODO добавить ссылки на github и на telegram
     return (
         <div className={classes.wrapper}>
             <div className={classes.name}>© kirill pavlovskii</div>

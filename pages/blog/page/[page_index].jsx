@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
@@ -9,8 +8,6 @@ import { POSTS_PER_PAGE } from '../../../consts/consts';
 import { Pagination } from '../../../components/Pagination/Pagination';
 
 const BlogPage = ({ posts, currentPage, numPages }) => {
-  console.log(currentPage)
-  console.log(numPages)
     return (
         <>
           <Head>
@@ -23,7 +20,7 @@ const BlogPage = ({ posts, currentPage, numPages }) => {
                   return <Post post={post} key={post.slug}/>
               })}
           </div>
-          <Pagination/>
+          <Pagination currentPage={currentPage} numOfPages={numPages}/>
         </>
     )
 };
@@ -33,7 +30,7 @@ export const getStaticPaths = async () => {
   const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
 
   let paths = [];
-  console.log('getstatucpatdddh')
+
   for (let i = 1; i <= numberOfPages; i++) {
     paths.push({
       params: {
@@ -41,7 +38,6 @@ export const getStaticPaths = async () => {
       }
     })
   }
-  console.log(paths,'=> path')
   return {
     paths,
     fallback: false
@@ -61,9 +57,9 @@ export const getStaticProps = async ({ params }) => {
       }
     });
 
+    // вычисление числа постов пагинация
     const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
-    const pageIndex = page - 1;
-    const orderedPosts = posts.slice(page * POSTS_PER_PAGE,(pageIndex + 1) * POSTS_PER_PAGE);
+    const orderedPosts = posts.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
 
     return {
       props: {
