@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
 import matter from 'gray-matter';
-import styles from '../../../styles/post.module.css';
-import { Post } from '../../../components/Post/Post';
-import { POSTS_PER_PAGE } from '../../../consts/consts';
-import { Pagination } from '../../../components/Pagination/Pagination';
+import styles from '@/styles/post.module.css';
+import { Post } from '@/components/Post/Post';
+import { POSTS_PER_PAGE } from '@/consts/consts';
+import { Pagination } from '@/components/Pagination/Pagination';
 
 const BlogPage = ({ posts, currentPage, numPages }) => {
     return (

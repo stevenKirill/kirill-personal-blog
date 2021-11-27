@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '../Navigation/Navigation';
-import styles from '../../styles/header.module.css';
+import styles from '@/styles/header.module.css';
 
 export const Header = () => {
     return (

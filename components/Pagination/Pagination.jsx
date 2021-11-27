@@ -1,4 +1,4 @@
-import classes from '../../styles/pagination.module.css';
+import classes from '@/styles/pagination.module.css';
 import Link from 'next/link';
 
 // TODO подумать как сделать так если страниц будет много например больше 10 
@@ -21,7 +21,7 @@ export const Pagination = ({ currentPage, numOfPages }) => {
                     </li>
                 </Link>}
                 {Array.from({length: numOfPages}, (_, i) => (
-                    <Link href={`/blog/page/${i + 1}`}>
+                    <Link href={`/blog/page/${i + 1}`} key={i * 100}>
                         <li className={classes.number}>{i + 1}</li>
                     </Link>
                 ))}

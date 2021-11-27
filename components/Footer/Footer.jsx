@@ -1,4 +1,4 @@
-import classes from '../../styles/footer.module.css';
+import classes from '@/styles/footer.module.css';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
 
 const Footer = () => {

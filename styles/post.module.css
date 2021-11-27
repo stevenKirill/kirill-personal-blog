@@ -141,3 +141,17 @@
   padding-right: 16px;
   position: relative;
 }
+.category_title_container {
+  font-size: 20px;
+  width: 900px;
+  margin: 10px auto;
+  text-align: left;
+  border-bottom: 3px solid var(--black);
+  padding-bottom: 10px;
+}
+.category_title_container div {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--black);
+  font-weight: bold;
+}

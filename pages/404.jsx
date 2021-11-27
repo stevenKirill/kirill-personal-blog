@@ -1,4 +1,4 @@
-import styles from '../styles/404.module.css';
+import styles from '@/styles/404.module.css';
 import { FaSadCry } from 'react-icons/fa';
 
 const NotFound = () => {

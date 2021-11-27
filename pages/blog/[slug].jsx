@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import styles from '../../styles/post.module.css';
+import styles from '@/styles/post.module.css';
 import Link from 'next/link';
 
 const PostPage = ({
@@ -14,7 +14,7 @@ const PostPage = ({
         <div className={styles.container}>
           <Link href='/blog'>
             <a className={styles.post_back}>
-            <button class={styles.back_button} role="button">Назад</button>
+            <button className={styles.back_button} role="button">Назад</button>
             </a>
           </Link>
           <div className={styles.card}>
@@ -39,6 +39,7 @@ export const getStaticPaths = async () => {
       slug: fileName.replace('.md', ''),
     },
   }));
+  
   return {
     paths,
     fallback: false,
