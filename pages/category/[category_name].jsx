@@ -7,11 +7,12 @@ import { Post } from '@/components/Post/Post';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
+    // TODO подумать мб в будущем сделат еще и пагинацию на каждую категорию постов.
   return (
     <>
         <Head>
         <title>{category}</title>
-        <meta name="keywords" content="блог,Кирилл,Павловский,программирование,психология,спорт,питание"/>
+        <meta name="keywords" content={`${category} категория,блог,успех,читать,полезная информаиция`}/>
         <meta name="description" content="блог о программировании,психологии,спорте и других интересных темах."/>
         </Head>
         <div className={styles.category_title_container}>

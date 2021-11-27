@@ -8,6 +8,6 @@ const NotFound = () => {
             <FaSadCry color="black" size="24"/>
         </div>
     )
-}
+};
 
 export default NotFound
