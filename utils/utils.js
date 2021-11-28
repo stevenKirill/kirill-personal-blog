@@ -24,8 +24,8 @@ export const getCategoryColor = category => {
             }
         default: 
         return {
-            text: 'Общая',
-            color: 'goldenCategory'
+            text: 'Поразмыслить',
+            color: 'purpleCategory'
         }
     }
 }
