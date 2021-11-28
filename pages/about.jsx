@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Contacts = () => {
+const About = () => {
     return (
         <>
             <Head>
@@ -9,10 +9,10 @@ const Contacts = () => {
                 <meta name="description" content=""/>
             </Head>
             <div>
-                Страница Контакты
+                Страница эбббаут
             </div>
         </>
     )
 };
 
-export default Contacts
+export default About
