@@ -1,9 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import Head from 'next/head';
-import matter from 'gray-matter';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
+import { getPosts, getPostCategories } from '@/utils/getters';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
@@ -28,13 +26,7 @@ const CategoryBlogPage = ({ posts, category }) => {
 };
 
 export const getStaticPaths =  async () => {
-    const files = fs.readdirSync(path.join('posts'));
-    const categories = files.map(fileName => {
-        const markdownAndMeta = fs.readFileSync(path.join('posts',fileName),'utf-8');
-
-        const { data: frontMatter } = matter(markdownAndMeta);
-        return frontMatter.category.toLowerCase();
-    });
+    const categories = getPostCategories();
 
     const paths = categories.map(category => ({
         params: { category_name: category }
@@ -47,19 +39,7 @@ export const getStaticPaths =  async () => {
 };
 
 export const getStaticProps = async ({ params: { category_name }}) => {
-    const files = fs.readdirSync(path.join('posts'));
-    const categoryPosts = files
-    .map(fileName => {
-        const slug = fileName.replace('.md','');
-        const meta = fs.readFileSync(path.join('posts',fileName),'utf-8');
-        const { data: frontmatter } = matter(meta);
-        return {
-          slug,
-          frontmatter
-        }
-      })
-      .filter(post => post.frontmatter.category.toLowerCase() === category_name);
-
+    const categoryPosts = getPosts().filter(post => post.frontmatter.category.toLowerCase() === category_name);
     return {
         props: {
             posts: categoryPosts,

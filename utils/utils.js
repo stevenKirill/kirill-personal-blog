@@ -1,4 +1,4 @@
-import { CATEGORIES } from "../consts/consts"
+import { CATEGORIES } from "@/consts/consts"
 
 export const getCategoryColor = category => {
     switch(category) {

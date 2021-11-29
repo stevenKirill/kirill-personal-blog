@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 import styles from '@/styles/post.module.css';
 import Link from 'next/link';
+import { getFiles } from '@/utils/getters';
 
 const PostPage = ({
     frontmatter: { title, date, category, cover_image },
@@ -33,7 +34,7 @@ const PostPage = ({
 };
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('posts'));
+  const files = getFiles();
   const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace('.md', ''),

@@ -1,11 +1,9 @@
-import fs from 'fs';
-import path from 'path';
 import Head from 'next/head';
-import matter from 'gray-matter';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
 import { POSTS_PER_PAGE } from '@/consts/consts';
 import { Pagination } from '@/components/Pagination/Pagination';
+import { getPosts, getFiles } from '@/utils/getters';
 
 const BlogPage = ({ posts, currentPage, numPages }) => {
     return (
@@ -26,7 +24,7 @@ const BlogPage = ({ posts, currentPage, numPages }) => {
 };
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('posts'));
+  const files = getFiles();
   const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
 
   let paths = [];
@@ -46,16 +44,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const page = parseInt(params && params.page_index) || 1;
-    const files = fs.readdirSync(path.join('posts'));
-    const posts = files.map(fileName => {
-      const slug = fileName.replace('.md','');
-      const meta = fs.readFileSync(path.join('posts',fileName),'utf-8');
-      const { data: frontmatter } = matter(meta);
-      return {
-        slug,
-        frontmatter
-      }
-    });
+    const posts = getPosts();
+    const files = getFiles();
 
     // вычисление числа постов пагинация
     const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
