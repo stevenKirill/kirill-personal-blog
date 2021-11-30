@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import styles from '@/styles/post.module.css';
+import CategoryBar from '@/components/CategoryBar/CategoryBar';
 import { Post } from '@/components/Post/Post';
 import { POSTS_PER_PAGE } from '@/consts/consts';
 import { Pagination } from '@/components/Pagination/Pagination';
 import { getPosts, getFiles } from '@/utils/getters';
 
-const BlogPage = ({ posts, currentPage, numPages }) => {
+const BlogPage = ({ posts, currentPage, numPages, categories }) => {
     return (
         <>
           <Head>
@@ -13,10 +14,13 @@ const BlogPage = ({ posts, currentPage, numPages }) => {
             <meta name="keywords" content="блог,Кирилл,Павловский,программирование,психология,спорт,питание"/>
             <meta name="description" content="блог о программировании,психологии,спорте и других интересных темах."/>
           </Head>
-          <div className={styles.posts}>
-              {posts.map((post) => {
-                  return <Post post={post} key={post.slug}/>
-              })}
+          <div className={styles.content}>
+            <div className={styles.posts}>
+                {posts.map((post) => {
+                    return <Post post={post} key={post.slug}/>
+                })}
+            </div>
+            <CategoryBar categories={categories}/>
           </div>
           <Pagination currentPage={currentPage} numOfPages={numPages}/>
         </>
@@ -47,6 +51,9 @@ export const getStaticProps = async ({ params }) => {
     const posts = getPosts();
     const files = getFiles();
 
+    const categories = posts.map(post => post.frontmatter.category);
+    const uniqueCategories = [...new Set(categories)];
+
     // вычисление числа постов пагинация
     const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
     const orderedPosts = posts.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
@@ -56,6 +63,7 @@ export const getStaticProps = async ({ params }) => {
         posts: orderedPosts,
         numPages: numberOfPages,
         currentPage: page,
+        categories: uniqueCategories,
       }
     }
   }

@@ -1,3 +1,5 @@
+
+// Категории постов в блоге
 export const CATEGORIES = {
     PROGRAMMING: 'PROGRAMMING',
     SPORT: 'SPORT',

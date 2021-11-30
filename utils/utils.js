@@ -1,6 +1,6 @@
 import { CATEGORIES } from "@/consts/consts"
 
-export const getCategoryColor = category => {
+export const getCategoryItem = category => {
     switch(category) {
         case CATEGORIES.PROGRAMMING:
             return {

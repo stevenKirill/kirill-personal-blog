@@ -7,10 +7,10 @@ const Footer = () => {
         <div className={classes.wrapper}>
             <div className={classes.name}>© kirill pavlovskii</div>
             <div className={classes.icons}>
-                <a href="/">
+                <a href="https://t.me/stevenPav" target="_blank">
                     <FaTelegram color="white" size="30" className={classes.icon}/>
                 </a>
-                <a href="/">
+                <a href="https://github.com/stevenKirill" target="_blank">
                     <FaGithub color="white" size="30" className={classes.icon}/>
                 </a>
             </div>

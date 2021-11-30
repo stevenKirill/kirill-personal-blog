@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    height: fit-content;
+    padding: 5px;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+    margin-bottom: 10px;
+}
+.link {
+    margin: 3px;
+    min-height: 30px;
+    padding: 5px;
+}
+.link a {
+    color: var(--light-white);
+    width: 100%;
+    display: block;
+}
+.title {
+    text-align: center;
+}

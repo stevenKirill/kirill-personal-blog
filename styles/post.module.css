@@ -155,3 +155,8 @@
   color: var(--black);
   font-weight: bold;
 }
+
+.content {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}

@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '../../styles/post.module.css';
 import { FaReadme } from 'react-icons/fa';
-import { getCategoryColor } from '../../utils/utils';
+import { getCategoryItem } from '../../utils/utils';
 
 export const Post = ({ post }) => {
     const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post
-    const { text, color } = getCategoryColor(category);
+    const { text, color } = getCategoryItem(category);
     return (
         <div className={styles.card}>
             <div className={`${styles.post_category} ${color}`}>{text}</div>
