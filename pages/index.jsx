@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SearchBar from '@/components/SearchBar/SearchBar';
 import styles from '@/styles/main_page.module.css';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
         <meta name="description" content=""/>
       </Head>
+      <SearchBar/>
       <div className={styles.main}>
         <div className={styles.inner}>
           <div className={styles.header}>
