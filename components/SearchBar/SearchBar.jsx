@@ -5,7 +5,6 @@ import SearchResults from '../SearchResults/SearchResults';
 
 /** Компонент поиска постов. */
 const SearchBar = () => {
-    // TODO добавить стили для компонента.
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
@@ -24,21 +23,21 @@ const SearchBar = () => {
 
     return (
         <div className={styles.wrapper}>
-        <div className={styles.inner}>
+          <div className={styles.inner}>
           <div className={styles.form}>
             <form>
               <input
                 type='search'
                 name='search'
                 id='search'
-                className=''
+                className={styles.input}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder='Поиск постов по названию или по категории'
+                placeholder='Поиск постов по названию/категории'
               />
               <FaSearch/>
             </form>
-          </div>
+        </div>
         </div>
         <SearchResults results={searchResults} />
       </div>

@@ -29,10 +29,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .main_container {
-    min-height: 100vh; 
+    min-height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 12% 8% 70% 10%;
 }
 
 p {

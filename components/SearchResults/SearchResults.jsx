@@ -3,7 +3,6 @@ import styles from '../../styles/search.module.css';
 
 /** Список постов после поиска (результаты поиска). */
 const SearchResults = ({ results }) => {
-    // TODO добавить стили для компонента.
     if (results.length === 0) return <></>
     return (
         <div className={styles.results}>

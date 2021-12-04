@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/post.module.css';
+import Image from 'next/image';
 import { FaReadme } from 'react-icons/fa';
+import styles from '../../styles/post.module.css';
 import { getCategoryItem } from '../../utils/utils';
 
-export const Post = ({ post }) => {
+export const Post = ({ post, compact }) => {
     const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post
     const { text, color } = getCategoryItem(category);
     return (
