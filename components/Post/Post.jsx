@@ -25,12 +25,17 @@ export const Post = ({ post, compact }) => {
             {!compact && <div className={styles.post_image}>
                 <img src={cover_image} alt={title}/>
             </div>}
-            <div className={styles.post_date}>{date}</div>
+            <div 
+                className={styles.post_date}
+                style={{ fontSize: `${compact ? '14px' : ''}`}}
+            >
+                {date}
+            </div>
             <div className={styles.post_excerpt}>{excerpt}...</div>
             <Link href={`/blog/${slug}`}>
                 <a className={styles.post_read_more}>
                     <FaReadme size="1.2rem"/>
-                    <span>Читать далее</span>
+                    <span style={{ fontSize: `${compact ? '14px' : ''}`}}>Читать далее</span>
                 </a>
             </Link>
         </div>
