@@ -9,7 +9,7 @@ const About = () => {
                 <meta name="description" content=""/>
             </Head>
             <div>
-                Страница эбббаут
+                Страница обо мне текст + резюме + фото
             </div>
         </>
     )

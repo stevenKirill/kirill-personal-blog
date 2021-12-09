@@ -4,12 +4,12 @@ const Other = () => {
     return (
         <>
             <Head>
-                <title>Другое</title>
-                <meta name="keywords" content="блог,павловский,кирилл,другое"/>
-                <meta name="description" content="блог и другие статьи"/>
+                <title>Видео</title>
+                <meta name="keywords" content="блог,павловский,кирилл,видео,саморазвитие"/>
+                <meta name="description" content="блог и видео которые советую посмотреть"/>
             </Head>
             <div>
-                Страница другое
+                Страница про видео
             </div>
         </>
     )
