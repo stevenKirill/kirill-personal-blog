@@ -5,7 +5,7 @@ import { getPosts, getPostCategories } from '@/utils/getters';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
-    // TODO подумать мб в будущем сделат еще и пагинацию на каждую категорию постов.
+    // TODO подумать мб в будущем сделать еще и пагинацию на каждую категорию постов.
   return (
     <>
         <Head>
@@ -18,7 +18,7 @@ const CategoryBlogPage = ({ posts, category }) => {
         </div>
         <div className={styles.posts}>
             {posts.map((post) => {
-                return <Post post={post} key={post.slug}/>
+                return <Post post={post} key={post.slug} compact={false}/>
             })}
         </div>
     </>

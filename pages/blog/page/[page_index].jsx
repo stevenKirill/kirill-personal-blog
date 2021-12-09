@@ -17,7 +17,7 @@ const BlogPage = ({ posts, currentPage, numPages, categories }) => {
           <div className={styles.content}>
             <div className={styles.posts}>
                 {posts.map((post) => {
-                    return <Post post={post} key={post.slug}/>
+                    return <Post post={post} key={post.slug} compact={false}/>
                 })}
             </div>
             <CategoryBar categories={categories}/>

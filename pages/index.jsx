@@ -4,7 +4,7 @@ import styles from '@/styles/main_page.module.css';
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.wrap}>
       <Head>
         <title>Главная</title>
         <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
@@ -25,6 +25,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

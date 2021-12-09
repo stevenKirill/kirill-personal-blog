@@ -10,11 +10,21 @@ export const Post = ({ post, compact }) => {
     const { text, color } = getCategoryItem(category);
     return (
         <div className={styles.card}>
-            <div className={`${styles.post_category} ${color}`}>{text}</div>
-            <div className={styles.post_title}>{title}</div>
-            <div className={styles.post_image}>
-                <img src={cover_image} alt={title}/>
+            <div 
+                className={`${styles.post_category} ${color}`} 
+                style={{ fontSize: `${compact ? '16px' : ''}`}}
+            >
+                {text}
             </div>
+            <div 
+                className={styles.post_title}
+                style={{ fontSize: `${compact ? '15px' : ''}`}}
+            >
+                    {title}
+            </div>
+            {!compact && <div className={styles.post_image}>
+                <img src={cover_image} alt={title}/>
+            </div>}
             <div className={styles.post_date}>{date}</div>
             <div className={styles.post_excerpt}>{excerpt}...</div>
             <Link href={`/blog/${slug}`}>
