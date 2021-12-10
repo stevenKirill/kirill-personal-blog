@@ -44,7 +44,6 @@
 }
 .category {
     color: var(--black);
-    /* background-color: var(--black); */
     margin-bottom: 5px;
     padding: 3px;
 }
