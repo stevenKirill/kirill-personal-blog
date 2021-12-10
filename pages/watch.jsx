@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { VideoBlock } from '@/components/VideoBlock/VideoBlock';
 
 const Other = () => {
     return (
@@ -8,9 +9,7 @@ const Other = () => {
                 <meta name="keywords" content="блог,павловский,кирилл,видео,саморазвитие"/>
                 <meta name="description" content="блог и видео которые советую посмотреть"/>
             </Head>
-            <div>
-                Страница про видео
-            </div>
+            <VideoBlock/>
         </>
     )
 };
