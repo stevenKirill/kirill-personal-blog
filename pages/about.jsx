@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import ResumeBlock from '@/components/ResumeBlock/ResumeBlock';
+import ResumePanel from '@/components/ResumePanel/ResumePanel';
 
 const About = () => {
     return (
@@ -8,8 +10,9 @@ const About = () => {
                 <meta name="keywords" content="контакты,павловский,кирилл"/>
                 <meta name="description" content=""/>
             </Head>
+            <ResumePanel/>
             <div>
-                Страница обо мне текст + резюме + фото
+                <ResumeBlock/>
             </div>
         </>
     )
