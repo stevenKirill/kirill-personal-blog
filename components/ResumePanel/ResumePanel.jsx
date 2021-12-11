@@ -8,10 +8,10 @@ const ResumePanel = () => {
             <div className={classes.contacts}>
                 <div className={classes.list}>
                     <div className={classes.replacer}></div>
-                        <GroupItem value="kirill-pavlovskij@rambler.ru" title="email"/>
-                        <GroupItem value="+7-999-803-38-56" title="тел."/>
-                        <GroupItem value="Москва" title="город"/>
-                        <GroupItem value="Кирилл Павловский" title="имя"/>
+                        <GroupItem value="kirill-pavlovskij@rambler.ru"/>
+                        <GroupItem value="+7-999-803-38-56"/>
+                        <GroupItem value="Москва"/>
+                        <GroupItem value="Кирилл Павловский"/>
                     <div className={classes.replacer}></div>
                 </div>
             </div>
