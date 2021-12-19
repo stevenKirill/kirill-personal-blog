@@ -7,8 +7,8 @@ const ResumeHeader = () => {
             <div>
             <Image 
                 src="/images/other/resume.jpg"
-                width={160}
-                height={160}
+                width={200}
+                height={200}
                 alt="logo"
                 className={classes.logo}
             />

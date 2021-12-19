@@ -103,3 +103,50 @@
 .text h4 {
     margin-top: 10px;
 }
+.list {
+
+}
+.option {
+    color: var(--black);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.optionStart {
+    color: var(--black);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.option a {
+    color: var(--green);
+    margin-top: 5px;
+}
+.contentWrapper {
+    width: 772px;
+    margin: 0 auto;
+    text-align: left;
+}
+.blockWrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.blockHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.blockHeaderRight {
+    margin-left: 10px;
+}
+.blockBody {
+    text-align: left;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}

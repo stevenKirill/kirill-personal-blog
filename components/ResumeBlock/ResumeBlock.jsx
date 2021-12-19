@@ -1,11 +1,15 @@
 import classes from '../../styles/resume.module.css';
 
-const ResumeBlock = ({ title, content }) => {
+const ResumeBlock = ({ children, title, icon }) => {
     return (
-        <div className={classes.wrapper}>
-            <span className={classes.circle}>
-                1
-            </span>
+        <div className={classes.blockWrapper}>
+            <div className={classes.blockHeader}>
+                <div className={classes.blockHeaderLeft}>{icon}</div>
+                <div className={classes.blockHeaderRight}>{title}</div>
+            </div>
+            <div className={classes.blockBody}>
+                {children}
+            </div>
         </div>
     )
 };
