@@ -28,5 +28,10 @@ export const videos = [
         name: 'Техника отпускания',
         id: 'otQ6TAmmBIE',
         category: '#psychology',
+    },
+    {
+        name: 'Техника привлечения успеха',
+        id: 'tvJPOZ8WfuE',
+        category: '#psychology',
     }
 ]

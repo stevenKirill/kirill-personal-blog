@@ -4,7 +4,7 @@ const ResumeBlock = ({ children, title, icon }) => {
     return (
         <div className={classes.blockWrapper}>
             <div className={classes.blockHeader}>
-                <div className={classes.blockHeaderLeft}>{icon}</div>
+                {icon}
                 <div className={classes.blockHeaderRight}>{title}</div>
             </div>
             <div className={classes.blockBody}>
