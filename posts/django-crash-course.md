@@ -1,58 +1,24 @@
 ---
-title: 'Django Crash Course'
+title: 'Как работает функция reduce в Javascript?'
 category: 'PROGRAMMING'
-date: 'March 5, 2021'
-excerpt: 'Django is a very powerful, high level Python framework for building web applications'
-cover_image: '/images/posts/autumn.jpg'
+date: '03.12.2021'
+excerpt: 'В языке javascript существует очень много встроенных полезных функций'
+cover_image: '/images/posts/reduce.jpg'
 ---
 
-Lorem markdownum fine incustoditam unda factura versum occuluere Aeneas, iuvat
-haec praepes [partes epulae](http://cui.com/), in egisse de. Caecisque ter
-manus. Munere in exhalat, ferre sed [habe quaeque saepe](http://ne.org/fretum)
-verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide postponere
-pavida ne omnes etiam, atque. Sonuit omina sed sine haerebat illic fit a mora
-in.
+В языке javascript существует очень много встроенных полезных функций для работы с массивами.
 
-1. Serrae enim Etruscam aquis
-2. Et premis et flumine frontem minatur oppressos
-3. Inquam rector Icarus possum vim tumulo propiusque
-4. Vulnus se Latreus
-5. Aptumque bis
+Одной из самых трудно-понимаемых является reduce. В этой статье я расскажу вам зачем нужен метод reduce, как он может быть полезен, а так же покажу реальные use-case в production коде как его применять.
 
-## Turpius Aegides membris colat volentes fallere
+Итак для начала давай те разберем такое понятие как **функция высшего порядка**. По сути это функция, которая в качестве аргумента принимает другую функцию, а так же может возвращать другую функцию с помощью слова **return** Так вот функция reduce - это встроенная функция высшего порядка в языке javascript, которая вызывается на массивах и принимает **callback функцию** первым аргументом и вызывает ее на каждой итерации массива, а так же начальное значение куда будет складываться результаты всех вызовов **callback функции**.
 
-Ille fida formosus, et addunt viscera perdidit ad pondere quia tellus
-consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
-Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
-procul fugitque corpora iugales!
+Давай те рассмотрим вот такой пример.
 
-    var ethics_font_drive = cycleSystemProgram + deprecatedTransferIp.ide(3) /
-            rgb + nybbleBaseband;
-    permalinkCertificateMacintosh(ergonomicsIsdnDns);
-    boot = bridgeDaemonActive;
+```javascript
+const letters = ['k','i','r','i','l','l'];
+const name = letters.reduce((letter,word) => {
+    return letter + word
+},'');
+```
 
-## O contra diu
-
-Descendit _auras cum misi_ contactu tenax lacus, **quaerensque invitum
-premuntur** patria. Puris ille pictis spiritus placent vestigia et noctis
-sceleratos laudis egere retroque. Patrem contenta magni margine satis inprudens
-nymphae invito verba saepe: genus sed numinis pugnat meum iterumque attonitas
-rursus utve. Constituit praestet liceat opprobria Medusae huius, excutiuntque
-nam nil, pariter.
-
-Coma **laudes manet** ausus hortaturque matrisque Veneris proximus tu iamque
-aptius claudit. Tmolus tetigere iussos animumque quid poplite Hippotaden? Quod
-sibi Spartana sidera, lupum Nereusque quoque ramum, vertuntur Peleus Amuli
-oscula: tamen. Surgere Epidaurius movit crede soceri Euboicam quoque.
-
-Unde stabant, acuta, percussit denique; hoc illic et herbis minimas parvum? Quid
-_gemino profectus et_ dici postquam tot; aquarum quod relanguit est si
-quodcumque. Ossaque protinus, quod somno est, repetit, hoc passu est. Qui devia;
-respice humum vobis oscula, in Lotis nymphae.
-
-Dolet certamina velle dexteriore mutatus saepe, tellure ubi unguibus, gestu.
-Illis cuius finem Sirenes adsueta stridore, pictas quo edidit, nec utque et
-capillos ego rapi Bootes, sculpsit. Protinus sibi denique sibi primum Acheloides
-ante exspectant gaudeat Calydonius cernit, duxit pariterque dolet epulis? Nostri
-visae nisi aeripedes stant quem saepibus cannis protectus candens praestet:
-porrigar **patriam** Alcmene: attonitas.
+В данном коде у нас есть массив букв. И у нас есть задача склеить эти буквы в слово. Мы вызываем функцию reduce и говорим что начальное значение будет пустая строка - второй аргумент функции reduce. Первым аргументом мы передаем ту самую функцию callback, которая первым параметром принимает *аккумулятор* - то самое значение куда "суммируются" все вызовы на каждой итерации, и так же второй аргумент это текущее значение в массиве (i-ый элемент).

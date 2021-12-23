@@ -33,5 +33,10 @@ export const videos = [
         name: 'Техника привлечения успеха',
         id: 'tvJPOZ8WfuE',
         category: '#psychology',
+    },
+    {
+        name: 'Css floats,flexbox,grid',
+        id: 'R7gqJkdc5dM',
+        category: '#css',
     }
 ]
