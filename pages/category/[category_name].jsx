@@ -9,9 +9,9 @@ const CategoryBlogPage = ({ posts, category }) => {
   return (
     <>
         <Head>
-        <title>{category}</title>
-        <meta name="keywords" content={`${category} категория,блог,успех,читать,полезная информаиция`}/>
-        <meta name="description" content="блог о программировании,психологии,спорте и других интересных темах."/>
+            <title>{category}</title>
+            <meta name="keywords" content={`${category} категория,блог,успех,читать,полезная информаиция`}/>
+            <meta name="description" content="блог о программировании,психологии,спорте и других интересных темах."/>
         </Head>
         <div className={styles.category_title_container}>
             <div>#{category}</div>

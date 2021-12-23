@@ -52,7 +52,8 @@
 @media (max-width: 900px) {
   .content {
     display: grid;
-    grid-template-columns: auto auto !important;
+    grid-template-rows: auto 1fr auto !important;
+    grid-template-columns: unset !important;
   }
   .posts {
       grid-template-columns: repeat(2,1fr);
@@ -62,7 +63,8 @@
 @media (max-width: 700px) {
   .content {
     display: grid;
-    grid-template-columns: auto auto !important;
+    grid-template-rows: auto 1fr auto !important;
+    grid-template-columns: unset !important;
   }
   .posts {
       grid-template-columns: 1fr;
