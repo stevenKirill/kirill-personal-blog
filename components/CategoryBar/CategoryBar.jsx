@@ -10,7 +10,7 @@ const CategoryBar = ({ categories }) => {
             {categories.map(category => {
                 const { text, color } = getCategoryItem(category);
                 return (
-                    <div className={`${color} ${classes.link}`}>
+                    <div className={`${color} ${classes.link}`} key={text}>
                         <Link href={`/category/${category.toLowerCase()}`}>
                             <a>{text}</a>
                         </Link>

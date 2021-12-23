@@ -31,7 +31,7 @@ const About = ({ pageName }) => {
                                 <span>&nbsp; - терминал купли продажи криптовалюты</span>
                             </li>
                             <li className={classes.optionStart}>
-                                <a href="https://sbi.sberbank.ru:9444/ic/dcb/login.html?demoModeU+0026version=3.0" target="_blank" style={{ color: '#ca7f4c'}}> Сббол </a>
+                                <a href="https://sbi.sberbank.ru:9444/ic/dcb/login.html?demoModeU+0026version=3.0" target="_blank" rel="noreferrer" style={{ color: '#ca7f4c'}}> Сббол </a>
                                 <span>&nbsp; - модуль платеженые документы</span>
                             </li>
                             <li className={classes.optionStart}>А также CRM система для премиальных менеджеров в одном из самых крупных банков России и СНГ.</li>

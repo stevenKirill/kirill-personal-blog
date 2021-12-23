@@ -5,7 +5,14 @@
     "dev": "next dev --port 3002",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "cache-posts": "node scripts/cache.js"
+  },
+  "husky": {
+    "hooks": {
+      "cache": "npm run cache-posts && git add cache/data.js"
+    }
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -17,6 +24,7 @@
   },
   "devDependencies": {
     "eslint": "7",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "husky": "^7.0.4"
   }
 }
