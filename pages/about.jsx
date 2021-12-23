@@ -27,7 +27,7 @@ const About = ({ pageName }) => {
                         Такими как:
                         <ul className={classes.list}>
                             <li className={classes.optionStart}>
-                                <a href='https://trovemat.com/' target="_blank" style={{ color: '#ca7f4c'}}>Trovemat Terminal </a>
+                                <a href='https://trovemat.com/' target="_blank" rel="noreferrer" style={{ color: '#ca7f4c'}}>Trovemat Terminal </a>
                                 <span>&nbsp; - терминал купли продажи криптовалюты</span>
                             </li>
                             <li className={classes.optionStart}>
