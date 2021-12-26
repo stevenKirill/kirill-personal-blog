@@ -5,6 +5,19 @@ import { marked } from 'marked';
 import styles from '@/styles/post.module.css';
 import Link from 'next/link';
 import { getFiles } from '@/utils/getters';
+import { useEffect, useState } from 'react';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  VKShareButton,
+  TelegramShareButton
+} from "react-share";
+import {
+  FacebookIcon,
+  TwitterIcon,
+  VKIcon,
+  TelegramIcon
+} from "react-share";
 
 const PostPage = ({
     frontmatter: { title, date, category, cover_image },
@@ -12,6 +25,10 @@ const PostPage = ({
     content,
     pageName,
   }) => {
+    const [url,setUrl] = useState('');
+    useEffect(() => {
+      setUrl(window.location.href);
+    },[]);
     return (
         <div className={styles.container}>
           <Link href='/blog'>
@@ -29,6 +46,36 @@ const PostPage = ({
             <div className={styles.post_body}>
               <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             </div>
+            <div className={styles.shareIcons}>
+              <FacebookShareButton
+                url={"https://peing.net/ja/"}
+                quote={title}
+                description={slug}
+              >
+                <FacebookIcon size={32} round/>
+              </FacebookShareButton>
+              <VKShareButton
+                  url={url}
+                  quote={title}
+                  description={slug}
+                >
+                  <VKIcon size={32} round/>
+              </VKShareButton>
+              <TelegramShareButton
+                  url={url}
+                  quote={title}
+                  description={slug}
+                >
+                  <TelegramIcon size={32} round/>
+              </TelegramShareButton>
+              <TwitterShareButton
+                  url={url}
+                  quote={title}
+                  description={slug}
+                >
+                  <TwitterIcon size={32} round/>
+              </TwitterShareButton>
+          </div>
           </div>
         </div>
       )

@@ -169,3 +169,8 @@
   display: grid;
   grid-template-columns: 80% 20%;
 }
+.shareIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
