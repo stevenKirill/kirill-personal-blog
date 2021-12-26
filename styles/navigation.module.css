@@ -1,7 +1,9 @@
 .nav_list {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-gap: 6.66%;
+    /* grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 6.66%; */
+    grid-template-columns: 17% 19% 22% 17% 14%;
+    grid-gap: 1.25%
 }
 .nav_item {
     list-style-type: none;

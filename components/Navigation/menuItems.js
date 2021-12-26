@@ -15,4 +15,8 @@ export const menuItems = [
         title: 'эбаут',
         path: '/about',
     },
+    {
+        title: 'фото',
+        path: '/photo',
+    },
 ];

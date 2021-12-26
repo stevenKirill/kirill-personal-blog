@@ -23,18 +23,18 @@ const About = ({ pageName }) => {
                     icon={<FaInfoCircle size="24"color="black"/>}
                 >
                     <div className={classes.info}>
-                        3 года успешной работы над разными продуктами.
+                        3 года успешной работы над разными продуктами в сфере финтеха.
                         Такими как:
                         <ul className={classes.list}>
                             <li className={classes.optionStart}>
                                 <a href='https://trovemat.com/' target="_blank" rel="noreferrer" style={{ color: '#ca7f4c'}}>Trovemat Terminal </a>
-                                <span>&nbsp; - терминал купли продажи криптовалюты</span>
+                                <span>&nbsp;- терминал купли продажи криптовалюты</span>
                             </li>
                             <li className={classes.optionStart}>
                                 <a href="https://sbi.sberbank.ru:9444/ic/dcb/login.html?demoModeU+0026version=3.0" target="_blank" rel="noreferrer" style={{ color: '#ca7f4c'}}> Сббол </a>
-                                <span>&nbsp; - модуль платеженые документы</span>
+                                <span>&nbsp;- модуль платёжные документы</span>
                             </li>
-                            <li className={classes.optionStart}>А также CRM система для премиальных менеджеров в одном из самых крупных банков России и СНГ.</li>
+                            <li style={{ textAlign: 'left'}} className={classes.optionStart}>А также CRM система для премиальных менеджеров и региональных руководителей в одном из самых крупных банков России и СНГ (более 1000 сотрудников пользуются данной системой).</li>
                         </ul>
                     </div>
                 </ResumeBlock>
@@ -65,7 +65,7 @@ const About = ({ pageName }) => {
                         </li>
                         <li className={classes.option}>
                             <span>React.js</span>
-                            <Rating number={4}/>
+                            <Rating number={5}/>
                         </li>
                         <li className={classes.option}>
                             <span>TypeScript</span>
