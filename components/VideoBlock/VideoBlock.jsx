@@ -6,7 +6,7 @@ export const VideoBlock = () => {
     return (
         <>
             <h2 className={styles.header}>
-                В данном разделе я оставлю видео, которыя я счаитаю полезными по той или иной теме.
+                В данном разделе я оставлю видео, которые я считаю полезными по той или иной теме.
             </h2>
             <div className={styles.wrapper}>
                 {videos.map(video => {
