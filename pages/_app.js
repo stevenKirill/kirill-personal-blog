@@ -5,7 +5,8 @@ import Footer from '@/components/Footer/Footer';
 /** Общая обертка над всеми страницами. */
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={`${pageProps.pageName !== 'ABOUT' ? 'main_container' : ''}`}>
+    <div className={`${pageProps.pageName !== 'ABOUT' 
+    && pageProps.pageName !== 'BLOG_PAGE' ? 'main_container' : ''}`}>
       <Header/>
       <Component {...pageProps} />
       <Footer/>

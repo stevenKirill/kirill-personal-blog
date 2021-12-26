@@ -88,6 +88,10 @@
         display: flex;
         justify-content: flex-start;
     }
+    .optionStart {
+        text-align: left !important;
+        display: block !important;
+    }
   }
 
 .header {
@@ -157,4 +161,5 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 17px;
+    padding-left: 9px;
 }

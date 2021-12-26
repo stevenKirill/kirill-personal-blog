@@ -17,14 +17,14 @@ export const getCategoryItem = category => {
                 text: 'Спорт',
                 color: 'lightBlueCategory'
             }
-        case CATEGORIES.FOOD:
+        case CATEGORIES.BUSINESS:
             return {
-                text: 'Еда',
+                text: 'Бизнес',
                 color: 'orangeCategory'
             }
-        default: 
+        default:
         return {
-            text: 'Поразмыслить',
+            text: 'Другое',
             color: 'purpleCategory'
         }
     }

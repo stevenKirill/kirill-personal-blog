@@ -4,7 +4,7 @@ export const CATEGORIES = {
     PROGRAMMING: 'PROGRAMMING',
     SPORT: 'SPORT',
     PSYCHOLOGY: 'PSYCHOLOGY',
-    FOOD: 'FOOD',
+    BUSINESS: 'BUSINESS',
     LIFE: 'LIFE',
 };
 

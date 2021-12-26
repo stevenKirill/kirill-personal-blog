@@ -10,6 +10,7 @@ const PostPage = ({
     frontmatter: { title, date, category, cover_image },
     slug,
     content,
+    pageName,
   }) => {
     return (
         <div className={styles.container}>
@@ -55,6 +56,7 @@ export const getStaticProps = async ({ params: { slug }}) => {
       frontmatter,
       slug,
       content,
+      pageName: 'BLOG_PAGE',
     },
   }
 }

@@ -35,6 +35,10 @@
     .wrapper {
         grid-template-columns: 1fr;
     }
+      .header {
+        font-size: 18px;
+        padding: 10px;
+    }
   }
 .name {
     color: var(--light-white);

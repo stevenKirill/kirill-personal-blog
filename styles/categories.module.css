@@ -10,6 +10,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
     margin-bottom: 10px;
 }
+
 .link {
     margin: 3px;
     min-height: 30px;
@@ -22,4 +23,18 @@
 }
 .title {
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 300px !important;
+        margin: 0 auto;
+    }    
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+    .wrapper {
+        width: 450px !important;
+        margin: 0 auto;
+    }    
 }
