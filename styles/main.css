@@ -88,3 +88,6 @@ header a {
     align-items: center;
     cursor: pointer;
 }
+.margin-left-5 {
+    margin-left: 5px;
+}

@@ -58,6 +58,7 @@ const PostPage = ({
                   url={url}
                   quote={title}
                   description={slug}
+                  className='margin-left-5'
                 >
                   <VKIcon size={32} round/>
               </VKShareButton>
@@ -65,6 +66,7 @@ const PostPage = ({
                   url={url}
                   quote={title}
                   description={slug}
+                  className='margin-left-5'
                 >
                   <TelegramIcon size={32} round/>
               </TelegramShareButton>
@@ -72,6 +74,7 @@ const PostPage = ({
                   url={url}
                   quote={title}
                   description={slug}
+                  className='margin-left-5'
                 >
                   <TwitterIcon size={32} round/>
               </TwitterShareButton>
