@@ -3,3 +3,9 @@
     margin: 20px auto;
     padding: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 500px;
+    }
+}
