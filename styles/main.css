@@ -79,3 +79,12 @@ header a {
 .goldenCategory {
     background-color: var(--golden);
 }
+.photo_contain {
+    object-fit: contain;
+}
+
+[data-testid="carousel"]:first-child {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
