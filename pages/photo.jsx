@@ -36,7 +36,6 @@ const Photo = () => {
                     swiping={true}
                     leftArrow={leftArrow()}
                     rightArrow={rightArrow()}
-                    responsive={typeof window !== "undefined"}
                 >
                     <Image
                         src='/images/other/carousel/1.jpg'
