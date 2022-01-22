@@ -39,7 +39,7 @@ const PostPage = ({
           <div className={styles.card}>
             <h1 className={styles.post_title}>{title}</h1>
             <div className={styles.post_date}>Опубликовано: {date}</div>
-            <div className={styles.post_category}>{category}</div>
+            <div className={styles.post_category_2}>{category}</div>
             <div className={styles.post_image_big}>
               <img src={cover_image} alt={styles.post_title}/>
             </div>

@@ -82,6 +82,12 @@
   padding: 3px;
   color: var(--light-white);
 }
+.post_category_2 {
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 3px;
+  color: var(--black);
+}
 
 .post_date {
   background: var(--dark-white);
