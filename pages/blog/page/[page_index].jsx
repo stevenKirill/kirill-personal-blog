@@ -58,7 +58,6 @@ export const getStaticProps = async ({ params }) => {
     // вычисление числа постов пагинация
     const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
     const orderedPosts = posts.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
-  console.log(orderedPosts.sort(sortByDate),'=.d')
     return {
       props: {
         posts:  orderedPosts.sort(sortByDate),
