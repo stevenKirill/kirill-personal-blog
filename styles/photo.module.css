@@ -1,11 +1,14 @@
 .wrapper {
-    width: 1000px;
+    width: 1200px;
     margin: 20px auto;
     padding: 10px;
+    height: 70vh;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
     .wrapper {
         width: 500px;
+        height: 100vh;
     }
 }

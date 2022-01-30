@@ -5,6 +5,7 @@ import { Post } from '@/components/Post/Post';
 import { POSTS_PER_PAGE } from '@/consts/consts';
 import { Pagination } from '@/components/Pagination/Pagination';
 import { getPosts, getFiles } from '@/utils/getters';
+import { sortByDate } from '@/utils/utils';
 
 const BlogPage = ({ posts, currentPage, numPages, categories }) => {
     return (
@@ -57,10 +58,10 @@ export const getStaticProps = async ({ params }) => {
     // вычисление числа постов пагинация
     const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
     const orderedPosts = posts.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
-
+  console.log(orderedPosts.sort(sortByDate),'=.d')
     return {
       props: {
-        posts: orderedPosts,
+        posts:  orderedPosts.sort(sortByDate),
         numPages: numberOfPages,
         currentPage: page,
         categories: uniqueCategories,

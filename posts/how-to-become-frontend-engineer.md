@@ -1,7 +1,7 @@
 ---
 title: 'Как стать frontend-разработчиком в 2022 году? (часть 1)'
 category: 'PROGRAMMING'
-date: '23.01.2021'
+date: '2022-01-23'
 excerpt: 'С чего начать свой путь в frontend разработке'
 cover_image: '/images/posts/coding.jpg'
 ---

@@ -74,6 +74,10 @@
   .posts {
       grid-template-columns: 1fr;
   }
+  .post_body pre {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 }
 
 .post_category {
@@ -134,7 +138,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: var(--red);
+  color: var(--green);
 }
 
 .post_read_more span {

@@ -1,7 +1,7 @@
 ---
 title: 'Как работает функция reduce в Javascript?'
 category: 'PROGRAMMING'
-date: '03.12.2021'
+date: '2021-12-03'
 excerpt: 'В языке javascript существует очень много встроенных полезных функций'
 cover_image: '/images/posts/reduce.jpg'
 ---
