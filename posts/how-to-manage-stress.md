@@ -1,8 +1,8 @@
 ---
 title: 'Как управлять своими эмоциями?'
 category: 'PSYCHOLOGY'
-date: '2021-02-06'
-excerpt: 'Тестовый пост'
+date: '2022-02-06'
+excerpt: 'В данном посте я расстмотрю тема управления своими эмоциями'
 cover_image: '/images/posts/stress.jpg'
 ---
 
