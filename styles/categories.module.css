@@ -36,5 +36,6 @@
     .wrapper {
         width: 450px !important;
         margin: 0 auto;
+        margin-bottom: 10px;
     }    
 }
