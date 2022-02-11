@@ -31,7 +31,7 @@
 .post_title {
   margin: 10px 0;
   color: var(--black);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .post_body ul, .post_body ol {
@@ -49,6 +49,11 @@
   line-height: 2;
 }
 .post_body img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.post_body_img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -94,10 +99,8 @@
 }
 
 .post_date {
-  background: var(--dark-white);
   color: var(--green);
   margin-bottom: 20px;
-  padding: 3px 10px;
 }
 
 .post_image {
@@ -182,7 +185,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 78% 19%;
 }
 .shareIcons {
   display: flex;

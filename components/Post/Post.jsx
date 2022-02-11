@@ -3,10 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaReadme } from 'react-icons/fa';
 import styles from '../../styles/post.module.css';
-import { getCategoryItem } from '../../utils/utils';
+import { getCategoryItem, MONTHS } from '../../utils/utils';
 
 export const Post = ({ post, compact }) => {
     const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post
+    const postDate = new Date(date);
     const { text, color } = getCategoryItem(category);
     return (
         <div className={styles.card}>
@@ -23,13 +24,13 @@ export const Post = ({ post, compact }) => {
                     {title}
             </div>
             {!compact && <div className={styles.post_image}>
-                <img src={cover_image} alt={title}/>
+                <Image src={cover_image} alt={title} width={250} height={250} className="post_body_img"/>
             </div>}
             <div 
                 className={styles.post_date}
                 style={{ fontSize: `${compact ? '14px' : ''}`}}
             >
-                {date}
+                {`${MONTHS[postDate.getMonth()]} ${postDate.getDate()}, ${postDate.getFullYear()}`}
             </div>
             <div className={styles.post_excerpt}>{excerpt}...</div>
             <Link href={`/blog/${slug}`}>
