@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    /* font-family: 'PT Sans', sans-serif; */
+    font-family: 'Rubik', sans-serif
 }
 
 :root {
@@ -90,4 +92,197 @@ header a {
 }
 .margin-left-5 {
     margin-left: 5px;
+}
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  @apply bg-gray-50 dark:bg-gray-900;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* https://seek-oss.github.io/capsize/ */
+.capsize::before {
+  content: '';
+  margin-bottom: -0.098em;
+  display: table;
+}
+
+.capsize::after {
+  content: '';
+  margin-top: -0.219em;
+  display: table;
+}
+
+.prose .anchor {
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible no-underline;
+}
+
+.prose a {
+  @apply transition-all;
+}
+
+.prose .anchor:after {
+  @apply text-gray-300 dark:text-gray-700;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible no-underline;
+}
+
+.prose pre {
+  @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+}
+
+.prose code {
+  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-gray-100 dark:bg-gray-900;
+}
+
+.prose pre code {
+    color: rgb(31 41 55);
+    padding: 0px;
+  /* @apply text-gray-800 dark:text-gray-200 p-0; */
+  border: initial;
+}
+
+.prose img {
+  margin-top: 0;
+}
+
+.prose > :first-child {
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: rgb(55 65 81);
+}
+
+.token.punctuation {
+    color: rgb(55 65 81);
+  /* @apply text-gray-700 dark:text-gray-300; */
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #22c55e;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a855f7;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #eab308;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #3b82f6;
+}
+
+.token.function,
+.token.class-name {
+  color: #d946ef;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #eab308;
+}
+.token.punctuation {
+    color: #323846;
+}
+.token.parameter {
+    color: #47a3f3;
+}
+code[class*='language-'],
+pre[class*='language-'] {
+    color: rgb(31 41 55);
+  /* @apply text-gray-800 dark:text-gray-50; */
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
+border-width: 1px;
+border-color: rgb(234 234 234/var(--tw-border-opacity));
+background-color: rgb(249 250 251/var(--tw-bg-opacity))
+}
+
+.rehype-code-title {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 700;
+    color: rgb(31 41 55);
+    background-color: rgb(229 231 235);
+    border-bottom-width: 0px;
+    border-color: rgb(229 231 235);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.rehype-code-title + pre {
+    margin-top: 0px;
+    border-radius: 0px;
+}
+
+.highlight-line {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-color: rgb(59 130 246);
+  /* @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800; */
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
 }

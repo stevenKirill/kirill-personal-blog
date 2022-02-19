@@ -31,7 +31,7 @@ export const getCategoryItem = category => {
 }
 
 export const sortByDate = (a, b) => {
-    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+    return new Date(b.date) - new Date(a.date)
 }
 
 export const MONTHS = {

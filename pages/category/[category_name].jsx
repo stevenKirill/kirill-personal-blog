@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
-import { getPosts, getPostCategories } from '@/utils/getters';
+import { allBlogs } from '.contentlayer/generated';
+// import { allBlogs } from '../../.contentlayer/generated';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
@@ -25,9 +26,8 @@ const CategoryBlogPage = ({ posts, category }) => {
   )
 };
 
-export const getStaticPaths =  async () => {
-    const categories = getPostCategories();
-
+export const getStaticPaths = () => {
+    const categories = allBlogs.map(blog => blog.category.toLowerCase());
     const paths = categories.map(category => ({
         params: { category_name: category }
     }));
@@ -38,8 +38,8 @@ export const getStaticPaths =  async () => {
     };
 };
 
-export const getStaticProps = async ({ params: { category_name }}) => {
-    const categoryPosts = getPosts().filter(post => post.frontmatter.category.toLowerCase() === category_name);
+export const getStaticProps = ({ params: { category_name }}) => {
+    const categoryPosts = allBlogs.filter(post => post.category.toLowerCase() === category_name);
     return {
         props: {
             posts: categoryPosts,

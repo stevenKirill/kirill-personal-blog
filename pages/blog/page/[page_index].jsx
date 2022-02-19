@@ -4,8 +4,9 @@ import CategoryBar from '@/components/CategoryBar/CategoryBar';
 import { Post } from '@/components/Post/Post';
 import { POSTS_PER_PAGE } from '@/consts/consts';
 import { Pagination } from '@/components/Pagination/Pagination';
-import { getPosts, getFiles } from '@/utils/getters';
 import { sortByDate } from '@/utils/utils';
+import { allBlogs } from '.contentlayer/generated';
+// import { allBlogs } from '../../../.contentlayer/generated';
 
 const BlogPage = ({ posts, currentPage, numPages, categories }) => {
     return (
@@ -28,10 +29,8 @@ const BlogPage = ({ posts, currentPage, numPages, categories }) => {
     )
 };
 
-export const getStaticPaths = async () => {
-  const files = getFiles();
-  const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
-
+export const getStaticPaths = () => {
+  const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
   let paths = [];
 
   for (let i = 1; i <= numberOfPages; i++) {
@@ -47,17 +46,15 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = ({ params }) => {
     const page = parseInt(params && params.page_index) || 1;
-    const posts = getPosts();
-    const files = getFiles();
 
-    const categories = posts.map(post => post.frontmatter.category);
+    const categories = allBlogs.map(post => post.category);
     const uniqueCategories = [...new Set(categories)];
 
     // вычисление числа постов пагинация
-    const numberOfPages = Math.ceil(files.length / POSTS_PER_PAGE);
-    const orderedPosts = posts.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
+    const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
+    const orderedPosts = allBlogs.slice((page - 1) * POSTS_PER_PAGE,(page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE);
     return {
       props: {
         posts:  orderedPosts.sort(sortByDate),

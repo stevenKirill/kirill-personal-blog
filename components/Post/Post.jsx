@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaReadme } from 'react-icons/fa';
 import styles from '../../styles/post.module.css';
 import { getCategoryItem, MONTHS } from '../../utils/utils';
 
 export const Post = ({ post, compact }) => {
-    const { frontmatter: { title, category, cover_image, date, excerpt }, slug } = post
+    const { title, category, cover_image, date, excerpt, slug } = post
     const postDate = new Date(date);
     const { text, color } = getCategoryItem(category);
     return (
@@ -21,10 +20,10 @@ export const Post = ({ post, compact }) => {
                 className={styles.post_title}
                 style={{ fontSize: `${compact ? '15px' : ''}`}}
             >
-                    {title}
+                {title}
             </div>
             {!compact && <div className={styles.post_image}>
-                <Image src={cover_image} alt={title} width={250} height={250} className="post_body_img"/>
+                <img src={cover_image} alt={title}/>
             </div>}
             <div 
                 className={styles.post_date}

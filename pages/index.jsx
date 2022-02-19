@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import SearchBar from '@/components/SearchBar/SearchBar';
 import styles from '@/styles/main_page.module.css';
+import { sortByDate } from '@/utils/utils';
+import { allBlogs } from '.contentlayer/generated';
+// import { allBlogs } from '../.contentlayer/generated';
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div className={styles.wrap}>
       <Head>
@@ -10,7 +13,7 @@ export default function Home() {
         <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
         <meta name="description" content=""/>
       </Head>
-      <SearchBar/>
+      <SearchBar posts={posts}/>
       <div className={styles.main}>
         <div className={styles.inner}>
           <div className={styles.header}>
@@ -28,3 +31,8 @@ export default function Home() {
     </div>
   )
 }
+
+export const getStaticProps = () => {
+  const posts = allBlogs.sort(sortByDate);
+  return { props: { posts } };
+};
