@@ -28,14 +28,14 @@
 @media (max-width: 600px) {
     .wrapper {
         width: 300px !important;
-        margin: 0 auto;
+        margin: 10px auto;
     }    
 }
 
 @media (max-width: 900px) and (min-width: 600px) {
     .wrapper {
         width: 450px !important;
-        margin: 0 auto;
+        margin: 10px auto;
         margin-bottom: 10px;
     }    
 }
