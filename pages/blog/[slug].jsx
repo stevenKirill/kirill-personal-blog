@@ -1,7 +1,7 @@
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import { allBlogs } from '.contentlayer/generated';
+// import { allBlogs } from '.contentlayer/generated';
 import { BlogLayout } from '../../layouts/BlogLayout';
-// import { allBlogs } from '../../.contentlayer/generated';
+import { allBlogs } from '../../.contentlayer/generated';
 
 const PostPage = ({ post, pageName }) => {
   const Component = useMDXComponent(post.body.code);

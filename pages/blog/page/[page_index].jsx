@@ -5,8 +5,8 @@ import { Post } from '@/components/Post/Post';
 import { POSTS_PER_PAGE } from '@/consts/consts';
 import { Pagination } from '@/components/Pagination/Pagination';
 import { sortByDate } from '@/utils/utils';
-import { allBlogs } from '.contentlayer/generated';
-// import { allBlogs } from '../../../.contentlayer/generated';
+// import { allBlogs } from '.contentlayer/generated';
+import { allBlogs } from '../../../.contentlayer/generated';
 
 const BlogPage = ({ posts, currentPage, numPages, categories }) => {
     return (

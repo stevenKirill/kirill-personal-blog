@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
-import { allBlogs } from '.contentlayer/generated';
-// import { allBlogs } from '../../.contentlayer/generated';
+// import { allBlogs } from '.contentlayer/generated';
+import { allBlogs } from '../../.contentlayer/generated';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
