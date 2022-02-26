@@ -7,7 +7,6 @@ import SearchResults from '../SearchResults/SearchResults';
 const SearchBar = ({ posts }) => {
   const [searchTerm, setSearchTerm] = useState('');
     const filteredBlogPosts = posts.filter((post) => {
-      console.log(post.title.toLowerCase().includes(searchTerm.toLowerCase()),'=> fh')
       return post.title.toLowerCase().includes(searchTerm.toLowerCase())
     }
   );
