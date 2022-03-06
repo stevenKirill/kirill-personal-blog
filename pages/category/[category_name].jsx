@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
-// import { allBlogs } from '.contentlayer/generated';
 import { allBlogs } from '../../.contentlayer/generated';
+import { sortByDate } from '@/utils/utils';
 
 /** Страница категории постов. */
 const CategoryBlogPage = ({ posts, category }) => {
@@ -42,7 +42,7 @@ export const getStaticProps = ({ params: { category_name }}) => {
     const categoryPosts = allBlogs.filter(post => post.category.toLowerCase() === category_name);
     return {
         props: {
-            posts: categoryPosts,
+            posts: categoryPosts.sort(sortByDate),
             category: category_name
         }
     };
