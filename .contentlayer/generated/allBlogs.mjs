@@ -5,7 +5,7 @@ import howToBecomeFrontendEngineer2Mdx from './Blog/how-to-become-frontend-engin
 import howToManageStressMdx from './Blog/how-to-manage-stress.mdx.json'
 import howToPassInterviewMdx from './Blog/how-to-pass-interview.mdx.json'
 import javascriptReduceMdx from './Blog/javascript-reduce.mdx.json'
-import jsTechInterviewQuestionsMdx from './Blog/js-tech-interview-questions.mdx.json'
 import jobsOffersExperienceMdx from './Blog/jobs-offers-experience.mdx.json'
+import jsTechInterviewQuestionsMdx from './Blog/js-tech-interview-questions.mdx.json'
 
-export const allBlogs = [howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jsTechInterviewQuestionsMdx, jobsOffersExperienceMdx]
+export const allBlogs = [howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jobsOffersExperienceMdx, jsTechInterviewQuestionsMdx]

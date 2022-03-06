@@ -5,7 +5,9 @@
             "@/components/*": ["components/*"],
             "@/utils/*": ["utils/*"],
             "@/consts/*": ["consts/*"],
-            "@/styles/*": ["styles/*"]
+            "@/styles/*": ["styles/*"],
+            "@/contentlayer/*": [".contentlayer/*"],
+            "@/layouts/*": ["layouts/*"]
         }
     }
 }
