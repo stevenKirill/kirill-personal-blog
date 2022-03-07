@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/post.module.css';
 import { Post } from '@/components/Post/Post';
-import { allBlogs } from '../../.contentlayer/generated';
+import { allBlogs } from '@/contentlayer/generated';
 import { sortByDate } from '@/utils/utils';
 
 /** Страница категории постов. */

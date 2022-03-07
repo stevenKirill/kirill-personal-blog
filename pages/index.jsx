@@ -2,7 +2,7 @@ import Head from 'next/head';
 import SearchBar from '@/components/SearchBar/SearchBar';
 import styles from '@/styles/main_page.module.css';
 import { sortByDate } from '@/utils/utils';
-import { allBlogs } from '../.contentlayer/generated';
+import { allBlogs } from '@/contentlayer/generated';
 
 export default function Home({ posts }) {
   return (
@@ -23,7 +23,13 @@ export default function Home({ posts }) {
             <p>мои статьи находяться в разделе почитать</p>
             <p>также я собрал видео, на разные интересующие меня темы в разделе посмотреть</p>
             <p>ты можешь почитать подробную информацию обо мне в разделе эбаут</p>
-            <p className={styles.last_p}>если у тебя есть вопросы или предложения ты можешь связаться со мной в <a href="https://t.me/stevenPav" target="_blank" rel="noreferrer">телеге</a></p>
+            <p className={styles.last_p}>если у тебя есть вопросы или предложения ты можешь связаться со мной в 
+            <a
+              href="https://t.me/stevenPav"
+              target="_blank"
+              rel="noreferrer"
+              style={{color: 'rgb(41,33,33)', display: 'inline-block',  marginLeft: '4px' }}
+            >телеге</a></p>
           </div>
         </div>
       </div>

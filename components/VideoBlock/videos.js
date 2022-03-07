@@ -10,11 +10,6 @@ export const videos = [
         category: '#javaScript',
     },
     {
-        name: 'Как работает blockchain',
-        id: 'bBC-nXj3Ng4',
-        category: '#blockchain',
-    },
-    {
         name: 'Основы уверенности в себе',
         id: 'YutxxLRGJac',
         category: '#psychology',
@@ -27,11 +22,6 @@ export const videos = [
     {
         name: 'Техника отпускания',
         id: 'otQ6TAmmBIE',
-        category: '#psychology',
-    },
-    {
-        name: 'Техника привлечения успеха',
-        id: 'tvJPOZ8WfuE',
         category: '#psychology',
     },
     {
