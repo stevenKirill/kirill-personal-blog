@@ -35,7 +35,7 @@ export default function Home({ posts }) {
       </div>
     </div>
   )
-}
+};
 
 export const getStaticProps = () => {
   const posts = allBlogs.sort(sortByDate);

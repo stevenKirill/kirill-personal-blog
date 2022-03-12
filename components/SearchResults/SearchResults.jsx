@@ -1,9 +1,9 @@
-import { Post } from '../Post/Post';
-import styles from '../../styles/search.module.css';
+import { Post } from "../Post/Post";
+import styles from "../../styles/search.module.css";
 
 /** Список постов после поиска (результаты поиска). */
 const SearchResults = ({ results }) => {
-  if (results.length === 0) return <div>Нет совпадений</div>
+  if (results.length === 0) return <div>Нет совпадений</div>;
   return (
     <div className={styles.results}>
       <div className={styles.resultsWrapper}>
@@ -13,7 +13,7 @@ const SearchResults = ({ results }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchResults
+export default SearchResults;
