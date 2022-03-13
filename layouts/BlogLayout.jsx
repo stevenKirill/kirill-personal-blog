@@ -38,6 +38,7 @@ export const BlogLayout = ({
         </div>
         <div className={styles.post_body}>{children}</div>
         <div className={styles.shareIcons}>
+          <div className={styles.shareTitle}>Поделиться: </div>
           <FacebookShareButton
             url={"https://peing.net/ja/"}
             quote={title}

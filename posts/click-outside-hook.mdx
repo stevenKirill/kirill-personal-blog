@@ -1,0 +1,50 @@
+---
+title: 'Как сделать свой первый кастомный хук, пример из реального production приложения.'
+category: 'PROGRAMMING'
+date: '2022-03-13'
+excerpt: 'Написание кастомных хуков считается очень хорошей практикой в реакте...'
+cover_image: '/images/posts/custom-hook.png'
+---
+
+Всем привет! Сегодня я затрону тему кастомных хуков в React на примере одного хука, который я использую
+на своем рабочем проекте как пример.
+
+Ниже код самого хука. Давайте разберем код и вообще что данный хук представляет из себя. Назовен его useDetectClickOutside.
+
+ ```javascript
+const useDetectClickOutside = (initialIsVisible, cleanFunc) => {
+  const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
+  const ref = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setIsComponentVisible(false);
+        if (cleanFunc) {
+          cleanFunc();
+        }
+      }
+    };
+    document.addEventListener('click', handleClickOutside, true);
+    return () => document.removeEventListener('click', handleClickOutside, true);
+  }, []);
+  return { ref, isComponentVisible, setIsComponentVisible };
+};
+export default useDetectClickOutside;
+```
+
+Сам хук представляет из себя следующее поведение: например у нас есть какое-то модальное окно или компонент popover
+и нам надо сделать так, чтобы когда этот компонент виден (то есть находится в состоянии открыт), мы хотим сделать так, что 
+если мы кликнули куда-то на документ он закрывался, (находился бы в состоянии закрыт), но при этом если клик произошел
+в самом компоненте - тогда ничего бы не происходило. Визуально это выглядит примерно так:
+
+![popover example](/images/posts/popover-example.gif)
+
+В данный хук мы передаем начальное состояние true нашего компонента, а так же какую то функцию, которую нам возможно нужно
+будет вызвать, когда мы будем закрывать наш компонент. Спомощью ***useRef*** создаем ссылку на DOM ноду нашего элемента,
+и создаем ***useEffect***, в котором при монтировании компонента вешаем на документ функцию обработчик handleClickOutside.
+Эта функция проверяет по ссылке на дом ноду, которую мы создали ранее - поймали ли мы клик на том самом элементе или на его дочерних элементах.
+И если это не так, то есть мы кликнули за пределами этого элемента, тогда переводим состояние в false и вызываем функцию очистки если передавали ее.
+В конце не забудем удалить этот самый обработчик handleClickOutside, вернув функцию из useEffect, в которой вызовем removeEventListener.
+
+Вот такой простой хук, который мы используем в нашем проекте во многих местах где нужно такое поведение.
+Изучайте react и не бойтесь писать кастомные хуки, так как это правило хорошего тона в сегодняшней разработке:)

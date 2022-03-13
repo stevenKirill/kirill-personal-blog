@@ -191,6 +191,10 @@
   justify-content: center;
   align-items: center;
 }
+.shareTitle {
+  margin-right: 10px;
+  font-weight: 800;
+}
 
 @media only screen and (max-width: 768px) {
   .post_image_big img {

@@ -4,7 +4,7 @@ export const getCategoryItem = (category) => {
   switch (category) {
     case CATEGORIES.PROGRAMMING:
       return {
-        text: "Программирование",
+        text: "Технологии",
         color: "goldenCategory",
       };
     case CATEGORIES.PSYCHOLOGY:
