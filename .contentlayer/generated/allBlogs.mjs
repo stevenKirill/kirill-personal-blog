@@ -8,5 +8,6 @@ import howToPassInterviewMdx from './Blog/how-to-pass-interview.mdx.json'
 import javascriptReduceMdx from './Blog/javascript-reduce.mdx.json'
 import jobsOffersExperienceMdx from './Blog/jobs-offers-experience.mdx.json'
 import jsTechInterviewQuestionsMdx from './Blog/js-tech-interview-questions.mdx.json'
+import errorBoundaryMdx from './Blog/error-boundary.mdx.json'
 
-export const allBlogs = [clickOutsideHookMdx, howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jobsOffersExperienceMdx, jsTechInterviewQuestionsMdx]
+export const allBlogs = [clickOutsideHookMdx, howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jobsOffersExperienceMdx, jsTechInterviewQuestionsMdx, errorBoundaryMdx]
