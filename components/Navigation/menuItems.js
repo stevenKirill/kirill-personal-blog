@@ -12,7 +12,7 @@ export const menuItems = [
     path: "/watch",
   },
   {
-    title: "эбаут",
+    title: "резюме",
     path: "/about",
   },
   {

@@ -83,6 +83,9 @@
     overflow: hidden;
     overflow-x: scroll;
   }
+  .post_body p {
+    text-align: unset;
+  }
 }
 
 .post_category {

@@ -35,7 +35,8 @@
     display: inline-block;
     vertical-align: top;
     max-width: 100%;
-    text-align: center
+    text-align: center;
+    margin-left: 0;
  }
  .item {
     display: inline-block;

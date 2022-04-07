@@ -8,7 +8,7 @@ import { ImLocation } from "react-icons/im";
 const ResumePanel = () => {
   return (
     <div className={classes.content}>
-      <div className={classes.replacer}></div>
+      {/* <div className={classes.replacer}></div> */}
       <div className={classes.contacts}>
         <div className={classes.list}>
           <div className={classes.replacer}></div>
@@ -29,7 +29,7 @@ const ResumePanel = () => {
           <div className={classes.replacer}></div>
         </div>
       </div>
-      <div className={classes.replacer}></div>
+      {/* <div className={classes.replacer}></div> */}
     </div>
   );
 };
