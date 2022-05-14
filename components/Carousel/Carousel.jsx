@@ -61,13 +61,20 @@ const CarouselComponent = () => {
         />
         <Image
           src="/images/other/carousel/5.jpg"
-          width={400}
-          height={400}
+          width={500}
+          height={500}
           alt="5"
           className="photo_contain"
         />
         <Image
           src="/images/other/carousel/6.jpg"
+          width={400}
+          height={400}
+          alt="6"
+          className="photo_contain"
+        />
+        <Image
+          src="/images/other/carousel/7.jpg"
           width={400}
           height={400}
           alt="6"

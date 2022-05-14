@@ -10,5 +10,6 @@ import javascriptReduceMdx from './Blog/javascript-reduce.mdx.json'
 import jobsOffersExperienceMdx from './Blog/jobs-offers-experience.mdx.json'
 import jsTechInterviewQuestionsMdx from './Blog/js-tech-interview-questions.mdx.json'
 import mfAppPractiseMdx from './Blog/mf-app-practise.mdx.json'
+import timeToLeaveJobMdx from './Blog/time-to-leave-job.mdx.json'
 
-export const allBlogs = [clickOutsideHookMdx, errorBoundaryMdx, howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jobsOffersExperienceMdx, jsTechInterviewQuestionsMdx, mfAppPractiseMdx]
+export const allBlogs = [clickOutsideHookMdx, errorBoundaryMdx, howToBecomeFrontendEngineerMdx, howToBecomeFrontendEngineer2Mdx, howToManageStressMdx, howToPassInterviewMdx, javascriptReduceMdx, jobsOffersExperienceMdx, jsTechInterviewQuestionsMdx, mfAppPractiseMdx, timeToLeaveJobMdx]

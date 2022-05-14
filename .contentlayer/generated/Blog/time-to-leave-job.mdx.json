@@ -1,0 +1,21 @@
+{
+  "title": "Когда пора менять работу?",
+  "category": "PSYCHOLOGY",
+  "date": "2022-04-23",
+  "excerpt": "Когда стоит принимать решение по смене работы...",
+  "cover_image": "/images/posts/leave-job.jpg",
+  "body": {
+    "raw": "\r\nВсем привет! Давно не выходил на связь, так как был в отпуске и путешествовал. Сегодня хотел бы\r\nзатронуть тему когда стоит менять работы или проект.",
+    "code": "var Component=(()=>{var x=Object.create;var c=Object.defineProperty;var j=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var a=t=>c(t,\"__esModule\",{value:!0});var _=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),d=(t,e)=>{for(var n in e)c(t,n,{get:e[n],enumerable:!0})},i=(t,e,n,r)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of l(e))!g.call(t,o)&&(n||o!==\"default\")&&c(t,o,{get:()=>e[o],enumerable:!(r=j(e,o))||r.enumerable});return t},f=(t,e)=>i(a(c(t!=null?x(u(t)):{},\"default\",!e&&t&&t.__esModule?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t),O=(t=>(e,n)=>t&&t.get(e)||(n=i(a({}),e,1),t&&t.set(e,n),n))(typeof WeakMap!=\"undefined\"?new WeakMap:0);var m=_((y,p)=>{p.exports=_jsx_runtime});var h={};d(h,{default:()=>M,frontmatter:()=>b});var s=f(m()),b={title:\"\\u041A\\u043E\\u0433\\u0434\\u0430 \\u043F\\u043E\\u0440\\u0430 \\u043C\\u0435\\u043D\\u044F\\u0442\\u044C \\u0440\\u0430\\u0431\\u043E\\u0442\\u0443?\",category:\"PSYCHOLOGY\",date:\"2022-04-23\",excerpt:\"\\u041A\\u043E\\u0433\\u0434\\u0430 \\u0441\\u0442\\u043E\\u0438\\u0442 \\u043F\\u0440\\u0438\\u043D\\u0438\\u043C\\u0430\\u0442\\u044C \\u0440\\u0435\\u0448\\u0435\\u043D\\u0438\\u0435 \\u043F\\u043E \\u0441\\u043C\\u0435\\u043D\\u0435 \\u0440\\u0430\\u0431\\u043E\\u0442\\u044B...\",cover_image:\"/images/posts/leave-job.jpg\"};function C(t={}){let{wrapper:e}=t.components||{};return e?(0,s.jsx)(e,Object.assign({},t,{children:(0,s.jsx)(n,{})})):n();function n(){let r=Object.assign({p:\"p\"},t.components);return(0,s.jsx)(r.p,{children:`\\u0412\\u0441\\u0435\\u043C \\u043F\\u0440\\u0438\\u0432\\u0435\\u0442! \\u0414\\u0430\\u0432\\u043D\\u043E \\u043D\\u0435 \\u0432\\u044B\\u0445\\u043E\\u0434\\u0438\\u043B \\u043D\\u0430 \\u0441\\u0432\\u044F\\u0437\\u044C, \\u0442\\u0430\\u043A \\u043A\\u0430\\u043A \\u0431\\u044B\\u043B \\u0432 \\u043E\\u0442\\u043F\\u0443\\u0441\\u043A\\u0435 \\u0438 \\u043F\\u0443\\u0442\\u0435\\u0448\\u0435\\u0441\\u0442\\u0432\\u043E\\u0432\\u0430\\u043B. \\u0421\\u0435\\u0433\\u043E\\u0434\\u043D\\u044F \\u0445\\u043E\\u0442\\u0435\\u043B \\u0431\\u044B\\r\n\\u0437\\u0430\\u0442\\u0440\\u043E\\u043D\\u0443\\u0442\\u044C \\u0442\\u0435\\u043C\\u0443 \\u043A\\u043E\\u0433\\u0434\\u0430 \\u0441\\u0442\\u043E\\u0438\\u0442 \\u043C\\u0435\\u043D\\u044F\\u0442\\u044C \\u0440\\u0430\\u0431\\u043E\\u0442\\u044B \\u0438\\u043B\\u0438 \\u043F\\u0440\\u043E\\u0435\\u043A\\u0442.`})}}var M=C;return O(h);})();\n;return Component;"
+  },
+  "_id": "time-to-leave-job.mdx",
+  "_raw": {
+    "sourceFilePath": "time-to-leave-job.mdx",
+    "sourceFileName": "time-to-leave-job.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "time-to-leave-job"
+  },
+  "type": "Blog",
+  "slug": "time-to-leave-job"
+}
