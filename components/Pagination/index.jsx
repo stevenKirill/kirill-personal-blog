@@ -1,4 +1,4 @@
-import classes from "@/styles/pagination.module.css";
+import classes from "../../styles/pagination.module.css";
 import Link from "next/link";
 
 // TODO подумать как сделать так если страниц будет много например больше 10

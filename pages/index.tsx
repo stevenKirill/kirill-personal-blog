@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import SearchBar from '@/components/SearchBar/SearchBar';
-import styles from '@/styles/main_page.module.css';
-import { sortByDate } from '@/utils/utils';
-import { allBlogs } from '@/contentlayer/generated';
+import SearchBar from '../components/SearchBar';
+import styles from '../styles/main_page.module.css';
+import { sortByDate } from '../utils/utils';
+import { allBlogs } from '../.contentlayer/generated';
 
 export default function Home({ posts }) {
   return (

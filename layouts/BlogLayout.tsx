@@ -6,9 +6,9 @@ import {
   VKShareButton,
   TelegramShareButton,
 } from "react-share";
-import styles from "@/styles/post.module.css";
+import styles from "../styles/post.module.css";
 import { FacebookIcon, TwitterIcon, VKIcon, TelegramIcon } from "react-share";
-import { getCategoryItem } from "@/utils/utils";
+import { getCategoryItem } from "../utils/utils";
 
 export const BlogLayout = ({
   post: { title, date, category, cover_image, slug },

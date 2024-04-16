@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Carousel } from "@trendyol-js/react-carousel";
+// import { Carousel } from "@trendyol-js/react-carousel";
 import classes from "@/styles/photo.module.css";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
@@ -23,7 +23,8 @@ const rightArrow = () => {
 const CarouselComponent = () => {
   return (
     <>
-      <Carousel
+    <div>карусель</div>
+      {/* <Carousel
         show={3.5}
         slide={3}
         swiping={true}
@@ -80,7 +81,7 @@ const CarouselComponent = () => {
           alt="6"
           className="photo_contain"
         />
-      </Carousel>
+      </Carousel> */}
     </>
   );
 };

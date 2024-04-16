@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styles from "@/styles/post.module.css";
-import CategoryBar from "@/components/CategoryBar/CategoryBar";
-import { Post } from "@/components/Post/Post";
-import { POSTS_PER_PAGE } from "@/consts/consts";
-import { Pagination } from "@/components/Pagination/Pagination";
-import { sortByDate } from "@/utils/utils";
+import CategoryBar from "@/components/CategoryBar";
+import { Post } from "@/components/Post";
+import { POSTS_PER_PAGE } from "@/consts";
+import { Pagination } from "../../../components/Pagination";
+import { sortByDate } from "../../../utils/utils";
 import { allBlogs } from "@/contentlayer/generated";
 
 const BlogPage = ({ posts, currentPage, numPages, categories }) => {

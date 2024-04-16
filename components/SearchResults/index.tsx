@@ -1,4 +1,4 @@
-import { Post } from "../Post/Post";
+import { Post } from "../Post";
 import styles from "../../styles/search.module.css";
 
 /** Список постов после поиска (результаты поиска). */

@@ -1,6 +1,6 @@
 import '../styles/main.css';
-import { Header } from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import { Header } from '../components/Header';
+import Footer from '../component/Footer';
 import { useEffect } from 'react';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <div className={`${pageProps.pageName !== 'ABOUT' 
+      <div className={`${pageProps.pageName !== 'ABOUT'
       && pageProps.pageName !== 'BLOG_PAGE' ? 'main_container' : ''}`}>
         <Header/>
         <Component {...pageProps} />
@@ -49,4 +49,4 @@ function MyApp({ Component, pageProps }) {
   )
 };
 
-export default MyApp
+export default MyApp;

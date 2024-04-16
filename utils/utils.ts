@@ -1,4 +1,5 @@
-import { CATEGORIES } from "@/consts/consts";
+import { CATEGORIES } from "@/consts";
+
 
 export const getCategoryItem = (category) => {
   switch (category) {
@@ -31,6 +32,8 @@ export const getCategoryItem = (category) => {
 };
 
 export const sortByDate = (a, b) => {
+  console.log(a, '=> a sortByDate');
+  console.log(b, '=> b sortByDate');
   return new Date(b.date) - new Date(a.date);
 };
 

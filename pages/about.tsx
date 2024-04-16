@@ -1,11 +1,11 @@
 import Head from "next/head";
-import ResumeHeader from "@/components/ResumeHeader/ResumeHeader";
-import ResumePanel from "@/components/ResumePanel/ResumePanel";
-import ResumeBlock from "@/components/ResumeBlock/ResumeBlock";
+import ResumeHeader from "../components/ResumeHeader";
+import ResumePanel from "../components/ResumePanel";
+import ResumeBlock from "../components/ResumeBlock";
+import Rating from "../components/Rating";
 import { FaInfoCircle, FaUniversity, FaRegGem } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import classes from "../styles/resume.module.css";
-import Rating from "@/components/Rating/Rating";
 
 const About = ({ pageName }) => {
   return (

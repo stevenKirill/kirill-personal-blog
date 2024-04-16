@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import styles from "../../styles/search.module.css";
-import SearchResults from "../SearchResults/SearchResults";
+import SearchResults from "../SearchResults";
 
 /** Компонент поиска постов. */
 const SearchBar = ({ posts }) => {

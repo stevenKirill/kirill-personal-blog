@@ -1,5 +1,5 @@
-import { getCategoryItem } from "@/utils/utils";
-import classes from "@/styles/categories.module.css";
+import { getCategoryItem } from "../../utils/utils";
+import classes from "../../styles/categories.module.css";
 import Link from "next/link";
 
 /** Компонент боковое меню с категориями. */

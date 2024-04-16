@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { menuItems } from './menuItems';
-import classes from '@/styles/navigation.module.css';
+import classes from '../../styles/navigation.module.css';
 
 const Navigation = () => {
     const hamburgerRef = useRef(null);
@@ -26,7 +26,7 @@ const Navigation = () => {
             <ul className={classes.nav_list} ref={menuRef}>
                 {menuItems.map(link => {
                     return (
-                        <li 
+                        <li
                             className={classes.nav_item}
                             key={`${link.title}_${link.path}`}
                             onClick={handleCloseMenu}
@@ -38,7 +38,7 @@ const Navigation = () => {
                     )
                 })}
             </ul>
-            <div 
+            <div
                 className={classes.hamburger}
                 ref={hamburgerRef}
                 onClick={handleOpenMobileMenu}
