@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={classes.wrapper}>
       <div className={classes.name}>© kirill pavlovskii</div>
       <div className={classes.icons}>
-        <a href="https://t.me/stevenPav" target="_blank" rel="noreferrer">
+        <a href="https://t.me/kirillPavlovskii" target="_blank" rel="noreferrer">
           <FaTelegram color="white" size="30" className={classes.icon} />
         </a>
         <a

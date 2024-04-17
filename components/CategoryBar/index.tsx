@@ -12,7 +12,7 @@ const CategoryBar = ({ categories }) => {
         return (
           <div className={`${color} ${classes.link}`} key={text}>
             <Link href={`/category/${category.toLowerCase()}`}>
-              <a>{text}</a>
+              {text}
             </Link>
           </div>
         );

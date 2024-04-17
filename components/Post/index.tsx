@@ -37,12 +37,12 @@ export const Post = ({ post, compact }) => {
       </div>
       <div className={styles.post_excerpt}>{excerpt}...</div>
       <Link href={`/blog/${slug}`}>
-        <a className={styles.post_read_more}>
+        <div className={styles.post_read_more}>
           <FaReadme size="1.2rem" />
           <span style={{ fontSize: `${compact ? "14px" : ""}` }}>
             Читать далее
           </span>
-        </a>
+        </div>
       </Link>
     </div>
   );

@@ -1,10 +1,16 @@
+"use client";
+
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import styles from "../../styles/search.module.css";
 import SearchResults from "../SearchResults";
+import { IPost } from "@/types";
 
-/** Компонент поиска постов. */
-const SearchBar = ({ posts }) => {
+interface ISearchBarProps {
+  posts: IPost[];
+}
+
+const SearchBar = ({ posts }: ISearchBarProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const filteredBlogPosts = posts.filter((post) => {
     return post.title.toLowerCase().includes(searchTerm.toLowerCase());

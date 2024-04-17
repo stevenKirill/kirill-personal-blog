@@ -1,17 +1,18 @@
-import Head from 'next/head';
 import SearchBar from '../components/SearchBar';
 import styles from '../styles/main_page.module.css';
 import { sortByDate } from '../utils/utils';
 import { allBlogs } from '../.contentlayer/generated';
+import { IPost } from '@/types';
 
-export default function Home({ posts }) {
+
+interface IHomeProps {
+  posts: IPost[];
+}
+
+export default function Home({ posts = [] }: IHomeProps) {
+  console.log(posts, '=> posts');
   return (
     <div className={styles.wrap}>
-      <Head>
-        <title>Главная</title>
-        <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
-        <meta name="description" content=""/>
-      </Head>
       <SearchBar posts={posts}/>
       <div className={styles.main}>
         <div className={styles.inner}>
@@ -23,13 +24,16 @@ export default function Home({ posts }) {
             <p>мои статьи находяться в разделе почитать</p>
             <p>также я собрал видео, на разные интересующие меня темы в разделе посмотреть</p>
             <p>ты можешь найти больше информации обо мне в разделе резюме</p>
-            <p className={styles.last_p}>если у тебя есть вопросы или предложения ты можешь связаться со мной в 
-            <a
-              href="https://t.me/stevenPav"
-              target="_blank"
-              rel="noreferrer"
-              style={{color: 'rgb(41,33,33)', display: 'inline-block',  marginLeft: '4px' }}
-            >телеге</a></p>
+            <p className={styles.last_p}>если у тебя есть вопросы или предложения ты можешь связаться со мной в
+              <a
+                href="https://t.me/kirillPavlovskii"
+                target="_blank"
+                rel="noreferrer"
+                style={{color: 'rgb(41,33,33)', display: 'inline-block',  marginLeft: '4px' }}
+              >
+                телеге
+                </a>
+            </p>
           </div>
         </div>
       </div>
@@ -37,7 +41,7 @@ export default function Home({ posts }) {
   )
 };
 
-export const getStaticProps = () => {
-  const posts = allBlogs.sort(sortByDate);
-  return { props: { posts } };
-};
+// export const getStaticProps = () => {
+//   const posts = allBlogs.sort(sortByDate);
+//   return { props: { posts } };
+// };

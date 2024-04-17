@@ -1,7 +1,9 @@
+"use client";
+
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import CarouselComponent from "../components/Carousel";
-import classes from "../styles/photo.module.css";
+import CarouselComponent from "../../components/Carousel";
+import classes from "../../styles/photo.module.css";
 
 const Photo = () => {
   const [mounted, setMounted] = useState(false);

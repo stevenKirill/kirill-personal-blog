@@ -1,13 +1,13 @@
 import Head from "next/head";
-import ResumeHeader from "../components/ResumeHeader";
-import ResumePanel from "../components/ResumePanel";
-import ResumeBlock from "../components/ResumeBlock";
-import Rating from "../components/Rating";
+import ResumeHeader from "../../components/ResumeHeader";
+import ResumePanel from "../../components/ResumePanel";
+import ResumeBlock from "../../components/ResumeBlock";
+import Rating from "../../components/Rating";
 import { FaInfoCircle, FaUniversity, FaRegGem } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
-import classes from "../styles/resume.module.css";
+import classes from "../../styles/resume.module.css";
 
-const About = ({ pageName }) => {
+const About = () => {
   return (
     <>
       <Head>
@@ -118,14 +118,6 @@ const About = ({ pageName }) => {
       </div>
     </>
   );
-};
-
-export const getStaticProps = async () => {
-  return {
-    props: {
-      pageName: "ABOUT",
-    },
-  };
 };
 
 export default About;

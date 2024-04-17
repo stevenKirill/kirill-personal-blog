@@ -1,6 +1,13 @@
+import { ReactNode } from "react";
 import classes from "../../styles/resume.module.css";
 
-const ResumeBlock = ({ children, title, icon }) => {
+interface IResumeBlock {
+  title: string;
+  icon: ReactNode;
+  children: ReactNode;
+}
+
+const ResumeBlock = ({ children, title, icon }: IResumeBlock) => {
   return (
     <div className={classes.blockWrapper}>
       <div className={classes.blockHeader}>
