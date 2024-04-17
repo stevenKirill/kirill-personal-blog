@@ -3,7 +3,13 @@ import Link from "next/link";
 
 // TODO подумать как сделать так если страниц будет много например больше 10
 // как отображать пагинацию в удобном виде (иммется ввиду цифры)
-export const Pagination = ({ currentPage, numOfPages }) => {
+
+interface IPaginationProps {
+  currentPage: number;
+  numOfPages: number;
+}
+
+export const Pagination = ({ currentPage, numOfPages }: IPaginationProps) => {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numOfPages;
   const prevPage = `/blog/page/${currentPage - 1}`;

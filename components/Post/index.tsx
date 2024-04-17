@@ -3,8 +3,15 @@ import Link from "next/link";
 import { FaReadme } from "react-icons/fa";
 import styles from "../../styles/post.module.css";
 import { getCategoryItem, MONTHS } from "../../utils/utils";
+import { IPost } from "@/types";
 
-export const Post = ({ post, compact }) => {
+
+interface IPostProps {
+  compact: boolean;
+  post: IPost
+}
+
+export const Post = ({ post, compact }: IPostProps) => {
   const { title, category, cover_image, date, excerpt, slug } = post;
   const postDate = new Date(date);
   const { text, color } = getCategoryItem(category);

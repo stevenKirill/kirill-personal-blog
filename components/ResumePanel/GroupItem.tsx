@@ -1,6 +1,12 @@
+import { ReactNode } from "react";
 import classes from "../../styles/resume.module.css";
 
-const GroupItem = ({ value, children }) => {
+interface IGroupItemProps {
+  value: string;
+  children: ReactNode;
+}
+
+const GroupItem = ({ value, children }: IGroupItemProps) => {
   return (
     <div className={classes.item}>
       <div className={classes.data}>

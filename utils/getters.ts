@@ -12,6 +12,7 @@ export const getFiles = () => {
 export const getPosts = () => {
   const files = getFiles();
   const posts = files.map((fileName) => {
+    console.log(fileName, '=> fileName');
     const slug = fileName.replace(".md", "");
     const meta = fs.readFileSync(path.join("posts", fileName), "utf-8");
     const { data: frontmatter } = matter(meta);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   FacebookShareButton,
@@ -6,21 +6,25 @@ import {
   VKShareButton,
   TelegramShareButton,
 } from "react-share";
-import styles from "../styles/post.module.css";
+import styles from "../../../styles/post.module.css";
 import { FacebookIcon, TwitterIcon, VKIcon, TelegramIcon } from "react-share";
-import { getCategoryItem } from "../utils/utils";
+import { getCategoryItem } from "../../../utils/utils";
 
-export const BlogLayout = ({
-  post: { title, date, category, cover_image, slug },
+const BlogLayout = ({
+  post,
   children,
 }) => {
-  const [url, setUrl] = useState("");
-  useEffect(() => {
-    setUrl(window.location.href);
-  }, []);
+  console.log(post, '[edede')
+  // const { title, date, category, cover_image, slug } = post;
+  console.log('BlogLayout');
+  // const [url, setUrl] = useState("");
+  // useEffect(() => {
+  //   setUrl(window.location.href);
+  // }, []);
   return (
     <div className={styles.container}>
-      <Link href="/blog">
+      dedede
+      {/* <Link href="/blog">
         <a className={styles.post_back}>
           <button className={styles.back_button} role="button">
             Назад
@@ -71,7 +75,9 @@ export const BlogLayout = ({
             <TwitterIcon size={32} round />
           </TwitterShareButton>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
+
+export default BlogLayout;

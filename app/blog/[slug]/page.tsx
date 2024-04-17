@@ -1,34 +1,35 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { BlogLayout } from "@/layouts/BlogLayout";
-import { allBlogs } from "../../../.contentlayer/generated";
-import { MDXComponents } from "@/components/MDXComponents/MDXComponents";
+import { allBlogs } from "@/content";
+import MDXComponents from "../../../components/MDXComponents";
 
-const PostPage = ({ post, pageName }) => {
-  console.log('PostPage');
-  console.log(post);
-  console.log(pageName);
+export function generateStaticParams() {
+  console.log('generateStaticParams =<<<');
+  return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
+}
+
+const PostPage = ({ post }) => {
+  console.log(post, '=111');
   const Component = useMDXComponent(post.body.code);
   return (
-    <BlogLayout post={post}>
-      <Component
-        components={{
-          ...MDXComponents,
-        }}
-      />
-    </BlogLayout>
+    // <Component
+    //   components={{
+    //     ...MDXComponents,
+    //   }}
+    // />
+    <div>1111</div>
   );
 };
 
-export const getStaticPaths = () => {
-  return {
-    paths: allBlogs.map((p) => ({ params: { slug: p.slug } })),
-    fallback: false,
-  };
-};
+// export const getStaticPaths = () => {
+//   return {
+//     paths: allBlogs.map((p) => ({ params: { slug: p.slug } })),
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = ({ params }) => {
-  const post = allBlogs.find((post) => post.slug === params.slug);
-  return { props: { post, pageName: "BLOG_PAGE" } };
-};
+// export const getStaticProps = ({ params }) => {
+//   const post = allBlogs.find((post) => post.slug === params.slug);
+//   return { props: { post, pageName: "BLOG_PAGE" } };
+// };
 
 export default PostPage;

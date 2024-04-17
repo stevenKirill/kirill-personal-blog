@@ -1,8 +1,11 @@
-// @ts-check
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  /* config options here */
-}
 
-module.exports = nextConfig
+const {withContentlayer} = require("next-contentlayer");
+
+const nextConfig = {
+  compiler:{
+    removeConsole: false,
+  }
+};
+
+module.exports = withContentlayer({ ...nextConfig });

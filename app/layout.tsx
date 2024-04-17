@@ -6,9 +6,15 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import Head from 'next/head';
+import { Metadata } from 'next';
 
 interface IRootLayoutProps {
   children: ReactNode;
+}
+
+export const metadata: Metadata = {
+  title: 'RootLayout',
+  description: 'description',
 }
 
 /** Общая обертка над всеми страницами. */
@@ -27,11 +33,6 @@ function RootLayout({ children }: IRootLayoutProps) {
 
   return (
     <html>
-      <Head>
-        <title>Главная</title>
-        <meta name="keywords" content="блог,статьи,интерсно,программирование,саморазвитие,успех,самосовершенствование"/>
-        <meta name="description" content=""/>
-      </Head>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}

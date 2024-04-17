@@ -6,36 +6,38 @@ import { menuItems } from './menuItems';
 import classes from '../../styles/navigation.module.css';
 
 const Navigation = () => {
-  console.log(menuItems, '=< menuItems');
-  const hamburgerRef = useRef(null);
-  const menuRef = useRef(null);
+  const hamburgerRef = useRef<HTMLDivElement | null>(null);
+  const menuRef = useRef<HTMLUListElement | null>(null);
 
   /** открыть меню на мобилке */
   const handleOpenMobileMenu = () => {
-    hamburgerRef.current.classList.toggle(`${classes.active}`);
-    menuRef.current.classList.toggle(`${classes.active}`);
+    if (hamburgerRef.current && menuRef.current) {
+      hamburgerRef.current.classList.toggle(`${classes.active}`);
+      menuRef.current.classList.toggle(`${classes.active}`);
+    }
   };
 
   /** закрыть мобильное меню */
   const handleCloseMenu = () => {
-    if (window.getComputedStyle(hamburgerRef.current, null).display === 'block') {
-      hamburgerRef.current.classList.remove(`${classes.active}`);
-      menuRef.current.classList.remove(`${classes.active}`);
-    };
+    if (hamburgerRef.current && menuRef.current) {
+      if (window.getComputedStyle(hamburgerRef.current, null).display === 'block') {
+        hamburgerRef.current.classList.remove(`${classes.active}`);
+        menuRef.current.classList.remove(`${classes.active}`);
+      };
+    }
   };
 
   return (
     <nav className={classes.navigation}>
       <ul className={classes.nav_list} ref={menuRef}>
         {menuItems.map(link => {
-          console.log(link, '=> link');
           return (
             <li
               className={classes.nav_item}
               key={`${link.title}_${link.path}`}
               onClick={handleCloseMenu}
             >
-              <Link href={`${link.path}`}></Link>
+              <Link href={`${link.path}`}>{link.title}</Link>
             </li>
           )
         })}
