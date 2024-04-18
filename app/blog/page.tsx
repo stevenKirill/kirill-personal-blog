@@ -11,16 +11,9 @@ export const generateStaticParams = () => {
   let paths = [];
 
   for (let i = 1; i <= numberOfPages; i++) {
-    paths.push({
-      params: {
-        page_index: i.toString(),
-      },
-    });
+    paths.push({ page_index: i.toString() });
   }
-  return {
-    paths,
-    fallback: false,
-  };
+  return paths;
 };
 
 const populateCategories = (categories: string[]) => {
@@ -36,7 +29,8 @@ const populateCategories = (categories: string[]) => {
 
 const BlogPage = ({ params }) => {
   console.log(params, '=> params lol');
-  const page = parseInt(params && params.page_index) || 1;
+  // const page = parseInt(props.p && props.p.page_index) || 1;
+  const page = 1;
   const currentPage = page;
   const categories = allBlogs.map((post) => post.category);
   const uniqueCategories = populateCategories(categories);

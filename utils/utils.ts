@@ -1,7 +1,7 @@
 import { CATEGORIES } from "@/consts";
 
 
-export const getCategoryItem = (category) => {
+export const getCategoryItem = (category: string) => {
   switch (category) {
     case CATEGORIES.PROGRAMMING:
       return {
