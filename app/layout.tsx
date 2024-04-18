@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 
 /** Общая обертка над всеми страницами. */
 function RootLayout({ children }: IRootLayoutProps) {
-  console.log('RootLayout');
   // const router = useRouter();
   // useEffect(() => {
   //   const handleRouteChange = (url) => {

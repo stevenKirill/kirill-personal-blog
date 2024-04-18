@@ -37,6 +37,7 @@ const BlogPage = () => {
     (page - 1) * POSTS_PER_PAGE,
     (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
   );
+  console.log(orderedPosts, '=> orderedPosts');
   const sortedPosts = orderedPosts.sort(sortByDate);
   return (
     <>

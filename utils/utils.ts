@@ -1,3 +1,4 @@
+import { Blog } from "@/.contentlayer/generated";
 import { CATEGORIES } from "@/consts";
 
 
@@ -31,7 +32,8 @@ export const getCategoryItem = (category: string) => {
   }
 };
 
-export const sortByDate = (a, b) => {
+export const sortByDate = (a: Blog, b: Blog) => {
+  // @ts-ignore
   return new Date(b.date) - new Date(a.date);
 };
 

@@ -1,7 +1,5 @@
 import SearchBar from '../components/SearchBar';
 import styles from '../styles/main_page.module.css';
-import { sortByDate } from '../utils/utils';
-import { allBlogs } from '../.contentlayer/generated';
 import { IPost } from '@/types';
 
 
@@ -10,7 +8,6 @@ interface IHomeProps {
 }
 
 export default function Home({ posts = [] }: IHomeProps) {
-  console.log(posts, '=> posts');
   return (
     <div className={styles.wrap}>
       <SearchBar posts={posts}/>
