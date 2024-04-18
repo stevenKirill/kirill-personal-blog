@@ -2,19 +2,18 @@ import styles from "@/styles/post.module.css";
 import CategoryBar from "@/components/CategoryBar";
 import { Post } from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/consts";
-import { Pagination } from "../../components/Pagination";
 import { sortByDate } from "../../utils/utils";
 import { allBlogs } from "../../.contentlayer/generated";
 
-export const generateStaticParams = () => {
-  const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
-  let paths = [];
+// export const generateStaticParams = () => {
+//   const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
+//   let paths = [];
 
-  for (let i = 1; i <= numberOfPages; i++) {
-    paths.push({ page_index: i.toString() });
-  }
-  return paths;
-};
+//   for (let i = 1; i <= numberOfPages; i++) {
+//     paths.push({ page_index: i.toString() });
+//   }
+//   return paths;
+// };
 
 const populateCategories = (categories: string[]) => {
   let uniqueCategories: string[] = [];
@@ -27,16 +26,13 @@ const populateCategories = (categories: string[]) => {
 }
 
 
-const BlogPage = ({ params }) => {
-  console.log(params, '=> params lol');
+const BlogPage = () => {
   // const page = parseInt(props.p && props.p.page_index) || 1;
   const page = 1;
-  const currentPage = page;
   const categories = allBlogs.map((post) => post.category);
   const uniqueCategories = populateCategories(categories);
 
-  // вычисление числа постов пагинация
-  const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
+  // const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
   const orderedPosts = allBlogs.slice(
     (page - 1) * POSTS_PER_PAGE,
     (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
@@ -52,31 +48,8 @@ const BlogPage = ({ params }) => {
         </div>
         <CategoryBar categories={uniqueCategories} />
       </div>
-      <Pagination currentPage={currentPage} numOfPages={numberOfPages} />
     </>
   );
 };
-
-// export const getStaticProps = ({ params }) => {
-//   const page = parseInt(params && params.page_index) || 1;
-
-//   const categories = allBlogs.map((post) => post.category);
-//   const uniqueCategories = [...new Set(categories)];
-
-//   // вычисление числа постов пагинация
-//   const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
-//   const orderedPosts = allBlogs.slice(
-//     (page - 1) * POSTS_PER_PAGE,
-//     (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
-//   );
-//   return {
-//     props: {
-//       posts: orderedPosts.sort(sortByDate),
-//       numPages: numberOfPages,
-//       currentPage: page,
-//       categories: uniqueCategories,
-//     },
-//   };
-// };
 
 export default BlogPage;

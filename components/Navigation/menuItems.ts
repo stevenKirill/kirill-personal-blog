@@ -8,15 +8,7 @@ export const menuItems = [
     path: "/blog",
   },
   {
-    title: "посмотреть",
-    path: "/watch",
-  },
-  {
     title: "резюме",
     path: "/about",
-  },
-  {
-    title: "фото",
-    path: "/photo",
   },
 ];
