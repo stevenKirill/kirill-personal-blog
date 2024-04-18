@@ -5,7 +5,6 @@ interface IProps {
 const BlogLayout = ({ children }: IProps) => {
   return (
     <div>
-      <div>layout post page</div>
       {children}
     </div>
   );

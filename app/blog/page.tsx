@@ -5,15 +5,15 @@ import { POSTS_PER_PAGE } from "@/consts";
 import { sortByDate } from "../../utils/utils";
 import { allBlogs } from "../../.contentlayer/generated";
 
-// export const generateStaticParams = () => {
-//   const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
-//   let paths = [];
+export const generateStaticParams = () => {
+  const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
+  let paths = [];
 
-//   for (let i = 1; i <= numberOfPages; i++) {
-//     paths.push({ page_index: i.toString() });
-//   }
-//   return paths;
-// };
+  for (let i = 1; i <= numberOfPages; i++) {
+    paths.push({ page_index: i.toString() });
+  }
+  return paths;
+};
 
 const populateCategories = (categories: string[]) => {
   let uniqueCategories: string[] = [];
@@ -23,22 +23,24 @@ const populateCategories = (categories: string[]) => {
     }
   });
   return uniqueCategories;
-}
+};
+
+// const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
+// let paths = [];
+
+// for (let i = 1; i <= numberOfPages; i++) {
+//   paths.push({ page_index: i.toString() });
+// }
 
 
 const BlogPage = () => {
-  // const page = parseInt(props.p && props.p.page_index) || 1;
-  const page = 1;
   const categories = allBlogs.map((post) => post.category);
   const uniqueCategories = populateCategories(categories);
-
-  // const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);
-  const orderedPosts = allBlogs.slice(
-    (page - 1) * POSTS_PER_PAGE,
-    (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
-  );
-  console.log(orderedPosts, '=> orderedPosts');
-  const sortedPosts = orderedPosts.sort(sortByDate);
+  // const orderedPosts = allBlogs.slice(
+  //   (page - 1) * POSTS_PER_PAGE,
+  //   (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
+  // );
+  const sortedPosts = allBlogs.sort(sortByDate);
   return (
     <>
       <div className={styles.content}>
