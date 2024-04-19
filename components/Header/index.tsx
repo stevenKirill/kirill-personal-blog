@@ -1,10 +1,16 @@
+"use client"
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "../Navigation";
 import styles from "../../styles/header.module.css";
+import { useThemeSwitch } from "@/hooks/useTheme";
+import { MoonIcon, SunIcon } from "../Icons"
 
 const Header = () => {
+  const [mode, setMode] = useThemeSwitch();
+  console.log(mode);
   return (
     <header className={styles.wrapper}>
       <div className={styles.header}>
@@ -22,6 +28,10 @@ const Header = () => {
           </Link>
           <h2>kirill pavlovskii</h2>
         </div>
+        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+          {mode === "light" ? <MoonIcon className={"fill-dark"} />
+          : <SunIcon className={"fill-dark"} />}
+        </button>
         <Navigation />
       </div>
     </header>

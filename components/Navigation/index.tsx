@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { menuItems } from './menuItems';
 import classes from '../../styles/navigation.module.css';
 
+console.log(document.documentElement, 'hello')
+
 const Navigation = () => {
   const hamburgerRef = useRef<HTMLDivElement | null>(null);
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -28,7 +30,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={classes.navigation}>
+    <nav>
       <ul className={classes.nav_list} ref={menuRef}>
         {menuItems.map(link => {
           return (

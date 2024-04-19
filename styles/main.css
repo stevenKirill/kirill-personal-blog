@@ -28,12 +28,16 @@
   --desktop-large-width: 1200px;
 }
 
-.main_container {
-  min-height: 100vh;
-  margin: 0;
-  display: grid;
-  /* grid-template-rows: 12% 8% 70% 10%; */
-  grid-template-rows: auto 1fr auto;
+.dark {
+  --background: #49243E;
+  --text: #dbe1ec;
+  --h2: #dbe1ec;
+}
+
+.light {
+  --background: #FFFBF5;
+  --text: #434343;
+  --h2: #434343;
 }
 
 p {
@@ -42,12 +46,12 @@ p {
   text-align: justify;
   font-size: 17px;
 }
-  
+
 a {
   text-decoration: none;
   color: rgb(65, 123, 216);
 }
-  
+
 header {
   background: var(--black);
   padding: 5px;
@@ -57,7 +61,7 @@ header {
 ul {
   margin-left: 10px;
 }
-  
+
 header a {
   color: var(--light-white);
 }
@@ -90,6 +94,7 @@ header a {
   align-items: center;
   cursor: pointer;
 }
+
 .margin-left-5 {
   margin-left: 5px;
 }

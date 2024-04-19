@@ -51,3 +51,5 @@ export const MONTHS = {
   10: "Ноябрь",
   11: "Декабрь",
 };
+
+export const cx = (...classNames: string[]) => classNames.filter(Boolean).join(" ");
