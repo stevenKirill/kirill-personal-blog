@@ -10,7 +10,6 @@ import { MoonIcon, SunIcon } from "../Icons"
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
-  console.log(mode);
   return (
     <header className={styles.wrapper}>
       <div className={styles.header}>

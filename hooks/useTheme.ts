@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from 'react';
 
-export function useThemeSwitch() {
+export function useThemeSwitch(): [string, Dispatch<SetStateAction<string>>] {
   const preferDarkQuery = '(prefers-color-schema:dark)';
   const storageKey = 'theme';
 
