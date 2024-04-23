@@ -1,24 +1,30 @@
 import MainPagePost from '@/components/MainPagePost';
-import styles from '../styles/main_page.module.css';
+import styles from './main_page.module.css';
 import { allBlogs } from "@/content";
+import CategoryBar from '@/components/CategoryBar';
+import { populateCategories } from '@/utils/utils';
 
 export default function Home() {
   const firstTen = allBlogs.slice(0, 10);
+  const categories = allBlogs.map((post) => post.category);
+  const uniqueCategories = populateCategories(categories);
   return (
     <main className={styles.wrap}>
-      {firstTen.map((post) => (
-        <section key={post._id}>
+      <section className={styles.posts}>
+        {firstTen.map((post) => (
           <MainPagePost
             title={post.title}
             excerpt={post.excerpt}
+            slug={post.slug}
+            key={post._id}
           />
-        </section>
-      ))}
-      <section>
-        категории
+        ))}
       </section>
-      <section>
-        популярные
+      <section className={styles.rightSection}>
+        <CategoryBar categories={uniqueCategories} />
+        <div>
+          популярные
+        </div>
       </section>
     </main>
   )

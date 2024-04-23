@@ -2,7 +2,7 @@ import styles from "@/styles/post.module.css";
 import CategoryBar from "@/components/CategoryBar";
 import { Post } from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/consts";
-import { sortByDate } from "../../utils/utils";
+import { populateCategories, sortByDate } from "../../utils/utils";
 import { allBlogs } from "../../.contentlayer/generated";
 
 export const generateStaticParams = () => {
@@ -13,16 +13,6 @@ export const generateStaticParams = () => {
     paths.push({ page_index: i.toString() });
   }
   return paths;
-};
-
-const populateCategories = (categories: string[]) => {
-  let uniqueCategories: string[] = [];
-  categories.forEach((category) => {
-    if (uniqueCategories.indexOf(category) === -1) {
-      uniqueCategories.push(category);
-    }
-  });
-  return uniqueCategories;
 };
 
 // const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);

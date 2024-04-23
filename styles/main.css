@@ -33,6 +33,7 @@
   --link: #FFFBF5;
   --h2: #FFFBF5;
   --moon: #FFFBF5;
+  --link-button: #3a4662;
 }
 
 .light {
@@ -40,6 +41,7 @@
   --text: #323846;
   --link: #323846;
   --h2: #323846;
+  --link-button: #adbbdc;
 }
 
 p {
@@ -47,11 +49,6 @@ p {
   line-height: 1.8;
   text-align: justify;
   font-size: 17px;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(65, 123, 216);
 }
 
 header {

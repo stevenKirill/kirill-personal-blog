@@ -53,3 +53,13 @@ export const MONTHS = {
 };
 
 export const cx = (...classNames: string[]) => classNames.filter(Boolean).join(" ");
+
+export const populateCategories = (categories: string[]) => {
+  let uniqueCategories: string[] = [];
+  categories.forEach((category) => {
+    if (uniqueCategories.indexOf(category) === -1) {
+      uniqueCategories.push(category);
+    }
+  });
+  return uniqueCategories;
+};
