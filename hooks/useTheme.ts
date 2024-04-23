@@ -13,9 +13,11 @@ export function useThemeSwitch(): [string, Dispatch<SetStateAction<string>>] {
 
   const toggleTheme = (theme: string) => {
     if (theme === 'dark') {
+      document.documentElement.classList.remove('light');
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
     }
     window.localStorage.setItem(storageKey, theme);
   };
@@ -48,7 +50,6 @@ export function useThemeSwitch(): [string, Dispatch<SetStateAction<string>>] {
   }, []);
 
   useEffect(() => {
-    console.log('effetc')
     toggleTheme(mode)
   }, [mode]);
 

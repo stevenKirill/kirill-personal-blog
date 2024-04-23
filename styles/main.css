@@ -28,7 +28,7 @@
 }
 
 .dark {
-  --background: #323846;
+  --nav-background: #323846;
   --text: #FFFBF5;
   --link: #FFFBF5;
   --h2: #FFFBF5;
@@ -36,7 +36,7 @@
 }
 
 .light {
-  --background: #FFFBF5;
+  --nav-background: #fcfcfc;
   --text: #323846;
   --link: #323846;
   --h2: #323846;

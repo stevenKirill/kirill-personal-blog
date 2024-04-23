@@ -1,20 +1,25 @@
+import MainPagePost from '@/components/MainPagePost';
 import styles from '../styles/main_page.module.css';
-import { IPost } from '@/types';
+import { allBlogs } from "@/content";
 
-
-interface IHomeProps {
-  posts: IPost[];
-}
-
-export default function Home({ posts = [] }: IHomeProps) {
+export default function Home() {
+  const firstTen = allBlogs.slice(0, 10);
   return (
-    <div className={styles.wrap}>
-      hello
-    </div>
+    <main className={styles.wrap}>
+      {firstTen.map((post) => (
+        <section key={post._id}>
+          <MainPagePost
+            title={post.title}
+            excerpt={post.excerpt}
+          />
+        </section>
+      ))}
+      <section>
+        категории
+      </section>
+      <section>
+        популярные
+      </section>
+    </main>
   )
 };
-
-// export const getStaticProps = () => {
-//   const posts = allBlogs.sort(sortByDate);
-//   return { props: { posts } };
-// };
