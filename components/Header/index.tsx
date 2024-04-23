@@ -6,7 +6,10 @@ import Image from "next/image";
 import Navigation from "../Navigation";
 import styles from "../../styles/header.module.css";
 import { useThemeSwitch } from "@/hooks/useTheme";
-import { MoonIcon, SunIcon } from "../Icons"
+import { IoSunnySharp } from "react-icons/io5";
+import { FiMoon } from "react-icons/fi";
+import { FaMoon } from "react-icons/fa";
+import classes from './header.module.css';
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
@@ -27,11 +30,16 @@ const Header = () => {
           </Link>
           <h2>kirill pavlovskii</h2>
         </div>
-        <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
-          {mode === "light" ? <MoonIcon className={"fill-dark"} />
-          : <SunIcon className={"fill-dark"} />}
-        </button>
-        <Navigation />
+        <div className={classes.rightContainer}>
+          <Navigation />
+          <div className={classes.icon} onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+            {mode === "light" ? (
+              <IoSunnySharp className={classes.sun} size={24} />
+            ) : (
+              <FaMoon className={classes.moon} color="white" size={24} />
+            )}
+          </div>
+        </div>
       </div>
     </header>
   );

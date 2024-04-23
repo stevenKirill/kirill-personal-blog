@@ -1,0 +1,22 @@
+.icon {
+  width: fit-content;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+}
+
+.sun, .moon {
+  opacity: 0.7;
+}
+
+.sun:hover {
+  opacity: 1;
+}
+
+.moon:hover {
+  opacity: 1;
+}

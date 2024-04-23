@@ -14,7 +14,7 @@
 }
 
 .nav_item a:hover {
-  color: var(--text);
+  color: red;
 }
 
 .hamburger {

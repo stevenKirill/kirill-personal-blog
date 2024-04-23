@@ -4,11 +4,11 @@ export const menuItems = [
     path: "/",
   },
   {
-    title: "почитать",
+    title: "блог",
     path: "/blog",
   },
   {
-    title: "резюме",
+    title: "об авторе",
     path: "/about",
   },
 ];

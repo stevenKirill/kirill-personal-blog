@@ -8,7 +8,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif
 }
 
 :root {
@@ -29,15 +28,18 @@
 }
 
 .dark {
-  --background: #49243E;
-  --text: #dbe1ec;
-  --h2: #dbe1ec;
+  --background: #323846;
+  --text: #FFFBF5;
+  --link: #FFFBF5;
+  --h2: #FFFBF5;
+  --moon: #FFFBF5;
 }
 
 .light {
   --background: #FFFBF5;
-  --text: #434343;
-  --h2: #434343;
+  --text: #323846;
+  --link: #323846;
+  --h2: #323846;
 }
 
 p {
