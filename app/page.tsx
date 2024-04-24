@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <main className={styles.wrap}>
       <section className={styles.posts}>
+        <h2 className={styles.title}>Последние публикации</h2>
         {firstTen.map((post) => (
           <MainPagePost
             title={post.title}

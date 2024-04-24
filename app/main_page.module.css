@@ -5,6 +5,14 @@
   margin-right: auto;
   padding-left: 32px;
   padding-right: 32px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.title {
+  padding-top: 15px;
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 20px;
 }

@@ -7,23 +7,21 @@ interface ICategoryBarProps {
 }
 
 const CategoryBar = ({ categories }: ICategoryBarProps) => {
-  console.log(categories);
-  let tmp = [ 'PROGRAMMING', 'PSYCHOLOGY', 'lol', 'ded', 'PSYCHOLdedededOGY', 'dw', 'dwd' ];
   return (
     <aside className={classes.wrapper}>
-    <span className={classes.title}>Категории</span>
-    <div className={classes.linkWrapper}>
-      {tmp.map((category) => {
-        const { text } = getCategoryItem(category);
-        return (
-          <div className={`${classes.link}`} key={text}>
-            <Link href={`/category/${category.toLowerCase()}`}>
-              {text}
-            </Link>
-          </div>
-        );
-      })}
-    </div>
+      <h2 className={classes.title}>Категории</h2>
+      <div className={classes.linkWrapper}>
+        {categories.map((category) => {
+          const { text } = getCategoryItem(category);
+          return (
+            <div className={`${classes.link}`} key={text}>
+              <Link href={`/category/${category.toLowerCase()}`}>
+                {text}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
   </aside>
   )
 }

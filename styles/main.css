@@ -34,6 +34,8 @@
   --h2: #FFFBF5;
   --moon: #FFFBF5;
   --link-button: #3a4662;
+  --body-background: #181d27;
+  --link-button-border: #FFFBF5;
 }
 
 .light {
@@ -41,7 +43,13 @@
   --text: #323846;
   --link: #323846;
   --h2: #323846;
-  --link-button: #adbbdc;
+  --link-button: #fefefe;
+  --body-background: #fcfcfc;
+  --link-button-border: #323846;
+}
+
+body {
+  background-color: var(--body-background);
 }
 
 p {
