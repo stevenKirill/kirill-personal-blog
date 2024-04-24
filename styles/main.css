@@ -32,10 +32,12 @@
   --text: #FFFBF5;
   --link: #FFFBF5;
   --h2: #FFFBF5;
+  --h3: #6b7692;
   --moon: #FFFBF5;
   --link-button: #3a4662;
   --body-background: #181d27;
   --link-button-border: #FFFBF5;
+  --title-main-page: #ff0878;
 }
 
 .light {
@@ -43,9 +45,11 @@
   --text: #323846;
   --link: #323846;
   --h2: #323846;
+  --h3: #7e8c9a;
   --link-button: #fefefe;
   --body-background: #fcfcfc;
   --link-button-border: #323846;
+  --title-main-page: #ff0878;
 }
 
 body {
@@ -63,10 +67,6 @@ header {
   background: var(--black);
   padding: 5px;
   margin-bottom: 30px;
-}
-
-ul {
-  margin-left: 10px;
 }
 
 header a {

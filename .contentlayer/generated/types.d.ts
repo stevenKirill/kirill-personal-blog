@@ -18,6 +18,7 @@ export type Blog = {
   date: string
   excerpt: string
   cover_image: string
+  first_text: string
   /** MDX file body */
   body: MDX
   slug: string
