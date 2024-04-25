@@ -14,3 +14,35 @@
   display: block;
   color: var(--title-main-page);
 }
+
+.postsWrapper {
+  margin-top: 10px;
+}
+
+.post {
+  color: var(--text);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  margin-top: 7px;
+  list-style-type: none;
+}
+
+.postText {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.postText:hover .icon {
+  transform: translateX(8px);
+}
+
+.icon {
+  transform: translateY(5px) translateX(0px);
+  transition: transform 250ms ease-in;
+  cursor: default;
+}
