@@ -38,6 +38,9 @@
   --body-background: #181d27;
   --link-button-border: #FFFBF5;
   --title-main-page: #ff0878;
+  --footer-bg: #323846;
+  /* --footer-dark: #020024;
+  --footer-light: #3f3c3c; */
 }
 
 .light {
@@ -50,6 +53,9 @@
   --body-background: #fcfcfc;
   --link-button-border: #323846;
   --title-main-page: #ff0878;
+  --footer-bg: #fcfcfc;
+  /* --footer-dark: #ff0878;
+  --footer-light: #FFFBF5; */
 }
 
 body {

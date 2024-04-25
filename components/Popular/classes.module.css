@@ -34,7 +34,6 @@
 }
 
 .icon {
-  transform: translateY(5px) translateX(0px);
   transition: transform 250ms ease-in;
   cursor: default;
   display: inline-block;

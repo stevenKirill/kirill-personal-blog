@@ -1,0 +1,22 @@
+.wrapper {
+  /* background: linear-gradient(90deg, var(--footer-dark) 0%, var(--footer-light) 100%); */
+  background-color: var(--footer-bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-height: 100px;
+  box-shadow: 0 -10px 27px rgba(0, 0, 0, 0.05);
+}
+.name {
+  color: var(--text);
+  margin-right: 10px;
+}
+.icons {
+  display: flex;
+  cursor: pointer;
+}
+.icon {
+  margin-left: 10px;
+}
