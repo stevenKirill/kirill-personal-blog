@@ -7,7 +7,7 @@
   padding-right: 32px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
+  gap: 50px;
 }
 
 .title {
@@ -16,4 +16,8 @@
   color: var(--title-main-page);
   font-size: 20px;
   user-select: none;
+}
+
+.posts {
+  margin-bottom: 15px;
 }

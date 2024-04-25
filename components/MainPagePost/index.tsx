@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import classes from './classes.module.css';
+import { FaArrowRight } from "react-icons/fa";
 import Link from 'next/link';
 
 interface IMainPageProps {
@@ -19,6 +20,7 @@ const MainPagePost: FC<IMainPageProps> = ({ title, excerpt, slug, firstText }) =
           <p className={classes.firstText}>{firstText}</p>
           <div className={classes.readMore}>
             <span>Читать далее</span>
+            <FaArrowRight className={classes.icon} color="#617bff" />
           </div>
         </Link>
       </article>

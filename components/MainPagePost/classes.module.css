@@ -2,9 +2,16 @@
   margin-top: 48px;
   line-height: calc(1em + 0.725rem);
 }
+.cardWrapper:last-child {
+  margin-bottom: 10px;
+}
 
-.article:hover + .title {
-  color: hsl(230deg, 100%, 69%);
+.article:hover .title {
+  color: #617bff;
+}
+
+.article:hover .icon {
+  display: block;
 }
 
 .link {
@@ -27,6 +34,18 @@
   font-size: 1rem;
 }
 
+.readMore {
+  display: flex;
+  align-items: center;
+}
+
 .readMore span {
   color: var(--text);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.icon {
+  display: none;
+  transition: .3s ease;
 }

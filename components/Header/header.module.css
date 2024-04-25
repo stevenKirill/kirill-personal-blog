@@ -7,6 +7,7 @@
 .rightContainer {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .sun, .moon {
