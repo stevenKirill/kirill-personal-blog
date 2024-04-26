@@ -7,11 +7,12 @@ interface ICategoryBarProps {
 }
 
 const CategoryBar = ({ categories }: ICategoryBarProps) => {
+  const tmp = [ 'PSYCHOLOGY', 'PROGRAMMING', 'd', 'd', 'f', 'f', 'e', 't' ];
   return (
     <aside className={classes.wrapper}>
       <h2 className={classes.title}>Категории</h2>
       <div className={classes.linkWrapper}>
-        {categories.map((category) => {
+        {tmp.map((category) => {
           const { text } = getCategoryItem(category);
           return (
             <div className={`${classes.link}`} key={text}>

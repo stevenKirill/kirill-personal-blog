@@ -8,6 +8,7 @@
   padding: 10px;
   min-height: 100px;
   box-shadow: 0 -10px 27px rgba(0, 0, 0, 0.05);
+  padding-top: 32px;
 }
 
 .inner {
@@ -36,7 +37,8 @@
 
 .year {
   margin-top: 20px;
-  color: var(--color-grey);
+  color: var(--h3);
+  font-size: 14px;
 }
 
 .name {
@@ -61,15 +63,31 @@
 }
 
 .posts {
-  color: var(--color-grey);
+  color: var(--h3);
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .postsLinks {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+
+.social a {
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 6rem;
 }
 
 .postsLinks a {
@@ -77,8 +95,14 @@
   color: var(--text);
   margin-bottom: 10px;
   cursor: pointer;
+  font-size: 14px;
+  width: 6rem;
 }
 
 .postsLinks a:hover {
+  color: var(--pink);
+}
+
+.social a:hover {
   color: var(--pink);
 }

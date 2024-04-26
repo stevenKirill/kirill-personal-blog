@@ -18,11 +18,14 @@ const Footer = () => {
               <a>React</a>
               <a>JavaScript</a>
               <a>TypeScript</a>
+              <a>TypeScript</a>
+              <a>TypeScript</a>
+              <a>TypeScript</a>
             </div>
           </div>
           <div>
             <p className={classes.posts}>Ссылки</p>
-            <div className={classes.postsLinks}>
+            <div className={classes.social}>
               <a href="https://t.me/kirillPavlovskii" target="_blank" rel="noreferrer">
                 Telegram
               </a>

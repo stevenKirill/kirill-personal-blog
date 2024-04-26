@@ -64,5 +64,24 @@
   .link_wrapper h2 {
     font-size: 16px;
   }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 32px;
+    padding-right: 32px;
+  }
 }
 
+@media only screen and (max-width: 64em) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rightContainer {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: flex-end;
+  }
+}

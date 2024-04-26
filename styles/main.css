@@ -8,6 +8,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: calc(1em + 0.725rem);
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {

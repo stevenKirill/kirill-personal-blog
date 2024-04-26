@@ -1,11 +1,10 @@
 import '../styles/main.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
-import Head from 'next/head';
 import { Metadata } from 'next';
 import localFont from 'next/font/local'
 
