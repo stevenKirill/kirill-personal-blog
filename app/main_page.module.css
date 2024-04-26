@@ -13,7 +13,7 @@
 .title {
   padding-top: 15px;
   margin-top: 10px;
-  color: var(--title-main-page);
+  color: var(--pink);
   font-size: 20px;
   user-select: none;
 }
