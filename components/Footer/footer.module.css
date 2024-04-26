@@ -106,3 +106,36 @@
 .social a:hover {
   color: var(--pink);
 }
+
+.year_responsive {
+  display: none;
+}
+
+@media (max-width: 725px) {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .year {
+    display: none;
+  }
+
+  .year_responsive {
+    display: block;
+    color: var(--h3);
+    font-size: 14px;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .social a {
+    width: 5rem;
+  }
+
+  .postsLinks a {
+    width: 5rem;
+  }
+}
