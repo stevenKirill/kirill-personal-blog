@@ -33,7 +33,7 @@
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--light-white);
+  background-color: var(--burger);
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,7 +43,7 @@
     left: -102%;
     top: 5rem;
     flex-direction: column;
-    background-color: var(--black);
+    background-color: var(--nav-background);
     width: 100%;
     border-radius: 10px;
     text-align: center;

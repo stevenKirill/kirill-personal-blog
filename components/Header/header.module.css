@@ -72,6 +72,9 @@
     padding-right: 32px;
     padding-right: 32px;
   }
+  .icon {
+    margin-top: 6px;
+  }
 }
 
 @media only screen and (max-width: 64em) {

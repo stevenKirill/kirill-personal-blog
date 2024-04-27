@@ -1,15 +1,33 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { menuItems } from './menuItems';
 import classes from './navigation.module.css';
+
+const mediaQuery = '(max-width: 768px)';
+const mediaQueryList = window.matchMedia(mediaQuery);
 
 const Navigation = () => {
   const hamburgerRef = useRef<HTMLDivElement | null>(null);
   const menuRef = useRef<HTMLUListElement | null>(null);
 
-  /** открыть меню на мобилке */
+  const handleMatch = (event: MediaQueryListEvent) => {
+  if (!event.matches) {
+    if (hamburgerRef.current && menuRef.current) {
+      hamburgerRef.current.classList.remove(`${classes.active}`);
+      menuRef.current.classList.remove(`${classes.active}`);
+    }
+  }
+}
+
+  useEffect(() => {
+    mediaQueryList.addEventListener('change', handleMatch);
+    return () => {
+      mediaQueryList.removeEventListener('change', handleMatch);
+    };
+  }, []);
+
   const handleOpenMobileMenu = () => {
     if (hamburgerRef.current && menuRef.current) {
       hamburgerRef.current.classList.toggle(`${classes.active}`);
@@ -17,7 +35,6 @@ const Navigation = () => {
     }
   };
 
-  /** закрыть мобильное меню */
   const handleCloseMenu = () => {
     if (hamburgerRef.current && menuRef.current) {
       if (window.getComputedStyle(hamburgerRef.current, null).display === 'block') {
