@@ -68,26 +68,28 @@ const BlogPage = () => {
     category.posts.sort(sortByDate);
   });
   return (
-    <div className={classes.posts}>
-      {categories.map((category) => {
-        const { text } = getCategoryItem(category.title);
-        const numOfArticles = calculatePosts(category.posts);
-        return (
-          <>
-          <div className={classes.categoryTitle}>
-            <h1 className={classes.categoryText}>{text}</h1>
-            <span className={classes.categoryTitleText}>
-              {numOfArticles}
-              &nbsp;
-              {getArticleWord(numOfArticles)}
-            </span>
-          </div>
-            <div className={classes.category} key={category.title}>
-              {category.posts.map((post) => <Post post={post} key={post.slug} />)}
+    <div className={classes.bg}>
+      <div className={classes.posts}>
+        {categories.map((category) => {
+          const { text } = getCategoryItem(category.title);
+          const numOfArticles = calculatePosts(category.posts);
+          return (
+            <>
+            <div className={classes.categoryTitle}>
+              <h1 className={classes.categoryText}>{text}</h1>
+              <span className={classes.categoryTitleText}>
+                {numOfArticles}
+                &nbsp;
+                {getArticleWord(numOfArticles)}
+              </span>
             </div>
-          </>
-        )
-      })}
+              <div className={classes.category} key={category.title}>
+                {category.posts.map((post) => <Post post={post} key={post.slug} />)}
+              </div>
+            </>
+          )
+        })}
+      </div>
     </div>
   );
 };

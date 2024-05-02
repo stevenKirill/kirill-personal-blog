@@ -30,3 +30,7 @@
   padding-left: 32px;
   padding-right: 32px;
 }
+
+.bg {
+  background-color: var(--blog-page-body-layout);
+}

@@ -9,7 +9,6 @@ export type { Markdown, MDX, ImageFieldData, IsoDateTimeString }
 
 /** Document types */
 export type Blog = {
-  first_text: string
   /** File path relative to `contentDirPath` */
   _id: string
   _raw: Local.RawDocumentData
@@ -23,10 +22,10 @@ export type Blog = {
   /** MDX file body */
   body: MDX
   slug: string
-}
+}  
 
 /** Nested types */
-
+  
 
 /** Helper types */
 
@@ -68,3 +67,4 @@ export type NestedTypeMap = {
 
 }
 
+ 

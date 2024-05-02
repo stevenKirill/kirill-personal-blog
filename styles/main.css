@@ -47,6 +47,7 @@
   --color-grey: #5a6072;
   --card: #1e262f;
   --purple-blue: #617bff;
+  --blog-page-body-layout: #181d27;
 }
 
 .light {
@@ -58,6 +59,7 @@
   --link-button: #fefefe;
   --body-background: #fcfcfc;
   --link-button-border: #323846;
+  --blog-page-body-layout: hsl(225deg, 25%, 95%);
   --pink: #ff0878;
   --footer-bg: #fcfcfc;
   --burger: #323846;

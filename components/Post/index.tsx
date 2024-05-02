@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaReadme } from "react-icons/fa";
+import { FaArrowRight, FaReadme } from "react-icons/fa";
 import styles from "../../styles/post.module.css";
 import { getCategoryItem, MONTHS } from "../../utils/utils";
 import { IPost } from "@/types";
@@ -16,9 +16,6 @@ export const Post = ({ post }: IPostProps) => {
   const { text } = getCategoryItem(category);
   return (
     <Link className={styles.card} href={`/blog/${slug}`}>
-      <div className={`${styles.post_category}`}>
-        {text}
-      </div>
       <div className={styles.post_title}>
         {title}
       </div>
@@ -32,6 +29,7 @@ export const Post = ({ post }: IPostProps) => {
         <span className={styles.readMore}>
           Читать далее
         </span>
+        <FaArrowRight className={styles.icon} color="#617bff" />
       </div>
     </Link>
   );
