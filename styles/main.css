@@ -45,6 +45,8 @@
   /* --footer-dark: #020024;
   --footer-light: #3f3c3c; */
   --color-grey: #5a6072;
+  --card: #1e262f;
+  --purple-blue: #617bff;
 }
 
 .light {
@@ -62,6 +64,8 @@
   /* --footer-dark: #ff0878;
   --footer-light: #FFFBF5; */
   --color-grey: #5a6072;
+  --card: #ffff;
+  --purple-blue: #617bff;
 }
 
 body {

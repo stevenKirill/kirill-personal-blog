@@ -7,7 +7,7 @@
 }
 
 .article:hover .title {
-  color: #617bff;
+  color: var(--purple-blue)
 }
 
 .article:hover .icon {

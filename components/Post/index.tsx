@@ -7,50 +7,32 @@ import { IPost } from "@/types";
 
 
 interface IPostProps {
-  compact: boolean;
   post: IPost
 }
 
-export const Post = ({ post, compact }: IPostProps) => {
-  const { title, category, cover_image, date, excerpt, slug } = post;
+export const Post = ({ post }: IPostProps) => {
+  const { title, category, date, first_text, slug } = post;
   const postDate = new Date(date);
-  const { text, color } = getCategoryItem(category);
+  const { text } = getCategoryItem(category);
   return (
-    <div className={styles.card}>
-      <div
-        className={`${styles.post_category} ${color}`}
-        style={{ fontSize: `${compact ? "16px" : ""}` }}
-      >
+    <Link className={styles.card} href={`/blog/${slug}`}>
+      <div className={`${styles.post_category}`}>
         {text}
       </div>
-      <div
-        className={styles.post_title}
-        style={{ fontSize: `${compact ? "15px" : ""}` }}
-      >
+      <div className={styles.post_title}>
         {title}
       </div>
-      {!compact && (
-        <div className={styles.post_image}>
-          <img src={cover_image} alt={title} />
-        </div>
-      )}
       <div
         className={styles.post_date}
-        style={{ fontSize: `${compact ? "14px" : ""}` }}
       >
-        {`${
-          MONTHS[postDate.getMonth()]
-        } ${postDate.getDate()}, ${postDate.getFullYear()}`}
+        {`${MONTHS[postDate.getMonth()]} ${postDate.getDate()}, ${postDate.getFullYear()}`}
       </div>
-      <div className={styles.post_excerpt}>{excerpt}...</div>
-      <Link href={`/blog/${slug}`}>
-        <div className={styles.post_read_more}>
-          <FaReadme size="1.2rem" />
-          <span style={{ fontSize: `${compact ? "14px" : ""}` }}>
-            Читать далее
-          </span>
-        </div>
-      </Link>
-    </div>
+      <div className={styles.post_excerpt}>{first_text}...</div>
+      <div className={styles.post_read_more}>
+        <span className={styles.readMore}>
+          Читать далее
+        </span>
+      </div>
+    </Link>
   );
 };

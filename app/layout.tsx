@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import { Metadata } from 'next';
 import localFont from 'next/font/local'
+import { IsClientCtxProvider } from '@/utils/isClientContex';
 
 interface IRootLayoutProps {
   children: ReactNode;

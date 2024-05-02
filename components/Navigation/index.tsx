@@ -6,7 +6,12 @@ import { menuItems } from './menuItems';
 import classes from './navigation.module.css';
 
 const mediaQuery = '(max-width: 768px)';
-const mediaQueryList = window.matchMedia(mediaQuery);
+
+let mediaQueryList: MediaQueryList;
+if (typeof window !== 'undefined') {
+  mediaQueryList = window.matchMedia(mediaQuery);
+}
+
 
 const Navigation = () => {
   const hamburgerRef = useRef<HTMLDivElement | null>(null);

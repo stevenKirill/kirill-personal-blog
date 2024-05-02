@@ -1,9 +1,14 @@
 .card {
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: var(--card);
+  padding: 32px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.card:hover .categoryText {
+  color: var(--purple-blue);
 }
 
 .container {
@@ -13,24 +18,23 @@
   overflow: auto;
   padding: 0 10px;
 }
-  
+
 .card-page {
   padding: 15px 30px;
 }
 
 .posts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-  overflow: auto;
-  padding: 0 10px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .post_title {
   margin: 10px 0;
-  color: var(--black);
+  color: var(--text);
   font-size: 18px;
 }
 
@@ -41,7 +45,7 @@
   margin: 10px 0;
   margin-left: 15px;
 }
-  
+
 .post_body pre {
   background: var(--black);
   padding: 20px;
@@ -69,7 +73,7 @@
       grid-template-columns: repeat(2,1fr);
   }
 }
-  
+
 @media (max-width: 700px) {
   .content {
     display: grid;
@@ -92,8 +96,9 @@
   margin: 10px 0;
   font-size: 20px;
   padding: 3px;
-  color: var(--light-white);
+  color: var(--text);
 }
+
 .post_category_2 {
   margin: 10px 0;
   font-size: 20px;
@@ -102,7 +107,7 @@
 }
 
 .post_date {
-  color: var(--green);
+  color: var(--text);
   margin-bottom: 20px;
 }
 
@@ -136,14 +141,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: var(--black);
+  color: var(--text);
+}
+
+.post_read_more_link {
+  text-decoration: none;
 }
 
 .post_read_more {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: var(--green);
+  color: var(--text);
 }
 
 .post_read_more span {
@@ -171,6 +180,7 @@
   padding-right: 16px;
   position: relative;
 }
+
 .category_title_container {
   font-size: 20px;
   margin: 10px auto;
@@ -178,6 +188,7 @@
   border-bottom: 3px solid var(--black);
   padding-bottom: 10px;
 }
+
 .category_title_container div {
   display: flex;
   justify-content: flex-start;
@@ -185,10 +196,6 @@
   font-weight: bold;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 78% 19%;
-}
 .shareIcons {
   display: flex;
   justify-content: center;
