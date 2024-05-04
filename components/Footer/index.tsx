@@ -1,7 +1,8 @@
 import Link from "next/link";
 import classes from "./footer.module.css";
 
-// TODO ссылки на статьи в туториалах
+const links = ['JavaScript', 'TypeScript', 'React', 'CSS', 'Java', 'Карьера'];
+
 const Footer = () => (
   <div className={classes.wrapper}>
     <div className={classes.inner}>
@@ -15,12 +16,9 @@ const Footer = () => (
         <div>
           <p className={classes.posts}>Статьи</p>
           <div className={classes.postsLinks}>
-            <a>React</a>
-            <a>JavaScript</a>
-            <a>TypeScript</a>
-            <a>TypeScript</a>
-            <a>TypeScript</a>
-            <a>TypeScript</a>
+            {links.map((link) => (
+              <Link href="/" key={link}>{link}</Link>
+            ))}
           </div>
         </div>
         <div>

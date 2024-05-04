@@ -33,4 +33,6 @@
 
 .bg {
   background-color: var(--blog-page-body-layout);
+  margin-top: -9px;
+  padding-top: 10px;
 }

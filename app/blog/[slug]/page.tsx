@@ -37,9 +37,7 @@ const PostPage = ({ params }: IPostPageProps) => {
         </div>
         <div className={styles.post_body}>
           <Component
-            components={{
-              ...MDXComponents,
-            }}
+            components={{ ...MDXComponents }}
           />
         </div>
         <SharedIcons post={post} />

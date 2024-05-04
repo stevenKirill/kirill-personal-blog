@@ -1,6 +1,6 @@
 import { Post } from "@/components/Post";
 import { POSTS_PER_PAGE } from "@/consts";
-import { getArticleWord, getCategoryItem, populateCategories, sortByDate } from "../../utils/utils";
+import { getArticleWord, getCategoryItem, sortByDate } from "../../utils/utils";
 import { allBlogs, Blog } from "../../.contentlayer/generated";
 import classes from './blog.module.css';
 
@@ -26,17 +26,6 @@ export const generateStaticParams = () => {
   //   (page - 1) * POSTS_PER_PAGE + POSTS_PER_PAGE
   // );
 
-  // [
-  //   {
-  //     title: 'react',
-  //     posts: [
-  //       {
-
-  //       }
-  //     ]
-  //   }
-  // ]
-
 interface ICategoryPost {
   title: string;
   posts: Blog[]
@@ -55,7 +44,7 @@ const createCategories = (acc: ICategoryPost[], curr: Blog): ICategoryPost[] => 
   } else {
     return [...acc, {
       title: curr.category,
-      posts: [],
+      posts: [curr],
     }];
   }
 };

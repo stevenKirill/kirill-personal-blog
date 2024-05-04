@@ -4,24 +4,24 @@ import { CATEGORIES } from "@/consts";
 
 export const getCategoryItem = (category: string) => {
   switch (category) {
-    case CATEGORIES.PROGRAMMING:
+    case CATEGORIES.REACT:
       return {
-        text: "Технологии",
+        text: "React",
         color: "goldenCategory",
       };
-    case CATEGORIES.PSYCHOLOGY:
+    case CATEGORIES.CAREER:
       return {
-        text: "Психология",
+        text: "Карьера",
         color: "lightGreenCategory",
       };
-    case CATEGORIES.SPORT:
+    case CATEGORIES.JAVASCRIPT:
       return {
-        text: "Спорт",
+        text: "JavaScript",
         color: "lightBlueCategory",
       };
-    case CATEGORIES.BUSINESS:
+    case CATEGORIES.TYPESCRIPT:
       return {
-        text: "Бизнес",
+        text: "TypeScript",
         color: "orangeCategory",
       };
     default:
