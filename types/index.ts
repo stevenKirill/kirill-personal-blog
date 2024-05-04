@@ -1,3 +1,5 @@
+import { Blog } from "@/.contentlayer/generated";
+
 export interface IPost {
   category: string;
   cover_image: string;
@@ -10,4 +12,9 @@ export interface IPost {
     code: string;
     raw: string;
   }
+}
+
+export interface ICategoryPost {
+  title: string;
+  posts: Blog[]
 }

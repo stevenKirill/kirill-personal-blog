@@ -1,7 +1,13 @@
-import styles from "@/styles/post.module.css";
-import { Post } from "../../../components/Post";
 import { allBlogs } from "@/content";
-import { getCategoryItem, sortByDate } from "../../../utils/utils";
+import {
+  calculatePosts,
+  createCategories,
+  getCategoryItem,
+  sortByDate,
+} from "../../../utils/utils";
+import { IProps } from "../types";
+import CardWithTitle from "@/components/CardWithTitle";
+import styles from "./classes.module.css";
 
 export const generateStaticParams = () => {
   const categories = allBlogs.map((blog) => blog.category.toLowerCase());
@@ -10,26 +16,30 @@ export const generateStaticParams = () => {
   }));
 };
 
-interface IProps {
-  params: {
-    category_name: string;
-  }
-}
-
 const CategoryBlogPage = ({ params }: IProps) => {
   const categoryPosts = allBlogs.filter(
     (post) => post.category.toLowerCase() === params.category_name
-  ).sort(sortByDate);
-  const category = getCategoryItem(params.category_name.toUpperCase());
+  ).reduce(createCategories, []);
+  categoryPosts.forEach((category) => {
+    category.posts.sort(sortByDate);
+  });
   return (
     <>
-      <div className={styles.category_title_container}>
-        <div>{category.text}</div>
-      </div>
-      <div className={styles.posts}>
-        {categoryPosts.map((post) => {
-          return <Post post={post} key={post.slug} compact={false} />;
-        })}
+      <div className={styles.bg}>
+        <div className={styles.posts}>
+          {categoryPosts.map((post) => {
+          const { text } = getCategoryItem(post.title);
+          const numOfArticles = calculatePosts(post.posts);
+            return (
+              <CardWithTitle
+                key={post.title}
+                text={text}
+                numOfArticles={numOfArticles}
+                category={post}
+              />
+            )
+          })}
+        </div>
       </div>
     </>
   );

@@ -1,0 +1,23 @@
+.categoryTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  user-select: none;
+}
+
+.categoryTitle h1 {
+  color: var(--text);
+}
+
+.categoryTitleText {
+  color: var(--text);
+  font-size: 18px;
+  padding-right: 32px;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 32px;
+}

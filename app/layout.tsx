@@ -35,7 +35,6 @@ function RootLayout({ children }: IRootLayoutProps) {
   //     router.events.off('routeChangeComplete', handleRouteChange);
   //   }
   // }, [router.events]);
-  console.log('jejej')
   return (
     <html>
       <Script

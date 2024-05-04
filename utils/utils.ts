@@ -1,5 +1,6 @@
 import { Blog } from "@/.contentlayer/generated";
 import { CATEGORIES } from "@/consts";
+import { ICategoryPost } from "@/types";
 
 
 export const getCategoryItem = (category: string) => {
@@ -73,3 +74,23 @@ export function getArticleWord(number: number) {
     return 'статей';
   }
 }
+
+export const calculatePosts = (posts: Blog[]) => posts.length;
+
+export const createCategories = (acc: ICategoryPost[], curr: Blog): ICategoryPost[] => {
+  const wasBefore = acc.find((p) => p.title === curr.category);
+  if (wasBefore) {
+    const index = acc.indexOf(wasBefore);
+    if (index !== -1) {
+      const current = acc[index];
+      current.posts = [...current.posts, curr];
+      return acc;
+    }
+    return acc;
+  } else {
+    return [...acc, {
+      title: curr.category,
+      posts: [curr],
+    }];
+  }
+};
