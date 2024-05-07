@@ -12,7 +12,7 @@ cover_image: '/images/posts/custom-hook.png'
 
 Ниже код самого хука. Давайте разберем код и вообще что данный хук представляет из себя. Назовен его useDetectClickOutside.
 
- ```javascript
+ ```jsx showLineNumbers {1}
 const useDetectClickOutside = (initialIsVisible, cleanFunc) => {
   const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
   const ref = useRef(null);

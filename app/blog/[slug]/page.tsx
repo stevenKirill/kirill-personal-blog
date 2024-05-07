@@ -2,9 +2,8 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { allBlogs, Blog } from "@/content";
 import MDXComponents from "../../../components/MDXComponents";
 import Link from "next/link";
+import classes from './post.module.css';
 import styles from "../../../styles/post.module.css";
-import { getCategoryItem } from "../../../utils/utils";
-import SharedIcons from "@/components/SharedIcons";
 
 export const generateStaticParams = () => {
   return allBlogs.map((p) => ({ slug: p.slug }));
@@ -21,28 +20,22 @@ const PostPage = ({ params }: IPostPageProps) => {
   const Component = useMDXComponent(post.body.code);
   return (
       <div className={styles.container}>
-      <Link href="/blog">
-        <button className={styles.back_button} role="button">
-          Назад
-        </button>
-      </Link>
-      <div className={styles.card}>
-        <h1 className={styles.post_title}>{post.title}</h1>
-        <div className={styles.post_date}>Опубликовано: {post.date}</div>
-        <div className={styles.post_category_2}>
-          {getCategoryItem(post.category).text}
+        <Link href="/blog">
+          <button className={classes.link} role="button">
+            Назад
+          </button>
+        </Link>
+        <div className={classes.card}>
+          <h1 className={classes.post_title}>{post.title}</h1>
+          <div className={classes.post_date}>Опубликовано: {post.date}</div>
+          <div className={styles.post_image_big}>
+            <img src={post.cover_image} alt={styles.post_title} />
+          </div>
+          <div className={styles.post_body}>
+            <Component components={{ ...MDXComponents }}/>
+          </div>
         </div>
-        <div className={styles.post_image_big}>
-          <img src={post.cover_image} alt={styles.post_title} />
-        </div>
-        <div className={styles.post_body}>
-          <Component
-            components={{ ...MDXComponents }}
-          />
-        </div>
-        <SharedIcons post={post} />
       </div>
-    </div>
   );
 };
 

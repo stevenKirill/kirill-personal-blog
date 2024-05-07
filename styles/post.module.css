@@ -41,27 +41,14 @@
   color: var(--text);
   font-size: 18px;
 }
-
-.post_body ul, .post_body ol {
-  font-size: 110%;
-  line-height: 2.3;
-  font-weight: bold;
-  margin: 10px 0;
-  margin-left: 15px;
+.post_body p {
+  color: var(--text);
+  font-size: calc(1.1875rem);
+  text-wrap: pretty;
+  margin-bottom: 1.5rem;
 }
 
-.post_body pre {
-  background: var(--black);
-  padding: 20px;
-  margin: 20px 0;
-  line-height: 2;
-}
 .post_body img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.post_body_img {
   width: 100%;
   height: 100%;
   object-fit: contain;
