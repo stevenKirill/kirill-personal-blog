@@ -38,7 +38,7 @@ export const sortByDate = (a: Blog, b: Blog) => {
   return new Date(b.date) - new Date(a.date);
 };
 
-export const MONTHS = {
+export const MONTHS: { [key in number]: string } = {
   0: "Январь",
   1: "Февраль",
   2: "Март",

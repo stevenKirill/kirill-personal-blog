@@ -10,7 +10,7 @@
 .post_title {
   margin: 10px 0;
   color: var(--text);
-  font-size: 18px;
+  font-size: 1.875rem;
 }
 
 .post_date {

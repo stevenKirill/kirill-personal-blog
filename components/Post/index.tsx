@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { FaArrowRight, FaReadme } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import styles from "../../styles/post.module.css";
-import { getCategoryItem, MONTHS } from "../../utils/utils";
+import { MONTHS } from "../../utils/utils";
 import { IPost } from "@/types";
 
 
@@ -13,7 +13,6 @@ interface IPostProps {
 export const Post = ({ post }: IPostProps) => {
   const { title, category, date, first_text, slug } = post;
   const postDate = new Date(date);
-  const { text } = getCategoryItem(category);
   return (
     <Link className={styles.card} href={`/blog/${slug}`}>
       <div className={styles.post_title}>

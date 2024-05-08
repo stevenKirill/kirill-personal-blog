@@ -1,43 +1,45 @@
- .circle {
-    width: 40px;
-    height: 40px;
-    transition: opacity 0.2s ease-in-out;
-    position: absolute;
-    cursor: pointer;
-    right: 0;
-    top: 0;
-    border-radius: 50%;
-    color: #fff;
-    font: 700 20px/40px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    text-align: center;
-    background: linear-gradient(to right,var(--black) 0%,var(--black) 100%);
-    box-shadow: 0 0 10px rgb(0 0 0 / 40%);
-    z-index: 20;
-    opacity: .3;
- }
- .replacer {
-    transition: background 0.2s ease-in-out;
-    background: var(--light-white);
-    height: 0.125rem;
-    margin: 0.3125rem 0;
-    border: none;
-    padding: 0;
- }
- .contacts {
-    background: var(--black);
-    text-align: center;
-    border-radius: 0;
- }
- .list {
-    color: var(--light-white);
-    line-height: 1.3125rem;
-    text-align: left;
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
-    text-align: center;
-    margin-left: 0;
- }
+.circle {
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  color: #fff;
+  font: 700 20px/40px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  background: linear-gradient(to right,var(--black) 0%,var(--black) 100%);
+  box-shadow: 0 0 10px rgb(0 0 0 / 40%);
+  z-index: 20;
+  opacity: .3;
+}
+.replacer {
+  transition: background 0.2s ease-in-out;
+  background: var(--light-white);
+  height: 0.125rem;
+  margin: 0.3125rem 0;
+  border: none;
+  padding: 0;
+}
+
+.contacts {
+  background: var(--black);
+  text-align: center;
+  border-radius: 0;
+}
+
+.list {
+  color: var(--light-white);
+  line-height: 1.3125rem;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  text-align: center;
+  margin-left: 0;
+}
  .item {
     display: inline-block;
     vertical-align: middle;
@@ -70,7 +72,7 @@
         width: 500px !important;
     }
   }
-    
+
   @media (max-width: 700px) {
     .group {
         display: grid;
