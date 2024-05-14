@@ -23,7 +23,7 @@ test("delay", async () => {
   const elapsed = Number(new Date()) - start;
   expect(elapsed).toBeGreaterThanOrEqual(100);
   expect(elapsed).toBeLessThan(120);
-})
+});
 ```
 
 Тут вопрос затрагивает понятие асинхронности в JavaScript.
@@ -36,7 +36,7 @@ return new Promise((resolve,reject) => {
   setTimeout(() => {
     resolve();
   }, ms);
-})
+});
 ```
 Второй вопрос, который был задан мне звучит следующим образом. Реализовать тело объекта **object**, чтобы у него появилось свойство prop "только для чтения". Тест должен пройти.
 
@@ -56,7 +56,7 @@ const object = {
     return
   },
   get prop() {
-    return 5
+    return 5;
   },
 };
 ```
