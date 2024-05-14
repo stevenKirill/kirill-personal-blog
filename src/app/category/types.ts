@@ -1,4 +1,4 @@
-import { Blog } from "@/.contentlayer/generated";
+import { Blog } from '@/content';
 
 export interface IProps {
   params: {

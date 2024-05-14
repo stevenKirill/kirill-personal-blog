@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classes from './classes.module.css';
-import { Blog } from '@/.contentlayer/generated';
+import { Blog } from '@/content';
 import Item from './Item';
 
 interface IProps {

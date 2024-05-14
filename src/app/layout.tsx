@@ -15,7 +15,7 @@ interface IRootLayoutProps {
 }
 
 const tildaSans = localFont({
-  src: '../public/tildaSansRegular.woff2',
+  src: '../../public/tildaSansRegular.woff2',
   display: 'swap',
 });
 

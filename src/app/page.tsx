@@ -2,9 +2,9 @@ import MainPagePost from '@/components/MainPagePost';
 import styles from './main_page.module.css';
 import { allBlogs } from '@/content';
 import CategoryBar from '@/components/CategoryBar';
-import { populateCategories, sortByDate } from '@/src/utils/utils';
 import Popular from '@/components/Popular';
-import { POPULAR } from '@/src/consts';
+import { POPULAR } from '@/consts';
+import { sortByDate, populateCategories } from '@/utils/utils';
 
 export default function Home() {
   const firstFive = allBlogs.sort(sortByDate).slice(0, 5);

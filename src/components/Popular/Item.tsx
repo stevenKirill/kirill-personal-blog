@@ -1,11 +1,12 @@
 /* eslint-disable react/display-name */
-"use client";
+
+'use client';
 
 import React, { useCallback, useRef } from 'react';
-import classes from './classes.module.css';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
-import { Blog } from '@/.contentlayer/generated';
+import classes from './classes.module.css';
+import { Blog } from '@/content';
 
 interface IProps {
   post: Blog;
@@ -28,20 +29,20 @@ const Item = ({ post }: IProps) => {
 
   return (
     <li key={post._id} className={classes.item}>
-    <span className={classes.icon} ref={ref}>
-      <FaArrowRight color="#617bff" size={16} />
-    </span>
-    <Link
-      ref={linkRef}
-      href={`/blog/${post.slug}`}
-      className={classes.post}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+      <span className={classes.icon} ref={ref}>
+        <FaArrowRight color="#617bff" size={16} />
+      </span>
+      <Link
+        ref={linkRef}
+        href={`/blog/${post.slug}`}
+        className={classes.post}
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
       >
         {post.title}
-    </Link>
-  </li>
-  )
+      </Link>
+    </li>
+  );
 };
 
 export default Item;

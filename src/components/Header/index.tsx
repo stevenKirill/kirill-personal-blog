@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 'use client';
 
 import React from 'react';
@@ -6,8 +8,8 @@ import Image from 'next/image';
 import { IoSunnySharp } from 'react-icons/io5';
 import { FaMoon } from 'react-icons/fa';
 import Navigation from '../Navigation';
-import { useThemeSwitch } from '@/src/hooks/useTheme';
 import classes from './header.module.css';
+import { useThemeSwitch } from '@/hooks/useTheme';
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
@@ -30,7 +32,10 @@ const Header = () => {
         </div>
         <div className={classes.rightContainer}>
           <Navigation />
-          <div className={classes.icon} onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
+          <div
+            className={classes.icon}
+            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+          >
             {mode === 'light' ? (
               <IoSunnySharp className={classes.sun} size={24} />
             ) : (

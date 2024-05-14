@@ -1,6 +1,6 @@
-import { Blog } from '@/.contentlayer/generated';
-import { CATEGORIES } from '@/src/consts';
-import { ICategoryPost } from '@/src/types';
+import { Blog } from '@/content';
+import { CATEGORIES } from '@/consts';
+import { ICategoryPost } from '@/types';
 
 export const getCategoryItem = (category: string) => {
   switch (category) {
