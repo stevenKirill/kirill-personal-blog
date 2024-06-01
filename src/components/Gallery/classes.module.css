@@ -3,9 +3,10 @@
   gap: 4px;
   height: 268px;
   position: relative;
-  /* justify-content: center;
+  justify-content: center;
   align-items: center;
-  margin: 20px auto; */
+  margin: 20px auto;
+  width: 652px;
 }
 
 .shared {
