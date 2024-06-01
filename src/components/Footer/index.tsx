@@ -1,5 +1,5 @@
-import Link from "next/link";
-import classes from "./footer.module.css";
+import Link from 'next/link';
+import classes from './footer.module.css';
 
 const links = [
   {
