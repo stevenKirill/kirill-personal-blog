@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import styles from '../../styles/search.module.css';
 import SearchResults from '../SearchResults';
-import { IPost } from '@/src/types';
+import { IPost } from '@/types';
 
 interface ISearchBarProps {
   posts: IPost[];

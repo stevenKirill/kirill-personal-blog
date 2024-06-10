@@ -11,7 +11,7 @@ interface IPostProps {
 
 export const Post = ({ post }: IPostProps) => {
   const {
-    title, category, date, first_text, slug,
+    title, date, first_text, slug,
   } = post;
   const postDate = new Date(date);
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable no-nested-ternary */
 
 'use client';
@@ -22,7 +23,7 @@ const tildaSansRegular = localFont({
   display: 'swap',
 });
 
-type PhotoProps = {
+interface PhotoProps {
   src: StaticImageData | string;
   meta?: ReactNode;
   filename?: string;
@@ -34,7 +35,7 @@ type PhotoProps = {
   index: number;
   flipDirection?: 'left' | 'right';
   children?: ReactNode;
-};
+}
 
 function Photo({
   src,
@@ -167,6 +168,16 @@ export default function Gallery() {
         flipDirection="left"
       />
       <Photo
+        src={meira}
+        meta="2023-01-12"
+        alt="meira"
+        width={280}
+        height={235}
+        rotate={-5.4}
+        left={300}
+        index={3}
+      />
+      <Photo
         src={vladik}
         meta="2022-04-14"
         alt="Vladivostok"
@@ -176,16 +187,6 @@ export default function Gallery() {
         left={530}
         index={4}
         flipDirection="left"
-      />
-      <Photo
-        src={meira}
-        meta="2023-01-12"
-        alt="meira"
-        width={280}
-        height={235}
-        rotate={-5.4}
-        left={300}
-        index={3}
       />
     </section>
   );

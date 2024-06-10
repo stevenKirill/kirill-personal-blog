@@ -1,5 +1,5 @@
-import classes from "../../styles/pagination.module.css";
-import Link from "next/link";
+import Link from 'next/link';
+import classes from '../../styles/pagination.module.css';
 
 // TODO подумать как сделать так если страниц будет много например больше 10
 // как отображать пагинацию в удобном виде (иммется ввиду цифры)

@@ -8,9 +8,9 @@
   margin: 20px auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .gallery_container {
-    gap: 6rem;
+    display: none;
   }
 }
 

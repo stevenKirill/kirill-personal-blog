@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+
 'use client';
 
 import React, { ReactNode } from 'react';
@@ -6,14 +8,12 @@ import { cx } from '@/utils/utils';
 import useMousePosition from '@/hooks/useMousePosition';
 import classes from './classes.module.css';
 
-type HaloProps = {
+interface HaloProps {
   children: ReactNode | ReactNode[];
-  /** Width/height in px */
-  size: number;
-  /** How strong the effect should be (0-100) */
+  size?: number;
   strength: number;
   className: string;
-};
+}
 
 export default function Halo({
   children,

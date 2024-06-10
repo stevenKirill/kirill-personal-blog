@@ -29,6 +29,7 @@
   z-index: 100000;
   margin: 0;
   background-color: var(--nav-background);
+  width: 100%
 }
 
 .header {
