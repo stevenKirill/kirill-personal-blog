@@ -5,7 +5,6 @@ interface IProps {
   results: [];
 }
 
-/** Список постов после поиска (результаты поиска). */
 const SearchResults = ({ results }: IProps) => {
   if (results.length === 0) return <div>Нет совпадений</div>;
   return (
