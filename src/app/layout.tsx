@@ -2,13 +2,12 @@ import '../styles/main.css';
 import '../styles/prism.css';
 import { ReactNode } from 'react';
 import Script from 'next/script';
-// import { useRouter } from 'next/router';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
-import * as gtag from '../../lib/gtag';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import * as gtag from '@utils/gtag';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-// import { IsClientCtxProvider } from '@/src/utils/isClientContex';
 
 interface IRootLayoutProps {
   children: ReactNode;
@@ -20,24 +19,14 @@ const tildaSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'RootLayout',
-  description: 'description',
+  title: 'Главная',
+  description: 'Блог Кирилла Павловского',
 };
 
 /** Общая обертка над всеми страницами. */
 function RootLayout({ children }: IRootLayoutProps) {
-  // const router = useRouter();
-  // useEffect(() => {
-  //   const handleRouteChange = (url) => {
-  //     gtag.pageview(url);
-  //   };
-  //   router.events.on('routeChangeComplete', handleRouteChange);
-  //   return () => {
-  //     router.events.off('routeChangeComplete', handleRouteChange);
-  //   }
-  // }, [router.events]);
   return (
-    <html>
+    <html lang="ru">
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
@@ -64,6 +53,7 @@ function RootLayout({ children }: IRootLayoutProps) {
         }`}
       </Script>
       <body className={tildaSans.className}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
         <Header />
         {children}
         <Footer />

@@ -30,7 +30,7 @@ export function useThemeSwitch(): [string, Dispatch<SetStateAction<string>>] {
     return window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light';
   };
 
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState(localStorage.getItem(storageKey) || 'light');
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);

@@ -1,12 +1,14 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Gallery from '@/components/Gallery';
-import classes from './about.module.css';
 import Section from '@/components/Section';
 import Workplaces from '@/components/Workplaces';
 import { workplaces } from './constants';
 import meira from '../../../public/images/other/carousel/me-ira.jpg';
 import vladik from '../../../public/images/other/carousel/vladivostok.jpg';
+import classes from './about.module.css';
+import ConnectLinks from '@/consts/connect';
 
 export const metadata: Metadata = {
   title: 'Обо мне',
@@ -66,6 +68,38 @@ const About = () => (
             иностранными языками. Свободное время я провожу со своей семьей.
           </p>
         </div>
+      </Section>
+      <Section heading="Контакты">
+        <ul className={classes.contact}>
+          {ConnectLinks.map((link) => (
+            <li className={classes.item} key={link.label}>
+              <Link
+                href={link.href}
+                className={classes.link}
+                target="_blank"
+              >
+                <div className={classes.linkInner}>
+                  <span style={{ fontSize: '1.25rem', lineHeight: '1.75rem' }}>
+                    {link.icon}
+                  </span>
+                  {link.label}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className={classes.icon}
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </Section>
       <Section heading="Работа">
         <div className={classes.work}>

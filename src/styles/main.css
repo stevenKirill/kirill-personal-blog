@@ -75,6 +75,7 @@
   --link-button: #3a4662;
   --body-background: #181d27;
   --link-button-border: #FFFBF5;
+  --link-button-secondary: #323846;
   --pink: #ff0878;
   --footer-bg: #323846;
   --burger: #FFFBF5;
@@ -114,6 +115,7 @@
   --h2: #323846;
   --h3: #7e8c9a;
   --link-button: #fefefe;
+  --link-button-secondary: #f9f9f9;
   --body-background: #fcfcfc;
   --link-button-border: #323846;
   --blog-page-body-layout: hsl(225deg, 25%, 95%);

@@ -1,4 +1,4 @@
-import bytewerk from '../../../public/images/other/bytewerk.png';
+import bytewerk from '../../../public/images/other/bytewerk2.jpeg';
 import bell from '../../../public/images/other/bell.png';
 import gazprombank from '../../../public/images/other/gazprombank-1.svg';
 

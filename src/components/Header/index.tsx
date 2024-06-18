@@ -32,7 +32,8 @@ const Header = () => {
         </div>
         <div className={classes.rightContainer}>
           <Navigation />
-          <div
+          <button
+            type="button"
             className={classes.icon}
             onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
           >
@@ -41,7 +42,7 @@ const Header = () => {
             ) : (
               <FaMoon className={classes.moon} color="white" size={24} />
             )}
-          </div>
+          </button>
         </div>
       </div>
     </header>

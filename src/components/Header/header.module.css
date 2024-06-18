@@ -2,6 +2,9 @@
   width: fit-content;
   cursor: pointer;
   margin-left: 20px;
+  background: none;
+  outline: none;
+  border: none;
 }
 
 .rightContainer {

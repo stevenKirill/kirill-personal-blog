@@ -37,3 +37,5 @@ yarn-error.log*
 .contentlayer
 
 temp.txt
+
+.env
