@@ -1,7 +1,7 @@
-import Rating from "../Rating";
+import Rating from '../Rating';
 
 const MDXComponents = {
-  StateLessExample: Rating
+  StateLessExample: Rating,
 };
 
 export default MDXComponents;

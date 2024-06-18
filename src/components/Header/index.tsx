@@ -8,8 +8,8 @@ import Image from 'next/image';
 import { IoSunnySharp } from 'react-icons/io5';
 import { FaMoon } from 'react-icons/fa';
 import Navigation from '../Navigation';
-import classes from './header.module.css';
 import { useThemeSwitch } from '@/hooks/useTheme';
+import classes from './header.module.css';
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
