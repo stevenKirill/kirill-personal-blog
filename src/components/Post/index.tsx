@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import React from 'react';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
