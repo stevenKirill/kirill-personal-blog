@@ -1,6 +1,6 @@
-import { getCategoryItem } from "../../utils/utils";
-import classes from "./categories.module.css";
-import Link from "next/link";
+import Link from 'next/link';
+import { getCategoryItem } from '../../utils/utils';
+import classes from './categories.module.css';
 
 interface ICategoryBarProps {
   categories: string[];
