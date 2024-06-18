@@ -1,9 +1,58 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { allBlogs, Blog } from '@/content';
 import classes from './post.module.css';
-import styles from '../../../styles/post.module.css';
 import MDXComponents from '@/components/MDXComponents';
+import styles from '../../../styles/post.module.css';
+
+type Props = {
+  params: {
+    slug: string;
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
+  const post = allBlogs.find((item) => item.slug === params.slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  const {
+    title,
+    date,
+    first_text,
+    cover_image,
+    slug,
+  } = post;
+
+  const ogImage = cover_image
+    ? `https://www.kirill-pavlovskii.ru/${cover_image}`
+    : `https://www.kirill-pavlovskii.ru/og?title=${title}`;
+
+  const metadata: Metadata = {
+    metadataBase: new URL('https://www.kirill-pavlovskii.ru/'),
+    title: `${title} | Кирилл Павловский`,
+    description: first_text,
+    openGraph: {
+      title: `${title} | Кирилл Павловский`,
+      description: first_text,
+      type: 'article',
+      publishedTime: date,
+      url: `https://www.kirill-pavlovskii.ru/blog/${slug}`,
+      images: [{ url: ogImage, alt: title }],
+    },
+  };
+
+  return metadata;
+}
 
 export const generateStaticParams = () => allBlogs.map((p) => ({ slug: p.slug }));
 
@@ -15,11 +64,14 @@ interface IPostPageProps {
 
 const PostPage = ({ params }: IPostPageProps) => {
   const post = allBlogs.find((blog) => blog.slug === params.slug) as Blog;
+  if (!post) {
+    notFound();
+  }
   const Component = useMDXComponent(post.body.code);
   return (
     <div className={styles.container}>
       <Link href="/blog">
-        <button type="button" className={classes.link} role="button">
+        <button type="button" className={classes.link}>
           Назад
         </button>
       </Link>

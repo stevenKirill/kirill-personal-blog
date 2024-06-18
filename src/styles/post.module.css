@@ -205,3 +205,23 @@
     object-fit: cover;
   }
 }
+
+.post_body ul {
+  list-style-type: disc;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-inline-start: 1.625em;
+}
+
+.post_body ul > li {
+  padding-inline-start: .375em
+}
+
+.post_body h2 {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+}
