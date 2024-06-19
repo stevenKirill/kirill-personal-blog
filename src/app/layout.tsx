@@ -3,10 +3,10 @@ import '../styles/prism.css';
 import { ReactNode } from 'react';
 import Script from 'next/script';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import localFont from 'next/font/local';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import * as gtag from '@utils/gtag';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface IRootLayoutProps {
@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   title: 'Главная',
   description: 'Блог Кирилла Павловского',
 };
+
+const DynamicHeader = dynamic(() => import('../components/Header'), {
+  ssr: false,
+});
 
 function RootLayout({ children }: IRootLayoutProps) {
   return (
@@ -53,7 +57,7 @@ function RootLayout({ children }: IRootLayoutProps) {
       </Script>
       <body className={tildaSans.className}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
-        <Header />
+        <DynamicHeader />
         {children}
         <Footer />
       </body>
