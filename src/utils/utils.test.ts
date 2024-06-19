@@ -2,8 +2,8 @@ import { getArticleWord } from './utils';
 
 describe('utils', () => {
   it('should return статья', () => {
-      const result = getArticleWord(1);
-      expect(result).toBe('статья');
+    const result = getArticleWord(1);
+    expect(result).toBe('статья');
   });
 
   it('should return статей', () => {
@@ -17,7 +17,7 @@ describe('utils', () => {
     expect(result3).toBe('статей');
     expect(result4).toBe('статей');
     expect(result5).toBe('статей');
-  })
+  });
 
   it('should return статьи', () => {
     const result = getArticleWord(24);
@@ -30,5 +30,5 @@ describe('utils', () => {
     expect(result3).toBe('статьи');
     expect(result4).toBe('статьи');
     expect(result5).toBe('статьи');
-  })
-})
+  });
+});

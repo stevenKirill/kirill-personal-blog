@@ -1,8 +1,9 @@
 import { Post } from '../Post';
 import styles from '../../styles/search.module.css';
+import { IPost } from '@/types';
 
 interface IProps {
-  results: [];
+  results: IPost[];
 }
 
 const SearchResults = ({ results }: IProps) => {
@@ -15,8 +16,8 @@ const SearchResults = ({ results }: IProps) => {
           {' '}
           результаты
         </h2>
-        {results.map((result, index) => (
-          <Post key={index} post={result} />
+        {results.map((result) => (
+          <Post key={result.date} post={result} />
         ))}
       </div>
     </div>

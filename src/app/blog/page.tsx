@@ -1,10 +1,10 @@
+import { allBlogs } from '@/content';
 import { POSTS_PER_PAGE } from '@/consts';
 import {
   calculatePosts, createCategories, getCategoryItem, sortByDate,
 } from '../../utils/utils';
 import classes from './blog.module.css';
 import CardWithTitle from '@/components/CardWithTitle';
-import { allBlogs } from '../../../.contentlayer/generated';
 
 export const generateStaticParams = () => {
   const numberOfPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE);

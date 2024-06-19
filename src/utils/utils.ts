@@ -32,9 +32,9 @@ export const getCategoryItem = (category: string) => {
   }
 };
 
-export const sortByDate = (a: Blog, b: Blog) =>
-  // @ts-ignore
-  new Date(b.date) - new Date(a.date);
+// @ts-ignore
+export const sortByDate = (a: Blog, b: Blog) => new Date(b.date) - new Date(a.date);
+
 export const MONTHS: { [key in number]: string } = {
   0: 'Январь',
   1: 'Февраль',

@@ -20,6 +20,7 @@ export default function Home() {
             title={post.title}
             excerpt={post.excerpt}
             slug={post.slug}
+            // eslint-disable-next-line no-underscore-dangle
             key={post._id}
             firstText={post.first_text}
           />
