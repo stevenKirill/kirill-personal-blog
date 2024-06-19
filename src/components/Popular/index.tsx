@@ -13,6 +13,7 @@ const Popular: FC<IProps> = ({ popularPosts }) => (
     <ul className={classes.postsWrapper}>
       {popularPosts.map((post) => (
         <Item
+          // eslint-disable-next-line no-underscore-dangle
           key={post._id}
           post={post}
         />

@@ -1,5 +1,3 @@
-/* eslint-disable react/display-name */
-
 'use client';
 
 import React, { useCallback, useRef } from 'react';
@@ -28,6 +26,7 @@ const Item = ({ post }: IProps) => {
   }, []);
 
   return (
+    // eslint-disable-next-line no-underscore-dangle
     <li key={post._id} className={classes.item}>
       <span className={classes.icon} ref={ref}>
         <FaArrowRight color="#617bff" size={16} />

@@ -5,6 +5,7 @@ export interface IPost {
   cover_image: string;
   date: string;
   excerpt: string;
+  first_text: string;
   title: string;
   type: string;
   slug: string;
