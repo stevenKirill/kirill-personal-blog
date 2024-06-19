@@ -20,6 +20,7 @@ const Blog = defineDocumentType(() => ({
     date: { type: "string", required: true },
     excerpt: { type: "string", required: true },
     cover_image: { type: "string", required: true },
+    first_text: { type: "string", required: true },
   },
   computedFields,
 }));

@@ -1,0 +1,51 @@
+.cardWrapper {
+  margin-top: 48px;
+  line-height: calc(1em + 0.725rem);
+}
+.cardWrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.article:hover .title {
+  color: var(--purple-blue)
+}
+
+.article:hover .icon {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  font-size: calc(1.375rem);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.excerpt {
+  color: var(--h3);
+  margin-top: 7px;
+}
+
+.firstText {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+}
+
+.readMore span {
+  color: var(--text);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.icon {
+  display: none;
+  transition: .3s ease;
+}

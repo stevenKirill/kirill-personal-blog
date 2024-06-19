@@ -1,36 +1,37 @@
 ---
 title: 'Практика микрофронтендов спомощью module federation'
-category: 'PROGRAMMING'
+category: 'REACT'
 date: '2022-04-04'
 excerpt: 'Сегодня немного попрактикуемся в микрофронтендах'
+first_text: 'Всем привет! Сегодня я хотел бы затронуть тему микрофронтедов. Эта тема стала очень популярной в последние годы и знание построения архитектуры микрофронтов будет очень полезно.'
 cover_image: '/images/posts/microfront.webp'
 ---
 
 Всем привет! Сегодня я хотел бы затронуть тему микрофронтедов. Эта тема стала очень популярной в последние годы
 и знание построения архитектуры микрофронтов будет очень полезно. Конкретно я рассмотрю эту тему на примере
-webpack 5 и плагина module federation, а также утилиту npx create-mf-app.
+webpack 5 и плагина module federation, а также утилиты npx create-mf-app.
 
 По-сути микрофронтед - это одна отдельная единица, приложение, как правило это просто javascript файл с кодом,
-который скачивается другим приложением, куда подключается сам скрипт. При помощи webpack 5 мы можем 
+который скачивается другим приложением, куда подключается сам скрипт. При помощи webpack 5 мы можем
 создать отдельное приложение (скрипт) и экспортировать его наружу для использования сторонними приложениями.
 
-Сгенерируем два module federation приложения. Для этого напишем следующую команду в консоле ***npx create-mf-app***.
+Сгенерируем два module federation приложения. Для этого напишем следующую команду в консоле `npx create-mf-app`.
 Дальше нам следует выбрать название и технологии которые мы будем использовать при разработке нашего приложения.
-В первом приложении я выберу имя home, порт 3000, а технологии application, react, typescript, css. Вы можете выбрать любой фреймворк 
+В первом приложении я выберу имя home, порт 3000, а технологии application, react, typescript, css. Вы можете выбрать любой фреймворк
 как для js, так и для стилей. Во втором приложении я напишу имя banner, порт 3001, остальное так жe как и в первом.
-После мы увидим сгенерированные проекты, нам нужно перейти в папки кажого из них и установить зависимости ***npm i***.
+После мы увидим сгенерированные проекты, нам нужно перейти в папки кажого из них и установить зависимости `npm i`.
 
 ![mf app source](/images/posts/mf-app-screen1.png)
 
-Давай те создадим какой нибудь простенький компонент Headerт в приложении home, который мы будем экспортировать наружу как микрофронтенд.
+Давай те создадим какой нибудь простенький компонент Header в приложении home, который мы будем экспортировать наружу как микрофронтенд.
 Создадим его и поместим в папку Components.
 
- ```javascript
+ ```jsx showLineNumbers
 import React, { ReactElement } from "react";
 export default function Header(): ReactElement {
   return (
     <div className="app-header">
-        App header
+      App header
     </div>
   );
 }
@@ -41,22 +42,22 @@ export default function Header(): ReactElement {
 который мы будем экспортировать. В remotes прописываем пути до всех удаленных файлов кода, которые будем переиспользовать
 у себя в приложении, например будем использовать баннер, который мы опишем во втором приложении, а наружу экспортируем наш Header.
 
- ```javascript
-    name: "home",
-    filename: "remoteEntry.js",
-    remotes: {
-        : "banner@http://localhost:3001/remoteEntry.js",
-    },
-    exposes: {
-        './Header': './src/components/Header.tsx',
-    },
+ ```jsx showLineNumbers {}
+  name: "home",
+  filename: "remoteEntry.js",
+  remotes: {
+      : "banner@http://localhost:3001/remoteEntry.js",
+  },
+  exposes: {
+      './Header': './src/components/Header.tsx',
+  },
 ```
 
 Теперь в приложении Banner мы можем написать такую конструкцию в файле App.tsx. Наше приложение называется home и оттуда
 мы импортируем Header. То есть мы используем Header, который является микрофронтендом, написанным другой командой например.
 Ниже код корневого файла App.tsx приложения banner.
 
- ```javascript
+ ```jsx showLineNumbers
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from "home/Header";
@@ -74,20 +75,20 @@ ReactDOM.render(<App />, document.getElementById("app"));
 Здесь для простоты я не буду описывать файл Banner.tsx, представим что там просто какой то функциональный компонент,
 который возвращает разметку. Мы будем его экспортировать наружу, чтобы потом использовать в home, то есть схема абсолютно такая же.
 
- ```javascript
-    name: "banner",
-    filename: "remoteEntry.js",
-    remotes: {
-        : "home@http://localhost:3000/remoteEntry.js",
-    },
-    exposes: {
-        './Banner': './src/components/Banner.tsx',
-    },
+ ```jsx showLineNumbers
+  name: "banner",
+  filename: "remoteEntry.js",
+  remotes: {
+      : "home@http://localhost:3000/remoteEntry.js",
+  },
+  exposes: {
+      './Banner': './src/components/Banner.tsx',
+  },
 ```
 
 Код в приложении home, где мы используем компонент Banner, являющийся микрофронтендом.
 
- ```javascript
+ ```jsx showLineNumbers
 import React from "react";
 import Banner from "banner/Banner";
 import OtherContent from './components/OtherContent';
@@ -101,8 +102,6 @@ const SomeComponent = () => (
 
 Мы можем экпортировать абсолютно любой код, React компоненты или просто какие то utils функции или даже
 api call типо axios вызовов. Что будет если выключить приложение, например banner? Тогда home не сможет импортировать
-код banner? Да, в таких случаях нужно использовать кэш, кэшировать скрипты приложений, которые вы забираете, например 
-спомощью утилиты servor, но в данной статье я не буду углубляться в это. Здесь же я хочу просто показать идею webpack 
+код banner? Да, в таких случаях нужно использовать кэш, кэшировать скрипты приложений, которые вы забираете, например
+спомощью утилиты servor, но в данной статье я не буду углубляться в это. Здесь же я хочу просто показать идею webpack
 5 mf плагина и его базовых возможностей.
-
-Если у вас остались какие либо вопросы, пишите мне в [телеграм](https://t.me/stevenPav)

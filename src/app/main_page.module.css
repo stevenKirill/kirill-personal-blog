@@ -1,0 +1,36 @@
+.wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.title {
+  padding-top: 15px;
+  margin-top: 10px;
+  color: var(--pink);
+  font-size: 20px;
+  user-select: none;
+}
+
+.posts {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 48em) {
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .posts {
+    margin-bottom: 0px;
+  }
+}

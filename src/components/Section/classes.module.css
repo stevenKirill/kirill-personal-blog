@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.heading {
+  flex-shrink: 0;
+  color: var(--h2);
+ }
+
+@media (min-width: 768px) {
+  .item {
+    flex-direction: row;
+  }
+
+  .heading {
+    width: 8rem;
+  }
+}
+
+

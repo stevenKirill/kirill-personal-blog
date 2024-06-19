@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": false,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "plugins": [
+        {
+          "name": "next"
+        }
+      ],
+      "paths": {
+        "@/*": ["./src/*"],
+        "@app/*": ["./src/app/*"],
+        "@components/*": ["./src/components/*"],
+        "@utils/*": ["./src/utils/*"],
+        "@hooks/*": ["./src/hooks/*"],
+        "@consts/*": ["./src/consts/*"],
+        "@/content": ["./.contentlayer/generated/"],
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/lib/gtag.js", "src/hooks/usePosition.js", "src/components/Map/index.jsx"],
+    "exclude": ["node_modules"]
+  }
