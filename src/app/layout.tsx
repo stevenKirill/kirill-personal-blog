@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   description: 'Блог Кирилла Павловского',
 };
 
-/** Общая обертка над всеми страницами. */
 function RootLayout({ children }: IRootLayoutProps) {
   return (
     <html lang="ru">
