@@ -184,7 +184,7 @@ export default function Gallery() {
         width={220}
         height={260}
         rotate={7.6}
-        left={530}
+        left={521}
         index={4}
         flipDirection="left"
       />

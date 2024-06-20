@@ -51,6 +51,7 @@
 
 .small {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .image {
@@ -159,4 +160,10 @@
  .icon {
   width: 1.25rem;
   height: 1.25rem;
+ }
+
+ @media (max-width: 360px) {
+  .small {
+    display: none;
+  }
  }

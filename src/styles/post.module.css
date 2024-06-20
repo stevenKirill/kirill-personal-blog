@@ -41,6 +41,7 @@
   color: var(--text);
   font-size: 18px;
 }
+
 .post_body p {
   color: var(--text);
   font-size: calc(1.1875rem);
@@ -61,7 +62,7 @@
     grid-template-columns: unset !important;
   }
   .posts {
-      grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -72,7 +73,7 @@
     grid-template-columns: unset !important;
   }
   .posts {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .post_body pre {
     overflow: hidden;
@@ -80,6 +81,21 @@
   }
   .post_body p {
     text-align: unset;
+  }
+}
+
+@media (max-width: 400px) {
+  .post_title {
+    font-size: 14px;
+  }
+  .post_excerpt {
+    font-size: 12px;
+  }
+  .post_read_more {
+    font-size: 13px;
+  }
+  .post_date {
+    font-size: 13px;
   }
 }
 
