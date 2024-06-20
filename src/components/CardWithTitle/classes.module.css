@@ -21,3 +21,20 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 32px;
 }
+
+@media (max-width: 768px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .categoryTitle h1 {
+    font-size: 14px;
+  }
+
+  .categoryTitleText {
+    font-size: 14px;
+  }
+}
