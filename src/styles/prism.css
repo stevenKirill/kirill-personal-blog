@@ -38,12 +38,12 @@ pre[class*="language-"] {
   padding: 1.5rem;
   overflow: auto;
   border-radius: 10px;
-  min-height: 303px;
   max-height: 75vh;
   background: var(--syntax-highlight);
   color: var(--text);
   border-width: 1px;
   border-color: var(--gray-3);
+  font-size: 0.75rem;
 }
 
 /* Inline code */
