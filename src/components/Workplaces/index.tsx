@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { Link } from '../Link';
 import classes from './classes.module.css';
+import { cx } from '@/utils/utils';
 
 type TWorkplace = {
   title: string;
@@ -17,7 +18,7 @@ function Workplace({
 }: TWorkplace) {
   const content = (
     <>
-      <div className={classes.work}>
+      <div className={cx(classes.work, classes.opacity)}>
         <Image
           src={imageSrc}
           alt={company}

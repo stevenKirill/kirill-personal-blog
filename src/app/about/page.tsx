@@ -4,11 +4,12 @@ import Link from 'next/link';
 import Gallery from '@/components/Gallery';
 import Section from '@/components/Section';
 import Workplaces from '@/components/Workplaces';
-import { workplaces } from './constants';
+import { projects, workplaces } from './constants';
 import meira from '../../../public/images/other/carousel/me-ira.jpg';
 import vladik from '../../../public/images/other/carousel/vladivostok.jpg';
 import classes from './about.module.css';
 import ConnectLinks from '@/consts/connect';
+import Projects from '@/components/Projects';
 
 export const metadata: Metadata = {
   title: 'Обо мне',
@@ -111,6 +112,14 @@ const About = () => (
             и работаю сейчас.
           </p>
           <Workplaces items={workplaces} />
+        </div>
+      </Section>
+      <Section heading="Проекты">
+        <div className={classes.work}>
+          <p className={classes.text}>
+            Некоторые проекты, которые я сделал и могу публиковать в свободном доступе.
+          </p>
+          <Projects items={projects} />
         </div>
       </Section>
     </div>
