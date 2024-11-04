@@ -39,6 +39,6 @@ export const projects = [
     name: 'Jetstream VPN',
     description: 'Сайт vpn сервиса для китайского рынка. Сделана страница лендинга, анимации и интернационализация на next.js',
     imageSrc: jetstream,
-    href: 'https://uat-web.jetflow.site/en-US/',
+    href: 'https://jetstreamjsvpn.com/en',
   },
 ];

@@ -61,6 +61,7 @@
     grid-template-rows: auto 1fr auto !important;
     grid-template-columns: unset !important;
   }
+
   .posts {
     grid-template-columns: repeat(2,1fr);
   }
@@ -72,13 +73,16 @@
     grid-template-rows: auto 1fr auto !important;
     grid-template-columns: unset !important;
   }
+
   .posts {
     grid-template-columns: 1fr;
   }
+
   .post_body pre {
     overflow: hidden;
     overflow-x: scroll;
   }
+
   .post_body p {
     text-align: unset;
   }
@@ -88,12 +92,15 @@
   .post_title {
     font-size: 14px;
   }
+
   .post_excerpt {
     font-size: 12px;
   }
+
   .post_read_more {
     font-size: 13px;
   }
+
   .post_date {
     font-size: 13px;
   }
