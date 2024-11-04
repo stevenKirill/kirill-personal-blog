@@ -2,7 +2,7 @@ import bytewerk from '../../../public/images/other/bytewerk2.jpeg';
 import bell from '../../../public/images/other/bell.png';
 import gazprombank from '../../../public/images/other/gazprombank-1.svg';
 import flash from '../../../public/images/other/flash.png';
-import jetstream from '../../../public/images/other/jetstream.png';
+import jetstream from '../../../public/images/other/logo-en-vpnweb.png';
 
 export const workplaces = [
   {
@@ -39,6 +39,6 @@ export const projects = [
     name: 'Jetstream VPN',
     description: 'Сайт vpn сервиса для китайского рынка. Сделана страница лендинга, анимации и интернационализация на next.js',
     imageSrc: jetstream,
-    href: 'https://uat-web.jetflow.site/en-US/',
+    href: 'https://jetstreamjsvpn.com/en',
   },
 ];

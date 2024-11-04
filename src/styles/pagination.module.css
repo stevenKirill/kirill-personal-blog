@@ -1,32 +1,32 @@
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .pagination_list {
-    display: flex;
+   display: flex;
 }
 .next, .prev, .number {
-    list-style-type: none;
-    align-items: center;
-    appearance: none;
-    background-color: var(--black);
-    border: 0;
-    border-radius: 6px;
-    box-sizing: border-box;
-    color: var(--light-white);
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
-    height: 37px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    margin-left: 10px;
+  list-style-type: none;
+  align-items: center;
+  appearance: none;
+  background-color: var(--black);
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--light-white);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 37px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  margin-left: 10px;
 }
