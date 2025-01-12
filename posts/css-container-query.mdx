@@ -80,3 +80,29 @@ Container queries — это новый механизм в CSS, который 
 
 
 ## Примеры использования container queries.
+
+Допустим у нас есть карточка c пиццей, ее описание и кнопка заказать.
+Весь контент карточки обернут в контейнер с классом `card-container`. Ему мы задаем css
+свойство `container-type: inline-size`, которое говорит что все его содержимое мы будем позиционировать
+относительно его ширины, так же мы задаем ему имя `cardContainer`. Соответственно мы прописали, что при
+ширине контейнера 478px, мы позиционируем наши блоки внутри карточки по вертикали (flex-direction: column).
+
+<div>
+   <iframe src="https://codesandbox.io/embed/h75j5w?view=editor+%2B+preview"
+      style={{
+      width: '100%',
+      height: '500px',
+      border: '0',
+      borderRadius: '4px',
+      overflow: 'hidden',
+     }}
+     title="container-query-example"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   />
+</div>
+
+И тут возникает вопрос а почему container queries, мы же могли это сделать просто через media.
+Да но container queries yпрощают создание модульных компонентов, которые адаптируются к своему окружению.
+Код становится чище и легче для понимания, так как стилизация зависит от конкретных контейнеров,
+а не от глобального состояния окна.
