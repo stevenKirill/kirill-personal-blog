@@ -9,7 +9,7 @@
 
 .rightContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 15px;
 }
 

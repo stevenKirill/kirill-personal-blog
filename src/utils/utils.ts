@@ -24,6 +24,11 @@ export const getCategoryItem = (category: string) => {
         text: 'TypeScript',
         color: 'orangeCategory',
       };
+    case CATEGORIES.CSS:
+      return {
+        text: 'CSS',
+        color: 'yellowCategory',
+      };
     default:
       return {
         text: 'Другое',
