@@ -9,7 +9,8 @@
     "lint:fix": "eslint ./src --ext ts,tsx --fix",
     "prepare": "husky install",
     "cache-posts": "node scripts/cache.js",
-    "test": "jest"
+    "test": "jest",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.4",
@@ -18,6 +19,7 @@
     "gray-matter": "4.0.3",
     "next": "13.5.5",
     "next-contentlayer": "0.3.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.3.1",
