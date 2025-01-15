@@ -9,22 +9,25 @@
     "lint:fix": "eslint ./src --ext ts,tsx --fix",
     "prepare": "husky install",
     "cache-posts": "node scripts/cache.js",
-    "test": "jest"
+    "test": "jest",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.4",
     "contentlayer": "0.3.4",
     "framer-motion": "^11.1.7",
     "gray-matter": "4.0.3",
+    "identity-obj-proxy": "^3.0.0",
     "next": "13.5.5",
     "next-contentlayer": "0.3.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.3.1",
     "react-share": "5.1.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^15.0.6",
     "@types/jest": "^29.5.12",
     "@types/react": "18.2.79",

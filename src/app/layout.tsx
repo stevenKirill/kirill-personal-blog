@@ -21,6 +21,21 @@ const tildaSans = localFont({
 export const metadata: Metadata = {
   title: 'Главная',
   description: 'Блог Кирилла Павловского',
+  keywords: 'JavaScript, React, Vue.js, Angular, TypeScript, HTML, CSS, Web Development, Frontend Development, Programming, Coding, Frameworks, Libraries, APIs, Debugging, Optimization, Performance, Testing, Deployment, DevOps, CI/CD, Version Control, Git, NPM, Yarn, Babel, Webpack, Rollup, Parcel, Vite, Next.js, Nuxt.js, Svelte, Astro, SolidJS, Remix Run, Redux, MobX, RxJS, GraphQL, REST API, Axios, Fetch API, HTTP Requests, CORS, WebSocket, JSON, AJAX, SPA, PWA, Progressive Web Apps, Microfrontends, Monorepos, Lerna, Turbopack, Storybook, Cypress, Jest, Playwright, WebAssembly, Deno',
+  openGraph: {
+    title: 'Блог разработчика Кирилла Павловского',
+    description: 'Блог о фронтенд разработке, и других технологиях',
+    type: 'website',
+    url: 'https://www.kirill-pavlovskii.ru',
+    images: [
+      {
+        url: 'https://www.kirill-pavlovskii.ru/_next/image?url=%2Fimages%2Fother%2Flogo.jpg&w=128&q=75',
+        width: 128,
+        height: 192,
+        alt: 'Логотип сайта',
+      },
+    ],
+  },
 };
 
 const DynamicHeader = dynamic(() => import('../components/Header'), {

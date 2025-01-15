@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.kirill-pavlovskii.ru/robots.txt</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/about</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/sitemap.xml</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/click-outside-hook</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/css-container-query</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/error-boundary</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/how-to-become-frontend-engineer</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/how-to-become-frontend-engineer2</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/how-to-manage-stress</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/how-to-pass-interview</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/javascript-reduce</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/js-tech-interview-questions</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/mf-app-practise</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru/blog/time-to-leave-job</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.kirill-pavlovskii.ru</loc><lastmod>2025-01-14T10:43:51.423Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

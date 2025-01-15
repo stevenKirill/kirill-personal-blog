@@ -13,7 +13,22 @@ import Projects from '@/components/Projects';
 
 export const metadata: Metadata = {
   title: 'Обо мне',
-  description: 'Страница обо мне, инфорация обо мне',
+  description: 'Страница о Кирилле Павловском, его опыте и навыках',
+  keywords: 'Заказать разработку сайта, разработка сайта с нуля, разработка сайта, фронтенд разработчик, senior frontend developer, middle frontend developer, middle frontend разработчик, senior frontend разработчик, опыт работы, Кирилл Павловский frontend разработчик, заказать сайт, разработка web приложений',
+  openGraph: {
+    title: 'Блог разработчика Кирилла Павловского',
+    description: 'Блог о фронтенд разработке, и других технологиях',
+    type: 'website',
+    url: 'https://www.kirill-pavlovskii.ru/about',
+    images: [
+      {
+        url: 'https://www.kirill-pavlovskii.ru/_next/image?url=%2Fimages%2Fother%2Flogo.jpg&w=128&q=75',
+        width: 128,
+        height: 192,
+        alt: 'Логотип сайта',
+      },
+    ],
+  },
 };
 
 const About = () => (

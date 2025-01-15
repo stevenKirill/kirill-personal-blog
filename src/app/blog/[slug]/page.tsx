@@ -6,18 +6,11 @@ import { notFound } from 'next/navigation';
 import { allBlogs, Blog } from '@/content';
 import classes from './post.module.css';
 import MDXComponents from '@/components/MDXComponents';
+import { IProps, IPostPageProps } from './types';
 import styles from '../../../styles/post.module.css';
 
-type Props = {
-  params: {
-    slug: string;
-    id: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
 export async function generateMetadata(
-  { params }: Props,
+  { params }: IProps,
 ): Promise<Metadata> {
   const post = allBlogs.find((item) => item.slug === params.slug);
 
@@ -41,6 +34,7 @@ export async function generateMetadata(
     metadataBase: new URL('https://www.kirill-pavlovskii.ru/'),
     title: `${title} | Кирилл Павловский`,
     description: first_text,
+    keywords: `${title}, ${slug}, ${first_text}`,
     openGraph: {
       title: `${title} | Кирилл Павловский`,
       description: first_text,
@@ -55,12 +49,6 @@ export async function generateMetadata(
 }
 
 export const generateStaticParams = () => allBlogs.map((p) => ({ slug: p.slug }));
-
-interface IPostPageProps {
-  params: {
-    slug: string;
-  }
-}
 
 const PostPage = ({ params }: IPostPageProps) => {
   const post = allBlogs.find((blog) => blog.slug === params.slug) as Blog;
