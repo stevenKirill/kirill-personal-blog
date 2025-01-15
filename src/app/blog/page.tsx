@@ -3,8 +3,8 @@ import { POSTS_PER_PAGE } from '@/consts';
 import {
   calculatePosts, createCategories, getCategoryItem, sortByDate,
 } from '../../utils/utils';
-import classes from './blog.module.css';
 import CardWithTitle from '@/components/CardWithTitle';
+import classes from './blog.module.css';
 
 export async function generateMetadata() {
   const categories = allBlogs.reduce(createCategories, []);

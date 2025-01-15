@@ -2,7 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-
+const path = require('path');
 const nextJest = require("next/jest");
 
 const createJestConfig = nextJest({
@@ -152,7 +152,16 @@ const config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
+  rootDir: './src',
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: [
+    `${path.resolve(__dirname,'./tests/setupTests.js')}`,
+  ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  moduleNameMapper: {
+    '\\.(gif|ttf|eot|svg|png|jpg)$': `${path.resolve(__dirname,'./tests/fileMock.js')}`,
+    "\\.css$": "identity-obj-proxy",
+  },
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
