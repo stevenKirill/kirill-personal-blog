@@ -65,6 +65,18 @@
   --blue-12: color(display-p3 0.102 0.193 0.379);
 }
 
+::selection {
+  background: var(--red);
+  text-shadow: none;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--red);
+  color: #fff;
+  text-shadow: none;
+}
+
 .dark {
   --nav-background: #323846;
   --text: #FFFBF5;
