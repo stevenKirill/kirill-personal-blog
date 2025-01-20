@@ -67,6 +67,7 @@ const PostPage = ({ params }: IPostPageProps) => {
         <h1 className={classes.post_title}>{post.title}</h1>
         <div className={classes.post_date}>
           Опубликовано:
+          {' '}
           {post.date}
         </div>
         <div className={styles.post_image_big}>

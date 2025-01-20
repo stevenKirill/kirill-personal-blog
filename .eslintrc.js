@@ -1,4 +1,4 @@
-{
+module.exports =  {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": [
@@ -41,6 +41,12 @@
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["*.mdx", "*.md"],
+      ...require('./eslint-mdx'),
+    }
+  ],
   "settings": {
     "react": {
       "createClass": "createReactClass", // Regex for Component Factory to use,

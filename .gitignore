@@ -41,3 +41,9 @@ temp.txt
 .env
 
 coverage
+
+# TypeScript cache
+tsconfig.tsbuildinfo
+
+# Personal todo lists
+todo.txt

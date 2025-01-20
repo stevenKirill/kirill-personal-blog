@@ -29,6 +29,6 @@
         "@/content": ["./.contentlayer/generated/"],
       }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/lib/gtag.js", "src/hooks/usePosition.js", "src/components/Map/index.jsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/lib/gtag.js", "src/hooks/usePosition.js", "src/components/Map/index.jsx",  "**/*.mdx"],
     "exclude": ["node_modules"]
   }
