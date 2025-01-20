@@ -1,0 +1,29 @@
+.blogReadTimeBar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.blogReadTimeBarIndicator {
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+.blogReadTimeBarIndicator::-webkit-progress-bar {
+  background: transparent;
+}
+
+.blogReadTimeBarIndicator::-webkit-progress-value {
+  background: #007bff;
+  transition: width 0.2s ease;
+}
+
+.blogReadTimeBarIndicator::-moz-progress-bar {
+  background: #007bff;
+  transition: width 0.2s ease;
+}

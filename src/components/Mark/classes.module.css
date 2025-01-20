@@ -1,0 +1,42 @@
+.mark {
+  width: 100%;
+  background-color: var(--tip-background);
+  padding: 10px 2rem;
+  position: relative;
+  border-radius: 0 10px 10px 0;
+}
+
+.tip {
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.text {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.tipContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.markWrapper {
+  position: relative;
+  padding-left: 4px;
+}
+
+.markWrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #3b82f6;
+}

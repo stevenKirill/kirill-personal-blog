@@ -11,4 +11,8 @@ export const menuItems = [
     title: 'об авторе',
     path: '/about',
   },
+  {
+    title: 'код',
+    path: '/snippets',
+  },
 ];

@@ -8,6 +8,7 @@ import classes from './post.module.css';
 import MDXComponents from '@/components/MDXComponents';
 import { IProps, IPostPageProps } from './types';
 import styles from '../../../styles/post.module.css';
+import ScrollLine from '@/components/ScrollLine';
 
 export async function generateMetadata(
   { params }: IProps,
@@ -58,6 +59,7 @@ const PostPage = ({ params }: IPostPageProps) => {
   const Component = useMDXComponent(post.body.code);
   return (
     <div className={styles.container}>
+      <ScrollLine />
       <Link href="/blog">
         <button type="button" className={classes.link}>
           Назад
