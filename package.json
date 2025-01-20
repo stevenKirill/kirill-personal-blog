@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "tsc --noEmit && eslint ./src --ext ts,tsx --max-warnings=0 --no-ignore",
     "lint:fix": "eslint ./src --ext ts,tsx --fix",
+    "lint:mdx": "eslint \"**/*.mdx\" --fix",
     "prepare": "husky install",
     "cache-posts": "node scripts/cache.js",
     "test": "jest",
@@ -27,6 +28,7 @@
     "react-share": "5.1.0"
   },
   "devDependencies": {
+    "@mdx-js/mdx": "^3.1.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^15.0.6",
     "@types/jest": "^29.5.12",
@@ -39,6 +41,7 @@
     "eslint-config-next": "13.4.19",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-mdx": "^3.1.5",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "7.0.0",
